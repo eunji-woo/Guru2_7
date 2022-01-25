@@ -1,4 +1,4 @@
-package com.example.login2
+package com.example.guru2_7
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
