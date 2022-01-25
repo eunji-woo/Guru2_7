@@ -1,6 +1,7 @@
 package com.example.guru2_7
 
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
@@ -42,6 +43,8 @@ class joinActivity : AppCompatActivity() {
                 if(join_pwEdittext.text.toString() == join_pwEdittext2.text.toString()){
                     sqlDB.execSQL("INSERT INTO groupTBL VALUES ('" + join_idEdittext.text.toString() + "'," + join_emailEdittext.text.toString() +" , "+ join_pwEdittext.text.toString() + ");")
                     sqlDB.close()
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 }
                 else{
                     Toast.makeText(applicationContext, "비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()
