@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         LoginButton=findViewById(R.id.LoginButton)
         idEdittext=findViewById(R.id.idEdittext)
         pwEdittext=findViewById(R.id.pwEdittext)
+        joinButton=findViewById(R.id.joinButton)
 
 
         /*DBManager = DBManager(this, "personal", null, 1)*/
