@@ -44,7 +44,7 @@ class joinActivity : AppCompatActivity() {
                     sqlDB.execSQL("INSERT INTO groupTBL VALUES ('" + join_idEdittext.text.toString() + "'," + join_emailEdittext.text.toString() +" , "+ join_pwEdittext.text.toString() + ");")
                     sqlDB.close()
                     val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                    startActivity(intent) // 회원가입 성공시 로그인 화면으로 intent
                 }
                 else{
                     Toast.makeText(applicationContext, "비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()
