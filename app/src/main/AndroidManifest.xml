@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Guru2_7">
-        <activity android:name=".JoinActivity"></activity>
+        <activity android:name=".joinActivity"></activity>
+        <activity android:name=".JoinActivity" />
         <activity
             android:name=".NavigationActivity"
-            android:label="@string/title_activity_navigation"></activity>
+            android:label="@string/title_activity_navigation" />
         <activity
             android:name=".MypageActivity"
             android:label="@string/title_activity_mypage" />

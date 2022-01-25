@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.guru2_7.R
 
 class joinActivity : AppCompatActivity() {
 
@@ -52,7 +51,6 @@ class joinActivity : AppCompatActivity() {
         }
     }
 
-
     inner class myDBHelper(context: Context) : SQLiteOpenHelper(context, "groupDB", null, 1){
         override fun onCreate(db: SQLiteDatabase?) {
             db!!.execSQL("CREATE TABLE groupTBL (nickname CHAR(20), email CHAR(30) PRIMARY KEY, passwd CHAR(30));")
@@ -65,4 +63,3 @@ class joinActivity : AppCompatActivity() {
     }
 
 }
-
