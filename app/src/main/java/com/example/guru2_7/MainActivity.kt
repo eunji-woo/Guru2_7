@@ -1,12 +1,15 @@
 package com.example.guru2_7
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.example.login2.joinActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var LoginButton: Button
+    lateinit var joinButton: Button
     lateinit var idEdittext: EditText
     lateinit var pwEdittext: EditText
 
@@ -24,6 +27,12 @@ class MainActivity : AppCompatActivity() {
 
         LoginButton.setOnClickListener {
 
+        }
+
+        joinButton.setOnClickListener{
+            // intent로 회원가입 창으로 이동
+            val intent = Intent(this, joinActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -40,7 +40,7 @@ class joinActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "정보를 모두 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
             else{ // 정보 다 제대로 입력해서 로그인 창으로 intent
-                if(join_pwEdittext.text.toString() === join_pwEdittext2.text.toString()){
+                if(join_pwEdittext.text.toString() == join_pwEdittext2.text.toString()){
                     sqlDB.execSQL("INSERT INTO groupTBL VALUES ('" + join_idEdittext.text.toString() + "'," + join_emailEdittext.text.toString() +" , "+ join_pwEdittext.text.toString() + ");")
                     sqlDB.close()
                 }
