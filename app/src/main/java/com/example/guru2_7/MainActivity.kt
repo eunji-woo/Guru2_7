@@ -31,12 +31,23 @@ class MainActivity : AppCompatActivity() {
         LoginButton.setOnClickListener {
             sqlDB = dbManager.readableDatabase
 
-            var cursor = sqlDB.rawQuery("SELECT nickname FROM groupTBL", null)
+            var cursor_id = sqlDB.rawQuery("SELECT nickname FROM groupTBL", null)
+            var cursor_pw = sqlDB.rawQuery("SELECT passwd FROM groupTBL", null)
 
-            while(cursor.moveToNext()){
-                if(cursor.getString(0) == idEdittext.text.toString())
+            while(cursor_id.moveToNext()){
+                if(cursor_id.getString(0) == idEdittext.text.toString()) {
                     Toast.makeText(this, "아이디 성공", Toast.LENGTH_SHORT).show()
+
+                    while (cursor_pw.moveToNext()) {
+                        if (cursor_pw.getString(0) == pwEdittext.text.toString()) {
+                            Toast.makeText(this, "비번 성공", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this, NaviActivity::class.java)
+                            startActivity(intent)
+                        }
+                    }
+                }
             }
+
         }
 
         joinButton.setOnClickListener{
