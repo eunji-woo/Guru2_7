@@ -18,7 +18,7 @@ class joinActivity : AppCompatActivity() {
     lateinit var join_pwEdittext2: EditText
     lateinit var join_joinButton: Button
 
-    lateinit var myHelper: joinActivity.myDBHelper
+    lateinit var dbManager: DBManager
     lateinit var sqlDB: SQLiteDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,10 +31,10 @@ class joinActivity : AppCompatActivity() {
         join_pwEdittext2 = findViewById(R.id.join_pwEdittext2)
         join_joinButton = findViewById(R.id.join_joinButton)
 
-        myHelper = myDBHelper(this)
+        dbManager = DBManager(this, "groupDB", null, 1)
 
         join_joinButton.setOnClickListener {
-            sqlDB = myHelper.writableDatabase
+            sqlDB = dbManager.writableDatabase
 
             if(join_idEdittext.text.isEmpty() || join_emailEdittext.text.isEmpty() || join_pwEdittext.text.isEmpty() || join_pwEdittext2.text.isEmpty()){ // 정보 입력 제대로 안한 경우 제대로 입력하라는 toast 메시지
                 Toast.makeText(applicationContext, "정보를 모두 입력해주세요.", Toast.LENGTH_SHORT).show()
@@ -54,7 +54,7 @@ class joinActivity : AppCompatActivity() {
         }
     }
 
-    class myDBHelper(context: Context) : SQLiteOpenHelper(context, "groupDB", null, 1){
+    /*class myDBHelper(context: Context) : SQLiteOpenHelper(context, "groupDB", null, 1){
         override fun onCreate(db: SQLiteDatabase?) {
             db!!.execSQL("CREATE TABLE groupTBL (nickname CHAR(20), email CHAR(30) PRIMARY KEY, passwd CHAR(30));")
         }
@@ -63,6 +63,6 @@ class joinActivity : AppCompatActivity() {
             db!!.execSQL("DROP TABLE IF EXISTS groupTBL")
             onCreate(db)
         }
-    }
+    }*/
 
 }
