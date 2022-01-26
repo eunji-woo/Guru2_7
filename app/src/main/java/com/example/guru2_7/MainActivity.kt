@@ -31,22 +31,39 @@ class MainActivity : AppCompatActivity() {
         LoginButton.setOnClickListener {
             sqlDB = dbManager.readableDatabase
 
-            var cursor_id = sqlDB.rawQuery("SELECT nickname FROM groupTBL", null)
-            var cursor_pw = sqlDB.rawQuery("SELECT passwd FROM groupTBL", null)
+            var cursor = sqlDB.rawQuery("SELECT * FROM groupTBL", null)
 
-            while(cursor_id.moveToNext()){
-                if(cursor_id.getString(0) == idEdittext.text.toString()) {
-                    Toast.makeText(this, "아이디 성공", Toast.LENGTH_SHORT).show()
-
-                    while (cursor_pw.moveToNext()) {
-                        if (cursor_pw.getString(0) == pwEdittext.text.toString()) {
-                            Toast.makeText(this, "비번 성공", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this, NaviActivity::class.java)
-                            startActivity(intent)
-                        }
-                    }
+            while(cursor.moveToNext()) {
+                if (cursor.getString(0) == idEdittext.text.toString() && cursor.getString(2) == pwEdittext.text.toString()) {
+                    Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, NaviActivity::class.java)
+                    startActivity(intent)
+                }
+                else {
+                    Toast.makeText(this, "다시 입력해주세요.", Toast.LENGTH_SHORT).show()
                 }
             }
+
+//            var cursor_id = sqlDB.rawQuery("SELECT nickname FROM groupTBL", null)
+//            var cursor_pw = sqlDB.rawQuery("SELECT passwd FROM groupTBL", null)
+//
+//            while(cursor_id.moveToNext()){
+//                if(cursor_id.getString(0) == idEdittext.text.toString()) {
+//                    while (cursor_pw.moveToNext()) {
+//                        if (cursor_pw.getString(0) == pwEdittext.text.toString()) {
+//                            Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
+//                            val intent = Intent(this, NaviActivity::class.java)
+//                            startActivity(intent)
+//                        }
+//                        else{
+//                            Toast.makeText(this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
+//                        }
+//                    }
+//                }
+//                else{
+//                    Toast.makeText(this, "존재하지 않는 아이디입니다.", Toast.LENGTH_SHORT).show()
+//                }
+//            }
 
         }
 
