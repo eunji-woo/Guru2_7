@@ -54,7 +54,7 @@ class joinActivity : AppCompatActivity() {
         }
     }
 
-    inner class myDBHelper(context: Context) : SQLiteOpenHelper(context, "groupDB", null, 1){
+    class myDBHelper(context: Context) : SQLiteOpenHelper(context, "groupDB", null, 1){
         override fun onCreate(db: SQLiteDatabase?) {
             db!!.execSQL("CREATE TABLE groupTBL (nickname CHAR(20), email CHAR(30) PRIMARY KEY, passwd CHAR(30));")
         }
