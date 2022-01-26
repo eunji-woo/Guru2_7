@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Guru2_7">
-        <activity android:name=".NaviActivity"></activity>
+        <activity android:name=".wfActivity"></activity>
+        <activity android:name=".inActivity" />
+        <activity android:name=".acActivity" />
+        <activity android:name=".NaviActivity" />
         <activity
             android:name=".Navigation"
-            android:label="@string/title_activity_navigation"></activity>
+            android:label="@string/title_activity_navigation" />
         <activity android:name=".joinActivity" />
         <activity android:name=".JoinActivity" />
         <activity
