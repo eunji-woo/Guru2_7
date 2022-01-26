@@ -31,7 +31,7 @@ class joinActivity : AppCompatActivity() {
         join_pwEdittext2 = findViewById(R.id.join_pwEdittext2)
         join_joinButton = findViewById(R.id.join_joinButton)
 
-        dbManager = DBManager(this, "groupDB", null, 1)
+        dbManager = DBManager(this)
 
         join_joinButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
