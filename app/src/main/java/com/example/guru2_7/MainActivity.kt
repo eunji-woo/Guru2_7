@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var idEdittext: EditText
     lateinit var pwEdittext: EditText
 
-    lateinit var myHelper: joinActivity.myDBHelper
+    lateinit var dbManager: DBManager
     lateinit var sqlDB: SQLiteDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,10 +25,7 @@ class MainActivity : AppCompatActivity() {
         pwEdittext=findViewById(R.id.pwEdittext)
         joinButton=findViewById(R.id.joinButton)
 
-        myHelper = joinActivity.myDBHelper(this)
-
-
-        /*DBManager = DBManager(this, "personal", null, 1)*/
+        dbManager = DBManager(this, "groupDB", null, 1)
 
         LoginButton.setOnClickListener {
 
