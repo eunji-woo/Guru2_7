@@ -31,26 +31,12 @@ class MainActivity : AppCompatActivity() {
         LoginButton.setOnClickListener {
             sqlDB = dbManager.readableDatabase
 
-            var cursor = sqlDB.rawQuery("SELECT nickname FROM groupTBL WHERE id = '" + idEdittext + "'", null)
+            var cursor = sqlDB.rawQuery("SELECT nickname FROM groupTBL", null)
 
-            if(cursor.getCount() != 1){
-                //아이디가 틀렸습니다.
-                Toast.makeText(this, "존재하지 않는 아이디입니다.", Toast.LENGTH_SHORT).show()
+            while(cursor.moveToNext()){
+                if(cursor.getString(0) == idEdittext.text.toString())
+                    Toast.makeText(this, "아이디 성공", Toast.LENGTH_SHORT).show()
             }
-
-            /*var sql = "SELECT pw FROM " + dbManager.tableName + " WHERE id = '" + id + "'";
-            cursor = database.rawQuery(sql, null);
-            if(cursor.moveToNext()){
-                if(!pw.equals(cursor.getString(0))){
-                    //비밀번호가 틀렸습니다.
-                    Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
-
-                }else{
-                    //로그인성공
-                    Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
-                }
-            }*/
-
         }
 
         joinButton.setOnClickListener{
