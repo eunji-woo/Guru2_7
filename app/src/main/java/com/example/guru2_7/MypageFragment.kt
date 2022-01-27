@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +31,6 @@ class MypageFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
-
     }
 
     override fun onCreateView(
@@ -38,8 +38,12 @@ class MypageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val intent = Intent(getActivity(), MypageActivity::class.java)
-        startActivity(intent)
+        lateinit var ChangePWbutton : Button
+        lateinit var Billbutton : Button
+        lateinit var Outbutton : Button
+
+        /*val intent = Intent(getActivity(), MypageActivity::class.java)
+        startActivity(intent)*/
         return inflater.inflate(R.layout.fragment_mypage, container, false)
     }
 
