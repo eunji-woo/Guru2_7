@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="place_array">
+        <item>후문</item>
+        <item>정문</item>
+        <item>50주년 기념관</item>
+        <item>제2과학관</item>
+        <item>샬롬하우스</item>
+        <item>학생누리관</item>
+        <item>인문사회관</item>
+        <item>조형예술관</item>
+    </string-array>
+
+    <string-array name="time_array">
+        <item>30분</item>
+        <item>1시간</item>
+        <item>2시간</item>
+    </string-array>
+</resources>
