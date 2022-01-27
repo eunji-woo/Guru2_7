@@ -37,9 +37,9 @@ class MypageFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_mypage, null)
-        val loginButton = view.findViewById<Button>(R.id.ChangePWbutton)
+        val changeButton = view.findViewById<Button>(R.id.ChangePWbutton)
 
-        loginButton.setOnClickListener(object :View.OnClickListener {
+        changeButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(context, ChangeActivity::class.java)
                 startActivity(intent)
