@@ -12,8 +12,6 @@ class inActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var checkBox = CheckBox(this)
-        var checkBox2 = CheckBox(this)
         var dayArray = arrayOf("바삭 닭껍질튀김(쉑쉑시즈닝)(스위트칠리+양파크리미)포함 - 소 4500", "바삭 닭껍질튀김(쉑쉑시즈닝)(스위트칠리+양파크리미)포함 - 대 9500",
             "바삭 닭껍질튀김(스위트칠리소스포함) - 소 4000", "바삭 닭껍질튀김(스위트칠리소스포함) - 대 9000", "치즈볼 4000", "모듬감자튀김 4000",
             "크런치 양파스틱 2500", "칼릭디핑소스 500", "양파크리미소스 500", "스위트칠리소스 500", "콘샐러드(새콤달콤) 2000",

@@ -12,8 +12,6 @@ class wfActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var checkBox = CheckBox(this)
-        var checkBox2 = CheckBox(this)
         var dayArray = arrayOf("애플시나몬와플 3,200", "민트초코와플 4,200", "크런치딸기잼와플 4,000","티라미수와플 4,900","오레오누텔라와플 4,000",
             "바나나누텔라와플 4,500","생딸기누텔라와플 4,900","생딸기듬뿍와플 5,400","생딸기케이크와플 5,400","젤라또와플 4,700","크림젤라또와플 5,200","싸만코젤라또와플 5,500","초코범벅젤라또와플 5,200","오레오누텔라젤라또와플 5,500",
             "블루베리젤라또와플 5,500","베리베리젤라또와플 5,700","생딸기누텔라젤라또와플 5,900","치즈케이크누텔라젤라또와플 5,900",
