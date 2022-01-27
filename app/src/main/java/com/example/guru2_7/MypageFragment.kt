@@ -23,28 +23,31 @@ class MypageFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        lateinit var ChangePWbutton : Button
-        lateinit var Billbutton : Button
-        lateinit var Outbutton : Button
 
-        /*val intent = Intent(getActivity(), MypageActivity::class.java)
-        startActivity(intent)*/
-        return inflater.inflate(R.layout.fragment_mypage, container, false)
+        val view = inflater.inflate(R.layout.fragment_mypage, null)
+        val loginButton = view.findViewById<Button>(R.id.ChangePWbutton)
+
+        loginButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, ChangeActivity::class.java)
+                startActivity(intent)
+                // 다른 액티비티에서 전환할 때
+                // activity?.finish()
+            }
+        })
+        return view
     }
 
     companion object {
