@@ -20,7 +20,7 @@ class MypageActivity : AppCompatActivity() {
         Outbutton = findViewById(R.id.Outbutton)
 
         ChangePWbutton.setOnClickListener{
-            // intent로 회원가입 창으로 이동
+            // 비밀번호 변경 창으로 이동
             val intent = Intent(this, ChangeActivity::class.java)
             startActivity(intent)
         }

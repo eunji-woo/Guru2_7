@@ -12,7 +12,7 @@
         tools:context=".MainActivity">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/acButton"
             android:layout_width="147dp"
             android:layout_height="151dp"
             android:layout_marginStart="32dp"
@@ -23,13 +23,13 @@
             android:backgroundTint="@color/purple_700"
             android:scaleType="fitCenter"
             android:src="@drawable/ac"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton3"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintBottom_toTopOf="@+id/inButton"
+            app:layout_constraintEnd_toStartOf="@+id/wfButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/wfButton"
             android:layout_width="140dp"
             android:layout_height="150dp"
             android:layout_marginTop="33dp"
@@ -42,7 +42,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/inButton"
             android:layout_width="145dp"
             android:layout_height="145dp"
             android:layout_marginStart="34dp"
@@ -52,12 +52,12 @@
             android:backgroundTint="@color/purple_700"
             android:scaleType="fitCenter"
             android:src="@drawable/in"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton5"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+            app:layout_constraintBottom_toTopOf="@+id/mongButton"
+            app:layout_constraintEnd_toStartOf="@+id/kimButton"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageButton8"
+            android:id="@+id/etcButton"
             android:layout_width="136dp"
             android:layout_height="152dp"
             android:layout_marginTop="37dp"
@@ -69,10 +69,10 @@
             android:src="@drawable/restaurant2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+            app:layout_constraintTop_toBottomOf="@+id/kimButton" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/kimButton"
             android:layout_width="145dp"
             android:layout_height="150dp"
             android:layout_marginTop="64dp"
@@ -81,10 +81,10 @@
             android:scaleType="fitCenter"
             android:src="@drawable/kim"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/wfButton" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/mongButton"
             android:layout_width="145dp"
             android:layout_height="145dp"
             android:layout_marginStart="34dp"
@@ -94,7 +94,7 @@
             android:scaleType="fitCenter"
             android:src="@drawable/mong"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+            app:layout_constraintEnd_toStartOf="@+id/etcButton"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

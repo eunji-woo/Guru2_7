@@ -43,8 +43,6 @@ class MypageFragment : Fragment() {
             override fun onClick(v: View?) {
                 val intent = Intent(context, ChangeActivity::class.java)
                 startActivity(intent)
-                // 다른 액티비티에서 전환할 때
-                // activity?.finish()
             }
         })
         return view

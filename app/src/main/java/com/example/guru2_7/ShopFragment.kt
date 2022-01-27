@@ -1,10 +1,12 @@
 package com.example.guru2_7
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,49 @@ class ShopFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shop, container, false)
+        val view = inflater.inflate(R.layout.fragment_shop, null)
+        val acButton = view.findViewById<ImageButton>(R.id.acButton)
+        val inButton = view.findViewById<ImageButton>(R.id.inButton)
+        val kimButton = view.findViewById<ImageButton>(R.id.kimButton)
+        val mongButton = view.findViewById<ImageButton>(R.id.mongButton)
+        val wfButton = view.findViewById<ImageButton>(R.id.wfButton)
+
+        acButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, acActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+        inButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, inActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+        kimButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, kimActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+        mongButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, mongActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+        wfButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, wfActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+        return view
     }
 
     companion object {
