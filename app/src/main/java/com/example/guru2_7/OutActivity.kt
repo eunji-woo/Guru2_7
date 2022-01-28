@@ -11,8 +11,7 @@ import android.widget.Toast
 class OutActivity : AppCompatActivity() {
 
     lateinit var dbManager: DBManager
-    lateinit var sqlDB1: SQLiteDatabase
-    lateinit var sqlDB2: SQLiteDatabase
+    lateinit var sqlDB: SQLiteDatabase
     lateinit var Outpw: TextView
     lateinit var OutButton2: Button
     lateinit var Outid:TextView
@@ -29,15 +28,14 @@ class OutActivity : AppCompatActivity() {
 
         OutButton2.setOnClickListener {
 
-            sqlDB1 = dbManager.readableDatabase
-            sqlDB2 = dbManager.writableDatabase
+            sqlDB = dbManager.writableDatabase
 
-            var cursor = sqlDB1.rawQuery("SELECT * FROM groupTBL", null)
+            var cursor = sqlDB.rawQuery("SELECT * FROM groupTBL", null)
 
             while(cursor.moveToNext()) {
                 if (cursor.getString(1) == Outid.text.toString() && cursor.getString(2) == Outpw.text.toString()) {
-                    sqlDB2.execSQL("DELETE FROM groupTBL WHERE email = '" + Outid.text.toString()+ "';")
-                    sqlDB2.close()
+                    sqlDB.execSQL("DELETE FROM groupTBL WHERE email = '" + Outid.text.toString()+ "';")
+                    sqlDB.close()
                     Toast.makeText(this, "탈퇴되었습니다.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
