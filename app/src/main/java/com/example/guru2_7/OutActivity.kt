@@ -37,6 +37,8 @@ class OutActivity : AppCompatActivity() {
                     sqlDB2.execSQL("DELETE FROM groupTBL WHERE nickname = '" + Outname.text.toString()+ "';")
                     sqlDB2.close()
                     Toast.makeText(this, "탈퇴되었습니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 }
                 else {
                     Toast.makeText(this, "다시 입력해주세요.", Toast.LENGTH_SHORT).show()
