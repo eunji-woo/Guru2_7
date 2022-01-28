@@ -52,35 +52,35 @@ class MenuActivity : AppCompatActivity() {
             for (i in in_array.indices){
                 val checkBox = CheckBox(this)
                 checkBox.text = in_array[i]
-                scrollLayout.addView(checkBox)
+                scrollLayout.addView(checkBox, 0)
             }
         }
         else if (shop_name == "wf"){
             for (i in wf_array.indices){
                 val checkBox = CheckBox(this)
                 checkBox.text = wf_array[i]
-                scrollLayout.addView(checkBox)
+                scrollLayout.addView(checkBox, 0)
             }
         }
         else if (shop_name == "mong"){
             for (i in mong_array.indices){
                 val checkBox = CheckBox(this)
                 checkBox.text = mong_array[i]
-                scrollLayout.addView(checkBox)
+                scrollLayout.addView(checkBox,0)
             }
         }
         else if (shop_name == "ac"){
             for (i in ac_array.indices){
                 val checkBox = CheckBox(this)
                 checkBox.text = ac_array[i]
-                scrollLayout.addView(checkBox)
+                scrollLayout.addView(checkBox, 0)
             }
         }
         else if (shop_name == "kim"){
             for (i in kim_array.indices){
                 val checkBox = CheckBox(this)
                 checkBox.text = kim_array[i]
-                scrollLayout.addView(checkBox)
+                scrollLayout.addView(checkBox, 0)
             }
         }
 
