@@ -1,5 +1,6 @@
 package com.example.guru2_7
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,7 @@ import android.widget.*
 class MenuActivity : AppCompatActivity() {
 
     lateinit var scrollLayout: LinearLayout
+    lateinit var orderButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +19,7 @@ class MenuActivity : AppCompatActivity() {
         var shop_name = intent.getStringExtra("shop_name")
         val spinner_wfp = findViewById<Spinner>(R.id.spinner_wfp)
         val spinner_wft = findViewById<Spinner>(R.id.spinner_wft)
+        val orderButton = findViewById<Button>(R.id.orderButton)
 
         scrollLayout = findViewById(R.id.scrollLayout)
 
@@ -80,8 +83,8 @@ class MenuActivity : AppCompatActivity() {
                 scrollLayout.addView(checkBox, 0)
             }
         }
-        else if (shop_name == "kim"){
-            for (i in kim_array.indices){
+        else if (shop_name == "kim") {
+            for (i in kim_array.indices) {
                 val checkBox = CheckBox(this)
                 checkBox.text = kim_array[i]
                 scrollLayout.addView(checkBox, 0)
@@ -133,6 +136,12 @@ class MenuActivity : AppCompatActivity() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 Log.d("MyTag", "아무것도 선택안됨")
             }
+        }
+
+        orderButton.setOnClickListener {
+            // 주문현황으로 이동
+            val intent = Intent(this, Order1_Activity::class.java)
+            startActivity(intent)
         }
     }
 }
