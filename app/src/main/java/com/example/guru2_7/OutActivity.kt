@@ -15,7 +15,7 @@ class OutActivity : AppCompatActivity() {
     lateinit var sqlDB2: SQLiteDatabase
     lateinit var Outpw: TextView
     lateinit var OutButton2: Button
-    lateinit var Outname:TextView
+    lateinit var Outid:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,9 @@ class OutActivity : AppCompatActivity() {
 
         OutButton2=findViewById(R.id.OutButton2)
         Outpw=findViewById(R.id.Outpw)
-        Outname=findViewById(R.id.Outname)
+        Outid=findViewById(R.id.Outid)
+
+        dbManager = DBManager(this)
 
         OutButton2.setOnClickListener {
 
@@ -33,8 +35,8 @@ class OutActivity : AppCompatActivity() {
             var cursor = sqlDB1.rawQuery("SELECT * FROM groupTBL", null)
 
             while(cursor.moveToNext()) {
-                if (cursor.getString(0) == Outname.text.toString() && cursor.getString(2) == Outpw.text.toString()) {
-                    sqlDB2.execSQL("DELETE FROM groupTBL WHERE nickname = '" + Outname.text.toString()+ "';")
+                if (cursor.getString(1) == Outid.text.toString() && cursor.getString(2) == Outpw.text.toString()) {
+                    sqlDB2.execSQL("DELETE FROM groupTBL WHERE email = '" + Outid.text.toString()+ "';")
                     sqlDB2.close()
                     Toast.makeText(this, "탈퇴되었습니다.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)

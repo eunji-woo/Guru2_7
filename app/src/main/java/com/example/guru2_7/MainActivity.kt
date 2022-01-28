@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             var cursor = sqlDB.rawQuery("SELECT * FROM groupTBL", null)
 
             while(cursor.moveToNext()) {
-                if (cursor.getString(0) == idEdittext.text.toString() && cursor.getString(2) == pwEdittext.text.toString()) {
+                if (cursor.getString(1) == idEdittext.text.toString() && cursor.getString(2) == pwEdittext.text.toString()) {
                     Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, NaviActivity::class.java)
                     startActivity(intent)

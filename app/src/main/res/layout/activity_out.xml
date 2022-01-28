@@ -36,12 +36,12 @@
         app:layout_constraintVertical_bias="0.596" />
 
     <EditText
-        android:id="@+id/Outname"
+        android:id="@+id/Outid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="ID(email)"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

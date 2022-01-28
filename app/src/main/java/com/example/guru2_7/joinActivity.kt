@@ -12,7 +12,7 @@ import android.widget.Toast
 
 class joinActivity : AppCompatActivity() {
 
-    lateinit var join_idEdittext: EditText
+    lateinit var join_nameEdittext: EditText
     lateinit var join_emailEdittext: EditText
     lateinit var join_pwEdittext: EditText
     lateinit var join_pwEdittext2: EditText
@@ -25,7 +25,7 @@ class joinActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
 
-        join_idEdittext = findViewById(R.id.join_idEdittext)
+        join_nameEdittext = findViewById(R.id.join_nameEdittext)
         join_emailEdittext = findViewById(R.id.join_emailEdittext)
         join_pwEdittext = findViewById(R.id.join_pwEdittext)
         join_pwEdittext2 = findViewById(R.id.join_pwEdittext2)
@@ -36,12 +36,12 @@ class joinActivity : AppCompatActivity() {
         join_joinButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
 
-            if(join_idEdittext.text.isEmpty() || join_emailEdittext.text.isEmpty() || join_pwEdittext.text.isEmpty() || join_pwEdittext2.text.isEmpty()){ // 정보 입력 제대로 안한 경우 제대로 입력하라는 toast 메시지
+            if(join_nameEdittext.text.isEmpty() || join_emailEdittext.text.isEmpty() || join_pwEdittext.text.isEmpty() || join_pwEdittext2.text.isEmpty()){ // 정보 입력 제대로 안한 경우 제대로 입력하라는 toast 메시지
                 Toast.makeText(applicationContext, "정보를 모두 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
             else{ // 정보 다 제대로 입력해서 로그인 창으로 intent
                 if(join_pwEdittext.text.toString() == join_pwEdittext2.text.toString()){
-                    sqlDB.execSQL("INSERT INTO groupTBL VALUES ('"+join_idEdittext.text.toString()+"','"+join_emailEdittext.text.toString()+"','"+join_pwEdittext.text.toString() +"');")
+                    sqlDB.execSQL("INSERT INTO groupTBL VALUES ('"+join_nameEdittext.text.toString()+"','"+join_emailEdittext.text.toString()+"','"+join_pwEdittext.text.toString() +"');")
                     sqlDB.close()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent) // 회원가입 성공시 로그인 화면으로 intent
