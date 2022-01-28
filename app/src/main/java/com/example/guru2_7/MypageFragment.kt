@@ -1,6 +1,8 @@
 package com.example.guru2_7
 
+import android.content.Context
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -38,13 +40,28 @@ class MypageFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_mypage, null)
         val changeButton = view.findViewById<Button>(R.id.ChangePWbutton)
+        val OutButton = view.findViewById<Button>(R.id.Outbutton)
+        lateinit var dbManager: DBManager
+        lateinit var sqlDB: SQLiteDatabase
 
         changeButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
+                //비밀번호 변경창으로 이동
                 val intent = Intent(context, ChangeActivity::class.java)
                 startActivity(intent)
             }
         })
+
+        OutButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                //탈퇴창으로 이동
+                val intent = Intent(context, OutActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+
+
         return view
     }
 
