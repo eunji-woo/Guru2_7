@@ -68,7 +68,4 @@
             android:text="주문완료"
             android:textSize="24sp"/>
     </LinearLayout>
-
-
 </LinearLayout>
-    tools:context=".Order1_Activity"/>
