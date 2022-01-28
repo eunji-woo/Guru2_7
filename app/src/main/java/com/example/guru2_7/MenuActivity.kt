@@ -2,6 +2,7 @@ package com.example.guru2_7
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 
@@ -92,26 +93,46 @@ class MenuActivity : AppCompatActivity() {
 
         val Adapter_place = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,place)
         spinner_wfp.adapter = Adapter_place
-//        spinner_wfp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//                TODO("Not yet implemented")
-//            }
-//
-//            override fun onNothingSelected(p0: AdapterView<*>?) {
-//                TODO("Not yet implemented")
-//            }
-//        }
+        spinner_wfp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                when (position) {
+                    0 -> {
+                        Log.d("MyTag", "0번 선택") //test 용, 나중에 db 구현하면 item 선택될때 각각 어떻게 될지 구현하면됨
+                    }
+                    1 -> {
+                        Log.d("MyTag", "1번 선택")
+                    }
+                    else -> {
+                        Log.d("MyTag", "0,1말고 다른거 선택")
+                    }
+                }
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                Log.d("MyTag", "아무것도 선택안됨")
+            }
+        }
 
         val Adapter_time = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,time)
         spinner_wft.adapter = Adapter_time
-//        spinner_wft.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//                TODO("Not yet implemented")
-//            }
-//
-//            override fun onNothingSelected(p0: AdapterView<*>?) {
-//                TODO("Not yet implemented")
-//            }
-//        }
+        spinner_wft.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                when (position) {
+                    0 -> {
+                        Log.d("MyTag", "0번 선택") //test 용, 나중에 db 구현하면 item 선택될때 각각 어떻게 될지 구현하면됨
+                    }
+                    1 -> {
+                        Log.d("MyTag", "1번 선택")
+                    }
+                    else -> {
+                        Log.d("MyTag", "0,1말고 다른거 선택")
+                    }
+                }
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                Log.d("MyTag", "아무것도 선택안됨")
+            }
+        }
     }
 }
