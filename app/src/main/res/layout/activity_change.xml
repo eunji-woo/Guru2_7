@@ -39,6 +39,7 @@
         android:layout_height="wrap_content" />
 
     <Button
+        android:id="@+id/ChangeOkButton"
         android:layout_width="363dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
