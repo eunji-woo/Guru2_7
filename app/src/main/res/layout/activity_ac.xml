@@ -88,6 +88,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="10" />
+
+            <Button
+                android:id="@+id/okButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
