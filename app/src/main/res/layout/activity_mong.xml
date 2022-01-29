@@ -42,7 +42,7 @@
                 android:id="@+id/mongCheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="훈제치킨라이스\n5,500"
+                android:text="소고기라이스\n5,500"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
@@ -51,7 +51,7 @@
                 android:id="@+id/mongCheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="감자튀김\n2,500"
+                android:text="치킨감자\n5,500"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="178dp" />
@@ -60,7 +60,7 @@
                 android:id="@+id/mongCheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="새우튀김\n3,000"
+                android:text="스킨칩스감자\n6,000"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="113dp" />
@@ -96,7 +96,7 @@
                 android:id="@+id/mongCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="코트라베이스커피\n2,000"
+                android:text="콘트라베이스커피\n2,000"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
         </LinearLayout>
     </ScrollView>

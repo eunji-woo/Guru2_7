@@ -28,7 +28,7 @@
                 android:id="@+id/acCheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="매콤알밥\n5,000"
+                android:text="카레알밥\n5,200"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
