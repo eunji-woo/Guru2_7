@@ -17,87 +17,199 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/acCheckBox1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="순한알밥\n4,600"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac1" />
+                <CheckBox
+                    android:id="@+id/acCheckBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="순한알밥\n4,600"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/acCheckBox2"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="카레알밥\n5,200"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac2" />
+                <CheckBox
+                    android:id="@+id/acCheckBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="카레알밥\n5,200"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/acCheckBox3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="진매알밥\n5,500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <CheckBox
-                android:id="@+id/acCheckBox4"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="마늘듬뿍매콤제육알밥\n6,300"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="446dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac2" />
+                <CheckBox
+                    android:id="@+id/acCheckBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="진매알밥\n5,500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/acCheckBox5"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="불고기알밥\n6,500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="81dp"
-                tools:layout_editor_absoluteY="178dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac4" />
+                <CheckBox
+                    android:id="@+id/acCheckBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="마늘듬뿍매콤제육알밥\n6,300"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/acCheckBox6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="그릴드치킨알밥\n6,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="83dp"
-                tools:layout_editor_absoluteY="113dp" />
 
-            <CheckBox
-                android:id="@+id/acCheckBox7"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="짜장알밥\n5,800"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="522dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac5" />
+                <CheckBox
+                    android:id="@+id/acCheckBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="불고기알밥\n6,500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/acCheckBox8"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="갈릭오밥\n6,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="85dp"
-                tools:layout_editor_absoluteY="238dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac6" />
+                <CheckBox
+                    android:id="@+id/acCheckBox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="그릴드치킨알밥\n6,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/acCheckBox9"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="355ml 스프라이트\n1,500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="83dp"
-                tools:layout_editor_absoluteY="306dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac7" />
+                <CheckBox
+                    android:id="@+id/acCheckBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="짜장알밥\n5,800"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/acCheckBox10"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="355ml 스파클링청포도\n1,500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac8" />
+                <CheckBox
+                    android:id="@+id/acCheckBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="갈릭오밥\n6,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac4" />
+                <CheckBox
+                    android:id="@+id/acCheckBox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="355ml 스프라이트\n1,500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/acImage10"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ac4" />
+                <CheckBox
+                    android:id="@+id/acCheckBox10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="355ml 스파클링청포도\n1,500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

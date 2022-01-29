@@ -17,87 +17,196 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <CheckBox
-                android:id="@+id/kimCheckBox1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="김가네 김밥\n3800"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim1" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="김가네 김밥\n3800"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox2"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="참치마요김밥\n4800"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim2" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="참치마요김밥\n4800"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox3"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="소고기김밥\n4800"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim3" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="소고기김밥\n4800"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox4"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="유부우동\n6000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="446dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim4" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="유부우동\n6000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox5"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="왕새우튀김우동\n7500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="81dp"
-                tools:layout_editor_absoluteY="178dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim5" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="왕새우튀김우동\n7500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox6"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="물냉면\n7000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="83dp"
-                tools:layout_editor_absoluteY="113dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim6" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="물냉면\n7000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox7"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="비빔냉면\n7000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="522dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim7" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="비빔냉면\n7000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox8"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="치즈떡볶이\n6000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="85dp"
-                tools:layout_editor_absoluteY="238dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim8" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="치즈떡볶이\n6000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox9"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="치킨마요덮밥\n6000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="83dp"
-                tools:layout_editor_absoluteY="306dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim9" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="치킨마요덮밥\n6000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/kimcheckBox10"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="치즈돈까스\n8500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/kimImage10"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/kim10" />
+                <CheckBox
+                    android:id="@+id/kimCheckBox10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="치즈돈까스\n8500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

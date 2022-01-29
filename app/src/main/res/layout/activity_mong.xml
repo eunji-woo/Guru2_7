@@ -17,87 +17,204 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <CheckBox
-                android:id="@+id/mongCheckBox1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="치킨라이스\n5,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong1" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="치킨라이스\n5,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/mongCheckBox2"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="스킨칩스라이스\n5,500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong2" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="스킨칩스라이스\n5,500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/mongCheckBox3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="소고기감자\n6,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <CheckBox
-                android:id="@+id/mongCheckBox4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="소고기라이스\n5,500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="446dp" />
 
-            <CheckBox
-                android:id="@+id/mongCheckBox5"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="치킨감자\n5,500"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="81dp"
-                tools:layout_editor_absoluteY="178dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong3" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="소고기감자\n6,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/mongCheckBox6"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="스킨칩스감자\n6,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="83dp"
-                tools:layout_editor_absoluteY="113dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong4" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="소고기라이스\n5,500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/mongCheckBox7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="치킨윙\n3,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="522dp" />
 
-            <CheckBox
-                android:id="@+id/mongCheckBox8"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="콜라\n1,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="85dp"
-                tools:layout_editor_absoluteY="238dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong5" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="치킨감자\n5,500"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/mongCheckBox9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="델몬트 에이드\n1,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:layout_editor_absoluteX="83dp"
-                tools:layout_editor_absoluteY="306dp" />
 
-            <CheckBox
-                android:id="@+id/mongCheckBox10"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="콘트라베이스커피\n2,000"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong6" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="스킨칩스감자\n6,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong6" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="치킨윙\n3,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong1" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="콜라\n1,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong1" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="델몬트 에이드\n1,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="30px">
+                <ImageView
+                    android:id="@+id/mongImage10"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/mong1" />
+                <CheckBox
+                    android:id="@+id/mongCheckBox10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="콘트라베이스커피\n2,000"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
