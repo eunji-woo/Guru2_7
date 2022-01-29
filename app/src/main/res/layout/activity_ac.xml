@@ -21,25 +21,29 @@
                 android:id="@+id/acCheckBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="순한알밥 4,600" />
+                android:text="순한알밥\n4,600"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
                 android:id="@+id/acCheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="매콤알밥 5,000" />
+                android:text="매콤알밥\n5,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
                 android:id="@+id/acCheckBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="진매알밥 5,500" />
+                android:text="진매알밥\n5,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
                 android:id="@+id/acCheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="마늘듬뿍매콤제육알밥 6,300"
+                android:text="마늘듬뿍매콤제육알밥\n6,300"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
 
@@ -47,7 +51,8 @@
                 android:id="@+id/acCheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="불고기알밥 6,500"
+                android:text="불고기알밥\n6,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="178dp" />
 
@@ -55,7 +60,8 @@
                 android:id="@+id/acCheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="그릴드치킨알밥 6,000"
+                android:text="그릴드치킨알밥\n6,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="113dp" />
 
@@ -63,7 +69,8 @@
                 android:id="@+id/acCheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="짜장알밥 5,800"
+                android:text="짜장알밥\n5,800"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="522dp" />
 
@@ -71,7 +78,8 @@
                 android:id="@+id/acCheckBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="갈릭오밥 6,000"
+                android:text="갈릭오밥\n6,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="238dp" />
 
@@ -79,7 +87,8 @@
                 android:id="@+id/acCheckBox9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="355ml 스프라이트 1,500"
+                android:text="355ml 스프라이트\n1,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="306dp" />
 
@@ -87,7 +96,8 @@
                 android:id="@+id/acCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="355ml 스파클링청포도 1,500" />
+                android:text="355ml 스파클링청포도\n1,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,25 +21,28 @@
                 android:id="@+id/acCheckBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="바삭 닭껍질튀김(쉑쉑시즈닝)(스위트칠리+양파크리미)포함 - 소 4500" />
+                android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 소\n4,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
                 android:id="@+id/acCheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="바삭 닭껍질튀김(쉑쉑시즈닝)(스위트칠리+양파크리미)포함 - 대 9500" />
+                android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 대\n9,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
                 android:id="@+id/acCheckBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 소 4000" />
+                android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 소\n4,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
                 android:id="@+id/acCheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 대 9000"
+                android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 대\n9,000"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
 
@@ -47,7 +50,8 @@
                 android:id="@+id/acCheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="튀긴마늘 슬라이스 500"
+                android:text="튀긴마늘 슬라이스\n500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="178dp" />
 
@@ -55,7 +59,8 @@
                 android:id="@+id/acCheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="치즈볼 4000"
+                android:text="치즈볼\n4,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="113dp" />
 
@@ -63,7 +68,8 @@
                 android:id="@+id/acCheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="모듬감자튀김 4000"
+                android:text="모듬감자튀김\n4,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="522dp" />
 
@@ -71,7 +77,8 @@
                 android:id="@+id/acCheckBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="크런치 양파스틱 2500"
+                android:text="크런치 양파스틱\n2,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="238dp" />
 
@@ -79,7 +86,8 @@
                 android:id="@+id/acCheckBox9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="콘샐러드(새콤달콤) 2000"
+                android:text="콘샐러드(새콤달콤)\n2,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="306dp" />
 
@@ -87,7 +95,8 @@
                 android:id="@+id/acCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="콜라 1500" />
+                android:text="콜라\n1,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
