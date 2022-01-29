@@ -46,7 +46,7 @@ class acActivity : AppCompatActivity() {
         acCheckBox9 = findViewById(R.id.acCheckBox9)
         acCheckBox10 = findViewById(R.id.acCheckBox10)
 
-        okButton = findViewById<Button>(R.id.okButton)
+//        okButton = findViewById<Button>(R.id.okButton)
 
         var menu1:String = ""
         var menu2:String = ""
@@ -66,16 +66,16 @@ class acActivity : AppCompatActivity() {
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
                 when(buttonView.id){
-                    R.id.acCheckBox1 ->  menu1 = "메뉴1"
-                    R.id.acCheckBox2 ->  menu2 = "메뉴2"
-                    R.id.acCheckBox3 ->  menu3 = "메뉴3"
-                    R.id.acCheckBox4 ->  menu4 = "메뉴4"
-                    R.id.acCheckBox5 ->  menu5 = "메뉴5"
-                    R.id.acCheckBox6 ->  menu6 = "메뉴6"
-                    R.id.acCheckBox7 ->  menu7 = "메뉴7"
-                    R.id.acCheckBox8 ->  menu8 = "메뉴8"
-                    R.id.acCheckBox9 ->  menu9 = "메뉴9"
-                    R.id.acCheckBox10 ->  menu10 = "메뉴10"
+                    R.id.acCheckBox1 ->  menu1 = acCheckBox1.text.toString()
+                    R.id.acCheckBox2 ->  menu2 = acCheckBox2.text.toString()
+                    R.id.acCheckBox3 ->  menu3 = acCheckBox3.text.toString()
+                    R.id.acCheckBox4 ->  menu4 = acCheckBox4.text.toString()
+                    R.id.acCheckBox5 ->  menu5 = acCheckBox5.text.toString()
+                    R.id.acCheckBox6 ->  menu6 = acCheckBox6.text.toString()
+                    R.id.acCheckBox7 ->  menu7 = acCheckBox7.text.toString()
+                    R.id.acCheckBox8 ->  menu8 = acCheckBox8.text.toString()
+                    R.id.acCheckBox9 ->  menu9 = acCheckBox9.text.toString()
+                    R.id.acCheckBox10 ->  menu10 = acCheckBox10.text.toString()
                 }
             }
             else { Log.d("test_eunji", "해제")}
@@ -92,12 +92,12 @@ class acActivity : AppCompatActivity() {
         acCheckBox9.setOnCheckedChangeListener(listener)
         acCheckBox10.setOnCheckedChangeListener(listener)
 
-        okButton.setOnClickListener {
-            sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
-            val intent = Intent(this, Order1_Activity::class.java)
-            startActivity(intent)
-        }
+//        okButton.setOnClickListener {
+//            sqlDB = dbManager.writableDatabase
+//            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
+//            val intent = Intent(this, Order1_Activity::class.java)
+//            startActivity(intent)
+//        }
 
         sqlDB.close()
 
