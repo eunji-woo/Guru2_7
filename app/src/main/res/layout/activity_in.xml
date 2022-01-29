@@ -144,7 +144,7 @@
                     android:id="@+id/inImage7"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    app:srcCompat="@drawable/in7" />
+                    app:srcCompat="@drawable/restaurant2" />
                 <CheckBox
                     android:id="@+id/inCheckBox7"
                     android:layout_width="match_parent"
