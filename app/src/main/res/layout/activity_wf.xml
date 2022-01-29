@@ -21,73 +21,83 @@
                 android:id="@+id/wfCheckBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="애플시나몬와플\n3,200"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
-                android:id="@+id/checkBox42"
+                android:id="@+id/wfcheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="민트초코와플\n4,200"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
-                android:id="@+id/checkBox43"
+                android:id="@+id/wfcheckBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="크런치딸기잼와플\n4,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
-                android:id="@+id/checkBox44"
+                android:id="@+id/wfcheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="생딸기범벅젤라또와플\n5,700"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
 
             <CheckBox
-                android:id="@+id/checkBox45"
+                android:id="@+id/wfcheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="블루베리범벅젤라또와플\n5,500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="178dp" />
 
             <CheckBox
-                android:id="@+id/checkBox46"
+                android:id="@+id/wfcheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="오레오젤라또컵\n4,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="113dp" />
 
             <CheckBox
-                android:id="@+id/checkBox47"
+                android:id="@+id/wfcheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="치즈케이크젤라또컵\n5,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="522dp" />
 
             <CheckBox
-                android:id="@+id/checkBox48"
+                android:id="@+id/wfcheckBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="아메리카노\n3,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="238dp" />
 
             <CheckBox
-                android:id="@+id/checkBox49"
+                android:id="@+id/wfcheckBox9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="카페라떼\n3,800"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="306dp" />
 
             <CheckBox
-                android:id="@+id/wfCheckBox8"
+                android:id="@+id/wfCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="바닐라라떼\n4,300"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,73 +21,83 @@
                 android:id="@+id/kimCheckBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="김가네 김밥\n3800"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
-                android:id="@+id/checkBox22"
+                android:id="@+id/kimcheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="참치마요김밥\n4800"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
-                android:id="@+id/checkBox23"
+                android:id="@+id/kimcheckBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="소고기김밥\n4800"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <CheckBox
-                android:id="@+id/checkBox24"
+                android:id="@+id/kimcheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="유부우동\n6000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
 
             <CheckBox
-                android:id="@+id/checkBox25"
+                android:id="@+id/kimcheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="왕새우튀김우동\n7500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="178dp" />
 
             <CheckBox
-                android:id="@+id/checkBox26"
+                android:id="@+id/kimcheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="물냉면\n7000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="113dp" />
 
             <CheckBox
-                android:id="@+id/checkBox27"
+                android:id="@+id/kimcheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="비빔냉면\n7000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="522dp" />
 
             <CheckBox
-                android:id="@+id/checkBox28"
+                android:id="@+id/kimcheckBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="치즈떡볶이\n6000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="238dp" />
 
             <CheckBox
-                android:id="@+id/checkBox29"
+                android:id="@+id/kimcheckBox9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="치킨마요덮밥\n6000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="306dp" />
 
             <CheckBox
-                android:id="@+id/checkBox30"
+                android:id="@+id/kimcheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="치즈돈까스\n8500"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
