@@ -44,8 +44,8 @@ class ShopFragment : Fragment() {
 
         acButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
-                val intent = Intent(context, MenuActivity::class.java)
-                intent.putExtra("shop_name", "ac")
+                val intent = Intent(context, acActivity::class.java)
+                /*intent.putExtra("shop_name", "ac")*/
                 startActivity(intent)
             }
         })
