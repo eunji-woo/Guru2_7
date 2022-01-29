@@ -29,7 +29,7 @@ class wfActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ac)
+        setContentView(R.layout.activity_wf)
 
         dbManager = wfDBManager(this)
         sqlDB = dbManager.writableDatabase

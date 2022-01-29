@@ -52,32 +52,32 @@ class ShopFragment : Fragment() {
 
         inButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
-                val intent = Intent(context, MenuActivity::class.java)
-                intent.putExtra("shop_name", "in")
+                val intent = Intent(context, inActivity::class.java)
+//                intent.putExtra("shop_name", "in")
                 startActivity(intent)
             }
         })
 
         kimButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
-                val intent = Intent(context, MenuActivity::class.java)
-                intent.putExtra("shop_name", "kim")
+                val intent = Intent(context, kimActivity::class.java)
+//                intent.putExtra("shop_name", "kim")
                 startActivity(intent)
             }
         })
 
         mongButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
-                val intent = Intent(context, MenuActivity::class.java)
-                intent.putExtra("shop_name", "mong")
+                val intent = Intent(context, mongActivity::class.java)
+//                intent.putExtra("shop_name", "mong")
                 startActivity(intent)
             }
         })
 
         wfButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
-                val intent = Intent(context, MenuActivity::class.java)
-                intent.putExtra("shop_name", "wf")
+                val intent = Intent(context, wfActivity::class.java)
+//                intent.putExtra("shop_name", "wf")
                 startActivity(intent)
             }
         })

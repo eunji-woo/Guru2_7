@@ -29,7 +29,7 @@ class kimActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ac)
+        setContentView(R.layout.activity_kim)
 
         dbManager = kimDBManager(this)
         sqlDB = dbManager.writableDatabase

@@ -29,7 +29,7 @@ class mongActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ac)
+        setContentView(R.layout.activity_mong)
 
         dbManager = mongDBManager(this)
         sqlDB = dbManager.writableDatabase
