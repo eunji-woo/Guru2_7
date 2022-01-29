@@ -24,19 +24,19 @@
                 android:text="CheckBox" />
 
             <CheckBox
-                android:id="@+id/checkBox32"
+                android:id="@+id/mongCheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox" />
 
             <CheckBox
-                android:id="@+id/checkBox33"
+                android:id="@+id/mongCheckBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox" />
 
             <CheckBox
-                android:id="@+id/checkBox34"
+                android:id="@+id/mongCheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox"
@@ -44,7 +44,7 @@
                 tools:layout_editor_absoluteY="446dp" />
 
             <CheckBox
-                android:id="@+id/checkBox35"
+                android:id="@+id/mongCheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox"
@@ -52,7 +52,7 @@
                 tools:layout_editor_absoluteY="178dp" />
 
             <CheckBox
-                android:id="@+id/checkBox36"
+                android:id="@+id/mongCheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox"
@@ -60,7 +60,7 @@
                 tools:layout_editor_absoluteY="113dp" />
 
             <CheckBox
-                android:id="@+id/checkBox37"
+                android:id="@+id/mongCheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox"
@@ -68,7 +68,7 @@
                 tools:layout_editor_absoluteY="522dp" />
 
             <CheckBox
-                android:id="@+id/checkBox38"
+                android:id="@+id/mongCheckBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox"
@@ -76,7 +76,7 @@
                 tools:layout_editor_absoluteY="238dp" />
 
             <CheckBox
-                android:id="@+id/checkBox39"
+                android:id="@+id/mongCheckBox9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox"
@@ -84,7 +84,7 @@
                 tools:layout_editor_absoluteY="306dp" />
 
             <CheckBox
-                android:id="@+id/checkBox40"
+                android:id="@+id/mongCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckBox" />
