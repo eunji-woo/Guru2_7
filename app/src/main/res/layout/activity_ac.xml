@@ -21,25 +21,25 @@
                 android:id="@+id/acCheckBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="1" />
 
             <CheckBox
                 android:id="@+id/acCheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="2" />
 
             <CheckBox
                 android:id="@+id/acCheckBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="3" />
 
             <CheckBox
                 android:id="@+id/acCheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="4"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
 
@@ -47,7 +47,7 @@
                 android:id="@+id/acCheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="5"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="178dp" />
 
@@ -55,7 +55,7 @@
                 android:id="@+id/acCheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="6"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="113dp" />
 
@@ -63,7 +63,7 @@
                 android:id="@+id/acCheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="7"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="522dp" />
 
@@ -71,7 +71,7 @@
                 android:id="@+id/acCheckBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="8"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="238dp" />
 
@@ -79,7 +79,7 @@
                 android:id="@+id/acCheckBox9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="9"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="306dp" />
 
@@ -87,7 +87,7 @@
                 android:id="@+id/acCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="10" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
