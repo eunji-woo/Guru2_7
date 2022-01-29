@@ -69,7 +69,7 @@
                 android:id="@+id/wfcheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="치즈케이크젤라또컵\n5,000"
+                android:text="팥젤라또컵\n4,000"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="522dp" />
@@ -96,7 +96,7 @@
                 android:id="@+id/wfCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="바닐라라떼\n4,300"
+                android:text="카라멜라떼\n4,000"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
         </LinearLayout>
     </ScrollView>
