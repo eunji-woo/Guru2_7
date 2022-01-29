@@ -1,11 +1,105 @@
 package com.example.guru2_7
 
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.CompoundButton
 
 class mongActivity : AppCompatActivity() {
+
+    lateinit var dbManager: mongDBManager
+    lateinit var sqlDB: SQLiteDatabase
+
+    lateinit var mongCheckBox1: CheckBox
+    lateinit var mongCheckBox2: CheckBox
+    lateinit var mongCheckBox3: CheckBox
+    lateinit var mongCheckBox4: CheckBox
+    lateinit var mongCheckBox5: CheckBox
+    lateinit var mongCheckBox6: CheckBox
+    lateinit var mongCheckBox7: CheckBox
+    lateinit var mongCheckBox8: CheckBox
+    lateinit var mongCheckBox9: CheckBox
+    lateinit var mongCheckBox10: CheckBox
+
+    lateinit var okButton: Button
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mong)
+        setContentView(R.layout.activity_ac)
+
+        dbManager = mongDBManager(this)
+        sqlDB = dbManager.writableDatabase
+
+        mongCheckBox1 = findViewById(R.id.mongCheckBox1)
+        mongCheckBox2 = findViewById(R.id.mongCheckBox2)
+        mongCheckBox3 = findViewById(R.id.mongCheckBox3)
+        mongCheckBox4 = findViewById(R.id.mongCheckBox4)
+        mongCheckBox5 = findViewById(R.id.mongCheckBox5)
+        mongCheckBox6 = findViewById(R.id.mongCheckBox6)
+        mongCheckBox7 = findViewById(R.id.mongCheckBox7)
+        mongCheckBox8 = findViewById(R.id.mongCheckBox8)
+        mongCheckBox9 = findViewById(R.id.mongCheckBox9)
+        mongCheckBox10 = findViewById(R.id.mongCheckBox10)
+
+//        okButton = findViewById<Button>(R.id.okButton)
+
+        var menu1:String = ""
+        var menu2:String = ""
+        var menu3:String = ""
+        var menu4:String = ""
+        var menu5:String = ""
+        var menu6:String = ""
+        var menu7:String = ""
+        var menu8:String = ""
+        var menu9:String = ""
+        var menu10:String = ""
+
+
+//        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
+
+
+        var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
+            if(isChecked){
+                when(buttonView.id){
+                    R.id.kimCheckBox1 ->  menu1 = mongCheckBox1.text.toString()
+                    R.id.kimCheckBox2 ->  menu2 = mongCheckBox2.text.toString()
+                    R.id.kimCheckBox3 ->  menu3 = mongCheckBox3.text.toString()
+                    R.id.kimCheckBox4 ->  menu4 = mongCheckBox4.text.toString()
+                    R.id.kimCheckBox5 ->  menu5 = mongCheckBox5.text.toString()
+                    R.id.kimCheckBox6 ->  menu6 = mongCheckBox6.text.toString()
+                    R.id.kimCheckBox7 ->  menu7 = mongCheckBox7.text.toString()
+                    R.id.kimCheckBox8 ->  menu8 = mongCheckBox8.text.toString()
+                    R.id.kimCheckBox9 ->  menu9 = mongCheckBox9.text.toString()
+                    R.id.kimCheckBox10 ->  menu10 = mongCheckBox10.text.toString()
+                }
+            }
+            else { Log.d("test_eunji", "해제")}
+        }
+
+        mongCheckBox1.setOnCheckedChangeListener(listener)
+        mongCheckBox2.setOnCheckedChangeListener(listener)
+        mongCheckBox3.setOnCheckedChangeListener(listener)
+        mongCheckBox4.setOnCheckedChangeListener(listener)
+        mongCheckBox5.setOnCheckedChangeListener(listener)
+        mongCheckBox6.setOnCheckedChangeListener(listener)
+        mongCheckBox7.setOnCheckedChangeListener(listener)
+        mongCheckBox8.setOnCheckedChangeListener(listener)
+        mongCheckBox9.setOnCheckedChangeListener(listener)
+        mongCheckBox10.setOnCheckedChangeListener(listener)
+
+//        okButton.setOnClickListener {
+//            sqlDB = dbManager.writableDatabase
+//            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
+//            val intent = Intent(this, Order1_Activity::class.java)
+//            startActivity(intent)
+//        }
+
+        sqlDB.close()
+
+
     }
 }

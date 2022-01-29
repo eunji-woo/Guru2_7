@@ -9,18 +9,21 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="300dp"
-        tools:layout_editor_absoluteY="180dp" >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="63dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin = "30px" >
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage1"
                     android:layout_width="100dp"
@@ -31,65 +34,71 @@
                     android:id="@+id/wfCheckBox1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="애플시나몬와플\n3,200"
                     android:layout_gravity="center"
+                    android:text="애플시나몬와플\n3,200"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf2" />
+
                 <CheckBox
-                    android:id="@+id/wfcheckBox2"
+                    android:id="@+id/wfCheckBox2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="민트초코와플\n4,200"
                     android:layout_gravity="center"
+                    android:text="민트초코와플\n4,200"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage3"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf3" />
+
                 <CheckBox
-                    android:id="@+id/wfcheckBox3"
+                    android:id="@+id/wfCheckBox3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="크런치딸기잼와플\n4,000"
                     android:layout_gravity="center"
+                    android:text="크런치딸기잼와플\n4,000"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage4"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf4" />
+
                 <CheckBox
-                    android:id="@+id/wfcheckBox4"
+                    android:id="@+id/wfCheckBox4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="생딸기범벅젤라또와플\n5,700"
                     android:layout_gravity="center"
+                    android:text="생딸기범벅젤라또와플\n5,700"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     tools:layout_editor_absoluteX="92dp"
                     tools:layout_editor_absoluteY="446dp" />
@@ -98,19 +107,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage5"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf5" />
+
                 <CheckBox
-                    android:id="@+id/wfcheckBox5"
+                    android:id="@+id/wfCheckBox5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="블루베리범벅젤라또와플\n5,500"
                     android:layout_gravity="center"
+                    android:text="블루베리범벅젤라또와플\n5,500"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     tools:layout_editor_absoluteX="81dp"
                     tools:layout_editor_absoluteY="178dp" />
@@ -119,19 +130,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage6"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf6" />
+
                 <CheckBox
-                    android:id="@+id/wfcheckBox6"
+                    android:id="@+id/wfCheckBox6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="오레오젤라또컵\n4,000"
                     android:layout_gravity="center"
+                    android:text="오레오젤라또컵\n4,000"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     tools:layout_editor_absoluteX="83dp"
                     tools:layout_editor_absoluteY="113dp" />
@@ -140,19 +153,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage7"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf7" />
+
                 <CheckBox
-                    android:id="@+id/wfcheckBox7"
+                    android:id="@+id/wfCheckBox7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="팥젤라또컵\n4,000"
                     android:layout_gravity="center"
+                    android:text="팥젤라또컵\n4,000"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     tools:layout_editor_absoluteX="92dp"
                     tools:layout_editor_absoluteY="522dp" />
@@ -161,20 +176,22 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage8"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf8" />
+
                 <CheckBox
-                    android:id="@+id/wfcheckBox8"
+                    android:id="@+id/wfCheckBox8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="아메리카노\n3,000"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:layout_gravity="center"
                     tools:layout_editor_absoluteX="85dp"
                     tools:layout_editor_absoluteY="238dp" />
             </LinearLayout>
@@ -182,19 +199,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage9"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf9" />
+
                 <CheckBox
-                    android:id="@+id/wfcheckBox9"
+                    android:id="@+id/wfCheckBox9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="카페라떼\n3,800"
                     android:layout_gravity="center"
+                    android:text="카페라떼\n3,800"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     tools:layout_editor_absoluteX="83dp"
                     tools:layout_editor_absoluteY="306dp" />
@@ -203,19 +222,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/wfImage10"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/wf10" />
+
                 <CheckBox
                     android:id="@+id/wfCheckBox10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="카라멜라떼\n4,000"
                     android:layout_gravity="center"
+                    android:text="카라멜라떼\n4,000"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             </LinearLayout>
 
