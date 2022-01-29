@@ -21,25 +21,25 @@
                 android:id="@+id/inCheckBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="순한알밥 4,600" />
 
             <CheckBox
                 android:id="@+id/inCheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="매콤알밥 5,000" />
 
             <CheckBox
                 android:id="@+id/inCheckBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="진매알밥 5,500" />
 
             <CheckBox
                 android:id="@+id/inCheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="마늘듬뿍매콤제육알밥 6,300"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
 
@@ -47,7 +47,7 @@
                 android:id="@+id/inCheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="불고기알밥 6,500"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="178dp" />
 
@@ -55,7 +55,7 @@
                 android:id="@+id/inCheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="그릴드치킨알밥 6,000"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="113dp" />
 
@@ -63,7 +63,7 @@
                 android:id="@+id/inCheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="짜장알밥 5,800"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="522dp" />
 
@@ -71,7 +71,7 @@
                 android:id="@+id/inCheckBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="갈릭오밥 6,000"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="238dp" />
 
@@ -79,7 +79,7 @@
                 android:id="@+id/inCheckBox9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="355ml 스프라이트 1,500"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="306dp" />
 
@@ -87,7 +87,7 @@
                 android:id="@+id/inCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="355ml 스파클링청포도 1,500" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

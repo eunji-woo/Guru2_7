@@ -21,25 +21,25 @@
                 android:id="@+id/mongCheckBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="치킨라이스 5000" />
 
             <CheckBox
                 android:id="@+id/mongCheckBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="스킨칩스라이스 5500" />
 
             <CheckBox
                 android:id="@+id/mongCheckBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="소고기감자 6000" />
 
             <CheckBox
                 android:id="@+id/mongCheckBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="훈제치킨라이스 5500"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
 
@@ -47,7 +47,7 @@
                 android:id="@+id/mongCheckBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="감자튀김 2500"
                 tools:layout_editor_absoluteX="81dp"
                 tools:layout_editor_absoluteY="178dp" />
 
@@ -55,7 +55,7 @@
                 android:id="@+id/mongCheckBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="새우튀김 3000"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="113dp" />
 
@@ -63,7 +63,7 @@
                 android:id="@+id/mongCheckBox7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="치킨윙 3000"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="522dp" />
 
@@ -71,7 +71,7 @@
                 android:id="@+id/mongCheckBox8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="콜라 1000"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="238dp" />
 
@@ -79,7 +79,7 @@
                 android:id="@+id/mongCheckBox9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox"
+                android:text="델몬트 에이드 1000"
                 tools:layout_editor_absoluteX="83dp"
                 tools:layout_editor_absoluteY="306dp" />
 
@@ -87,7 +87,7 @@
                 android:id="@+id/mongCheckBox10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:text="코트라베이스커피 2000" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
