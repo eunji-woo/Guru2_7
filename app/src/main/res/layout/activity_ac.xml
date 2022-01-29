@@ -28,7 +28,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac1" />
                 <CheckBox
-                    android:id="@+id/acCheckBox1"
+                    android:id="@+id/inCheckBox1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="순한알밥\n4,600"
@@ -47,7 +47,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac2" />
                 <CheckBox
-                    android:id="@+id/acCheckBox2"
+                    android:id="@+id/inCheckBox2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="카레알밥\n5,200"
@@ -66,7 +66,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac2" />
                 <CheckBox
-                    android:id="@+id/acCheckBox3"
+                    android:id="@+id/inCheckBox3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="진매알밥\n5,500"
@@ -86,7 +86,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac2" />
                 <CheckBox
-                    android:id="@+id/acCheckBox4"
+                    android:id="@+id/inCheckBox4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="마늘듬뿍매콤제육알밥\n6,300"
@@ -105,7 +105,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac5" />
                 <CheckBox
-                    android:id="@+id/acCheckBox5"
+                    android:id="@+id/inCheckBox5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="불고기알밥\n6,500"
@@ -125,7 +125,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac2" />
                 <CheckBox
-                    android:id="@+id/acCheckBox6"
+                    android:id="@+id/inCheckBox6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="그릴드치킨알밥\n6,000"
@@ -145,7 +145,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac7" />
                 <CheckBox
-                    android:id="@+id/acCheckBox7"
+                    android:id="@+id/inCheckBox7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="짜장알밥\n5,800"
@@ -165,7 +165,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac8" />
                 <CheckBox
-                    android:id="@+id/acCheckBox8"
+                    android:id="@+id/inCheckBox8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="갈릭오밥\n6,000"
@@ -185,7 +185,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac8" />
                 <CheckBox
-                    android:id="@+id/acCheckBox9"
+                    android:id="@+id/inCheckBox9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="355ml 스프라이트\n1,500"
@@ -205,7 +205,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/ac2" />
                 <CheckBox
-                    android:id="@+id/acCheckBox10"
+                    android:id="@+id/inCheckBox10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="355ml 스파클링청포도\n1,500"
