@@ -43,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 대\n9,000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="446dp" />
 
