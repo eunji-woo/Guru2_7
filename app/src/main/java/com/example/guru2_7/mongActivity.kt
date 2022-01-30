@@ -35,6 +35,9 @@ class mongActivity : AppCompatActivity() {
         dbManager = mongDBManager(this)
         sqlDB = dbManager.writableDatabase
 
+        var pref = this.getSharedPreferences("user",0)
+        var nickname = pref.getString("nickname", "default").toString()
+
         mongCheckBox1 = findViewById(R.id.mongCheckBox1) //5000
         mongCheckBox2 = findViewById(R.id.mongCheckBox2) //5500
         mongCheckBox3 = findViewById(R.id.mongCheckBox3) //6000
@@ -105,7 +108,7 @@ class mongActivity : AppCompatActivity() {
 
         okButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO mongTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
+            sqlDB.execSQL("INSERT INTO mongTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "mong")
             startActivity(intent)

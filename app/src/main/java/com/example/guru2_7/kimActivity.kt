@@ -35,6 +35,9 @@ class kimActivity : AppCompatActivity() {
         dbManager = kimDBManager(this)
         sqlDB = dbManager.writableDatabase
 
+        var pref = this.getSharedPreferences("user",0)
+        var nickname = pref.getString("nickname", "default").toString()
+
         kimCheckBox1 = findViewById(R.id.kimCheckBox1)
         kimCheckBox2 = findViewById(R.id.kimCheckBox2)
         kimCheckBox3 = findViewById(R.id.kimCheckBox3)
@@ -105,7 +108,7 @@ class kimActivity : AppCompatActivity() {
 
         okButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO kimTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
+            sqlDB.execSQL("INSERT INTO kimTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "kim")
             startActivity(intent)

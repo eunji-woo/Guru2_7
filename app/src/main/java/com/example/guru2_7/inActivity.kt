@@ -35,6 +35,9 @@ class inActivity : AppCompatActivity() {
         dbManager = inDBManager(this)
         sqlDB = dbManager.writableDatabase
 
+        var pref = this.getSharedPreferences("user",0)
+        var nickname = pref.getString("nickname", "default").toString()
+
         inCheckBox1 = findViewById(R.id.inCheckBox1)
         inCheckBox2 = findViewById(R.id.inCheckBox2)
         inCheckBox3 = findViewById(R.id.inCheckBox3)
@@ -105,7 +108,7 @@ class inActivity : AppCompatActivity() {
 
         okButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO inTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
+            sqlDB.execSQL("INSERT INTO inTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "in")
             startActivity(intent)
