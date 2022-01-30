@@ -58,7 +58,7 @@ class acActivity : AppCompatActivity() {
         var menu8:String = ""
         var menu9:String = ""
         var menu10:String = ""
-        var price:Int
+        var price: Int
 
 
 //        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
@@ -67,16 +67,17 @@ class acActivity : AppCompatActivity() {
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
                 when(buttonView.id){
-                    R.id.acCheckBox1 ->  menu1 = acCheckBox1.text.toString()
-                    R.id.acCheckBox2 ->  menu2 = acCheckBox2.text.toString()
-                    R.id.acCheckBox3 ->  menu3 = acCheckBox3.text.toString()
-                    R.id.acCheckBox4 ->  menu4 = acCheckBox4.text.toString()
-                    R.id.acCheckBox5 ->  menu5 = acCheckBox5.text.toString()
-                    R.id.acCheckBox6 ->  menu6 = acCheckBox6.text.toString()
-                    R.id.acCheckBox7 ->  menu7 = acCheckBox7.text.toString()
-                    R.id.acCheckBox8 ->  menu8 = acCheckBox8.text.toString()
-                    R.id.acCheckBox9 ->  menu9 = acCheckBox9.text.toString()
-                    R.id.acCheckBox10 ->  menu10 = acCheckBox10.text.toString()
+                    R.id.acCheckBox1 ->  {menu1 = acCheckBox1.text.toString()
+                    price=4600} //4600
+                    R.id.acCheckBox2 ->  menu2 = acCheckBox2.text.toString() //5200
+                    R.id.acCheckBox3 ->  menu3 = acCheckBox3.text.toString() //5500
+                    R.id.acCheckBox4 ->  menu4 = acCheckBox4.text.toString() //6300
+                    R.id.acCheckBox5 ->  menu5 = acCheckBox5.text.toString() //6500
+                    R.id.acCheckBox6 ->  menu6 = acCheckBox6.text.toString() //6000
+                    R.id.acCheckBox7 ->  menu7 = acCheckBox7.text.toString() //5800
+                    R.id.acCheckBox8 ->  menu8 = acCheckBox8.text.toString() //6000
+                    R.id.acCheckBox9 ->  menu9 = acCheckBox9.text.toString() //1500
+                    R.id.acCheckBox10 ->  menu10 = acCheckBox10.text.toString() //1500
 
                 }
             }

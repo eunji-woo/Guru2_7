@@ -34,16 +34,16 @@ class mongActivity : AppCompatActivity() {
         dbManager = mongDBManager(this)
         sqlDB = dbManager.writableDatabase
 
-        mongCheckBox1 = findViewById(R.id.mongCheckBox1)
-        mongCheckBox2 = findViewById(R.id.mongCheckBox2)
-        mongCheckBox3 = findViewById(R.id.mongCheckBox3)
-        mongCheckBox4 = findViewById(R.id.mongCheckBox4)
-        mongCheckBox5 = findViewById(R.id.mongCheckBox5)
-        mongCheckBox6 = findViewById(R.id.mongCheckBox6)
-        mongCheckBox7 = findViewById(R.id.mongCheckBox7)
-        mongCheckBox8 = findViewById(R.id.mongCheckBox8)
-        mongCheckBox9 = findViewById(R.id.mongCheckBox9)
-        mongCheckBox10 = findViewById(R.id.mongCheckBox10)
+        mongCheckBox1 = findViewById(R.id.mongCheckBox1) //5000
+        mongCheckBox2 = findViewById(R.id.mongCheckBox2) //5500
+        mongCheckBox3 = findViewById(R.id.mongCheckBox3) //6000
+        mongCheckBox4 = findViewById(R.id.mongCheckBox4) //5500
+        mongCheckBox5 = findViewById(R.id.mongCheckBox5) //5500
+        mongCheckBox6 = findViewById(R.id.mongCheckBox6) //6000
+        mongCheckBox7 = findViewById(R.id.mongCheckBox7) //3000
+        mongCheckBox8 = findViewById(R.id.mongCheckBox8) //1000
+        mongCheckBox9 = findViewById(R.id.mongCheckBox9) //1000
+        mongCheckBox10 = findViewById(R.id.mongCheckBox10) //2000
 
 //        okButton = findViewById<Button>(R.id.okButton)
 

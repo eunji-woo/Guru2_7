@@ -65,16 +65,16 @@ class wfActivity : AppCompatActivity() {
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
                 when(buttonView.id){
-                    R.id.kimCheckBox1 ->  menu1 = wfCheckBox1.text.toString()
-                    R.id.kimCheckBox2 ->  menu2 = wfCheckBox2.text.toString()
-                    R.id.kimCheckBox3 ->  menu3 = wfCheckBox3.text.toString()
-                    R.id.kimCheckBox4 ->  menu4 = wfCheckBox4.text.toString()
-                    R.id.kimCheckBox5 ->  menu5 = wfCheckBox5.text.toString()
-                    R.id.kimCheckBox6 ->  menu6 = wfCheckBox6.text.toString()
-                    R.id.kimCheckBox7 ->  menu7 = wfCheckBox7.text.toString()
-                    R.id.kimCheckBox8 ->  menu8 = wfCheckBox8.text.toString()
-                    R.id.kimCheckBox9 ->  menu9 = wfCheckBox9.text.toString()
-                    R.id.kimCheckBox10 ->  menu10 = wfCheckBox10.text.toString()
+                    R.id.kimCheckBox1 ->  menu1 = wfCheckBox1.text.toString() //3200
+                    R.id.kimCheckBox2 ->  menu2 = wfCheckBox2.text.toString() //4200
+                    R.id.kimCheckBox3 ->  menu3 = wfCheckBox3.text.toString() //4000
+                    R.id.kimCheckBox4 ->  menu4 = wfCheckBox4.text.toString() //5700
+                    R.id.kimCheckBox5 ->  menu5 = wfCheckBox5.text.toString() //5500
+                    R.id.kimCheckBox6 ->  menu6 = wfCheckBox6.text.toString() //4000
+                    R.id.kimCheckBox7 ->  menu7 = wfCheckBox7.text.toString() //4000
+                    R.id.kimCheckBox8 ->  menu8 = wfCheckBox8.text.toString() //3000
+                    R.id.kimCheckBox9 ->  menu9 = wfCheckBox9.text.toString() //3800
+                    R.id.kimCheckBox10 ->  menu10 = wfCheckBox10.text.toString() //4000
                 }
             }
             else { Log.d("test_eunji", "해제")}

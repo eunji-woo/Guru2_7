@@ -34,16 +34,16 @@ class kimActivity : AppCompatActivity() {
         dbManager = kimDBManager(this)
         sqlDB = dbManager.writableDatabase
 
-        kimCheckBox1 = findViewById(R.id.kimCheckBox1)
-        kimCheckBox2 = findViewById(R.id.kimCheckBox2)
-        kimCheckBox3 = findViewById(R.id.kimCheckBox3)
-        kimCheckBox4 = findViewById(R.id.kimCheckBox4)
-        kimCheckBox5 = findViewById(R.id.kimCheckBox5)
-        kimCheckBox6 = findViewById(R.id.kimCheckBox6)
-        kimCheckBox7 = findViewById(R.id.kimCheckBox7)
-        kimCheckBox8 = findViewById(R.id.kimCheckBox8)
-        kimCheckBox9 = findViewById(R.id.kimCheckBox9)
-        kimCheckBox10 = findViewById(R.id.kimCheckBox10)
+        kimCheckBox1 = findViewById(R.id.kimCheckBox1) //3800
+        kimCheckBox2 = findViewById(R.id.kimCheckBox2) //4800
+        kimCheckBox3 = findViewById(R.id.kimCheckBox3) //4800
+        kimCheckBox4 = findViewById(R.id.kimCheckBox4) //6000
+        kimCheckBox5 = findViewById(R.id.kimCheckBox5) //7500
+        kimCheckBox6 = findViewById(R.id.kimCheckBox6) //7000
+        kimCheckBox7 = findViewById(R.id.kimCheckBox7) //7000
+        kimCheckBox8 = findViewById(R.id.kimCheckBox8) //6000
+        kimCheckBox9 = findViewById(R.id.kimCheckBox9) //6000
+        kimCheckBox10 = findViewById(R.id.kimCheckBox10) //8500
 
 //        okButton = findViewById<Button>(R.id.okButton)
 
