@@ -34,16 +34,16 @@ class kimActivity : AppCompatActivity() {
         dbManager = kimDBManager(this)
         sqlDB = dbManager.writableDatabase
 
-        kimCheckBox1 = findViewById(R.id.kimCheckBox1) //3800
-        kimCheckBox2 = findViewById(R.id.kimCheckBox2) //4800
-        kimCheckBox3 = findViewById(R.id.kimCheckBox3) //4800
-        kimCheckBox4 = findViewById(R.id.kimCheckBox4) //6000
-        kimCheckBox5 = findViewById(R.id.kimCheckBox5) //7500
-        kimCheckBox6 = findViewById(R.id.kimCheckBox6) //7000
-        kimCheckBox7 = findViewById(R.id.kimCheckBox7) //7000
-        kimCheckBox8 = findViewById(R.id.kimCheckBox8) //6000
-        kimCheckBox9 = findViewById(R.id.kimCheckBox9) //6000
-        kimCheckBox10 = findViewById(R.id.kimCheckBox10) //8500
+        kimCheckBox1 = findViewById(R.id.kimCheckBox1)
+        kimCheckBox2 = findViewById(R.id.kimCheckBox2)
+        kimCheckBox3 = findViewById(R.id.kimCheckBox3)
+        kimCheckBox4 = findViewById(R.id.kimCheckBox4)
+        kimCheckBox5 = findViewById(R.id.kimCheckBox5)
+        kimCheckBox6 = findViewById(R.id.kimCheckBox6)
+        kimCheckBox7 = findViewById(R.id.kimCheckBox7)
+        kimCheckBox8 = findViewById(R.id.kimCheckBox8)
+        kimCheckBox9 = findViewById(R.id.kimCheckBox9)
+        kimCheckBox10 = findViewById(R.id.kimCheckBox10)
 
 //        okButton = findViewById<Button>(R.id.okButton)
 
@@ -57,6 +57,7 @@ class kimActivity : AppCompatActivity() {
         var menu8:String = ""
         var menu9:String = ""
         var menu10:String = ""
+        var price: Int = 0
 
 
 //        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
@@ -65,16 +66,26 @@ class kimActivity : AppCompatActivity() {
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
                 when(buttonView.id){
-                    R.id.kimCheckBox1 ->  menu1 = kimCheckBox1.text.toString()
-                    R.id.kimCheckBox2 ->  menu2 = kimCheckBox2.text.toString()
-                    R.id.kimCheckBox3 ->  menu3 = kimCheckBox3.text.toString()
-                    R.id.kimCheckBox4 ->  menu4 = kimCheckBox4.text.toString()
-                    R.id.kimCheckBox5 ->  menu5 = kimCheckBox5.text.toString()
-                    R.id.kimCheckBox6 ->  menu6 = kimCheckBox6.text.toString()
-                    R.id.kimCheckBox7 ->  menu7 = kimCheckBox7.text.toString()
-                    R.id.kimCheckBox8 ->  menu8 = kimCheckBox8.text.toString()
-                    R.id.kimCheckBox9 ->  menu9 = kimCheckBox9.text.toString()
-                    R.id.kimCheckBox10 ->  menu10 = kimCheckBox10.text.toString()
+                    R.id.kimCheckBox1 ->  {menu1 = kimCheckBox1.text.toString()
+                        price += 3800}
+                    R.id.kimCheckBox2 ->  {menu2 = kimCheckBox2.text.toString()
+                        price += 4800}
+                    R.id.kimCheckBox3 ->  {menu3 = kimCheckBox3.text.toString()
+                        price += 4800}
+                    R.id.kimCheckBox4 ->  {menu4 = kimCheckBox4.text.toString()
+                        price += 6000}
+                    R.id.kimCheckBox5 ->  {menu5 = kimCheckBox5.text.toString()
+                        price += 7500}
+                    R.id.kimCheckBox6 ->  {menu6 = kimCheckBox6.text.toString()
+                        price += 7000}
+                    R.id.kimCheckBox7 ->  {menu7 = kimCheckBox7.text.toString()
+                        price += 7000}
+                    R.id.kimCheckBox8 ->  {menu8 = kimCheckBox8.text.toString()
+                        price += 6000}
+                    R.id.kimCheckBox9 ->  {menu9 = kimCheckBox9.text.toString()
+                        price += 6000}
+                    R.id.kimCheckBox10 ->  {menu10 = kimCheckBox10.text.toString()
+                        price += 8500}
                 }
             }
             else { Log.d("test_eunji", "해제")}
