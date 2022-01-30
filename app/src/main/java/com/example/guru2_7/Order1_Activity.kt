@@ -36,8 +36,13 @@ class Order1_Activity : AppCompatActivity() {
 
             while(cursor.moveToNext()) {
                 val textView = TextView(this)
+                val textView2 = TextView(this)
+                sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ").plus(", "+cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," "))
+                sqlResult = sqlResult.replace(", , , , , , , , , ","").replace(", , , , , , , , ","").replace(", , , , , , , ","").replace(", , , , , , ","").replace(", , , , , ","").replace(", , , , ","").replace(", , , ","").replace(", , "," ").replace(",  "," ")
+                textView.background = ContextCompat.getDrawable(this, R.color.purple_200)
                 textView.text = sqlResult
                 scrollLayout.addView(textView, 0)
+                scrollLayout.addView(textView2, 0)
             }
 
         }
@@ -49,8 +54,13 @@ class Order1_Activity : AppCompatActivity() {
 
             while(cursor.moveToNext()) {
                 val textView = TextView(this)
-                textView.text = cursor.getString(0)
+                val textView2 = TextView(this)
+                sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ").plus(", "+cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," "))
+                sqlResult = sqlResult.replace(", , , , , , , , , ","").replace(", , , , , , , , ","").replace(", , , , , , , ","").replace(", , , , , , ","").replace(", , , , , ","").replace(", , , , ","").replace(", , , ","").replace(", , "," ").replace(",  "," ")
+                textView.background = ContextCompat.getDrawable(this, R.color.purple)
+                textView.text = sqlResult
                 scrollLayout.addView(textView, 0)
+                scrollLayout.addView(textView2, 0)
             }
         }
         else if (shop_name == "mong"){
@@ -61,8 +71,13 @@ class Order1_Activity : AppCompatActivity() {
 
             while(cursor.moveToNext()) {
                 val textView = TextView(this)
-                textView.text = cursor.getString(0)
+                val textView2 = TextView(this)
+                sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ").plus(", "+cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," "))
+                sqlResult = sqlResult.replace(", , , , , , , , , ","").replace(", , , , , , , , ","").replace(", , , , , , , ","").replace(", , , , , , ","").replace(", , , , , ","").replace(", , , , ","").replace(", , , ","").replace(", , "," ").replace(",  "," ")
+                textView.background = ContextCompat.getDrawable(this, R.color.purple)
+                textView.text = sqlResult
                 scrollLayout.addView(textView, 0)
+                scrollLayout.addView(textView2, 0)
             }
         }
         else if (shop_name == "ac"){
@@ -76,7 +91,7 @@ class Order1_Activity : AppCompatActivity() {
                 val textView2 = TextView(this)
                 sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ").plus(", "+cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ","").replace(", , , , , , , , ","").replace(", , , , , , , ","").replace(", , , , , , ","").replace(", , , , , ","").replace(", , , , ","").replace(", , , ","").replace(", , "," ").replace(",  "," ")
-                textView.background = ContextCompat.getDrawable(this, R.color.purple)
+                textView.background = ContextCompat.getDrawable(this, R.color.purple_200)
                 textView.text = sqlResult
                 scrollLayout.addView(textView, 0)
                 scrollLayout.addView(textView2, 0)
@@ -90,12 +105,15 @@ class Order1_Activity : AppCompatActivity() {
 
             while(cursor.moveToNext()) {
                 val textView = TextView(this)
-                textView.text = cursor.getString(0)
+                val textView2 = TextView(this)
+                sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ").plus(", "+cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " +cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex()," "))
+                sqlResult = sqlResult.replace(", , , , , , , , , ","").replace(", , , , , , , , ","").replace(", , , , , , , ","").replace(", , , , , , ","").replace(", , , , , ","").replace(", , , , ","").replace(", , , ","").replace(", , "," ").replace(",  "," ")
+                textView.background = ContextCompat.getDrawable(this, R.color.purple)
+                textView.text = sqlResult
                 scrollLayout.addView(textView, 0)
+                scrollLayout.addView(textView2, 0)
             }
         }
-
-
 
 
         OrderOkButton.setOnClickListener {
