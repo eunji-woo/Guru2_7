@@ -105,7 +105,7 @@ class mongActivity : AppCompatActivity() {
 
         okButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
+            sqlDB.execSQL("INSERT INTO mongTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "mong")
             startActivity(intent)
