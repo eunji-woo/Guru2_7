@@ -26,6 +26,7 @@ class Order1_Activity : AppCompatActivity() {
         scrollLayout = findViewById(R.id.scrollLayout)
         var shop_name = intent.getStringExtra("shop_name")
         var sqlResult = ""
+        var sqlName = ""
 
             if (shop_name == "in") {
                 indbManager = inDBManager(this)
@@ -33,14 +34,18 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
 
                 while (cursor.moveToNext()) {
-                    val textView = TextView(this)
-                    val textView2 = TextView(this)
-                    sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(":  ").plus(", " + cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
+                    val textView1 = TextView(this) // 공백
+                    val textView2 = TextView(this) // 닉네임
+                    val textView3 = TextView(this) // 메뉴
+                    sqlName = " ${cursor.getString(0)}"
+                    sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
-                    textView.background = ContextCompat.getDrawable(this, R.color.purple)
-                    textView.text = sqlResult
-                    scrollLayout.addView(textView, 0)
+                    textView2.text = sqlName
+                    textView3.background = ContextCompat.getDrawable(this, R.color.purple)
+                    textView3.text = sqlResult
+                    scrollLayout.addView(textView3, 0)
                     scrollLayout.addView(textView2, 0)
+                    scrollLayout.addView(textView1, 0)
                 }
                 cursor.close()
                 sqlDB.close()
@@ -52,14 +57,18 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
 
                 while (cursor.moveToNext()) {
-                    val textView = TextView(this)
-                    val textView2 = TextView(this)
-                    sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(":  ").plus(", " + cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
+                    val textView1 = TextView(this) // 공백
+                    val textView2 = TextView(this) // 닉네임
+                    val textView3 = TextView(this) // 메뉴
+                    sqlName = " ${cursor.getString(0)}"
+                    sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
-                    textView.background = ContextCompat.getDrawable(this, R.color.purple)
-                    textView.text = sqlResult
-                    scrollLayout.addView(textView, 0)
+                    textView2.text = sqlName
+                    textView3.background = ContextCompat.getDrawable(this, R.color.purple)
+                    textView3.text = sqlResult
+                    scrollLayout.addView(textView3, 0)
                     scrollLayout.addView(textView2, 0)
+                    scrollLayout.addView(textView1, 0)
                 }
                 cursor.close()
                 sqlDB.close()
@@ -70,14 +79,18 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
 
                 while (cursor.moveToNext()) {
-                    val textView = TextView(this)
-                    val textView2 = TextView(this)
-                    sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(":  ").plus(", " + cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
+                    val textView1 = TextView(this) // 공백
+                    val textView2 = TextView(this) // 닉네임
+                    val textView3 = TextView(this) // 메뉴
+                    sqlName = " ${cursor.getString(0)}"
+                    sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
-                    textView.background = ContextCompat.getDrawable(this, R.color.purple)
-                    textView.text = sqlResult
-                    scrollLayout.addView(textView, 0)
+                    textView2.text = sqlName
+                    textView3.background = ContextCompat.getDrawable(this, R.color.purple)
+                    textView3.text = sqlResult
+                    scrollLayout.addView(textView3, 0)
                     scrollLayout.addView(textView2, 0)
+                    scrollLayout.addView(textView1, 0)
                 }
                 cursor.close()
                 sqlDB.close()
@@ -89,14 +102,18 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM acTBL", null)
 
                 while (cursor.moveToNext()) {
-                    val textView = TextView(this)
-                    val textView2 = TextView(this)
-                    sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(":  ").plus(", " + cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
+                    val textView1 = TextView(this) // 공백
+                    val textView2 = TextView(this) // 닉네임
+                    val textView3 = TextView(this) // 메뉴
+                    sqlName = " ${cursor.getString(0)}"
+                    sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
-                    textView.background = ContextCompat.getDrawable(this, R.color.purple)
-                    textView.text = sqlResult
-                    scrollLayout.addView(textView, 0)
+                    textView2.text = sqlName
+                    textView3.background = ContextCompat.getDrawable(this, R.color.purple)
+                    textView3.text = sqlResult
+                    scrollLayout.addView(textView3, 0)
                     scrollLayout.addView(textView2, 0)
+                    scrollLayout.addView(textView1, 0)
                 }
                 cursor.close()
                 sqlDB.close()
@@ -107,14 +124,18 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
 
                 while (cursor.moveToNext()) {
-                    val textView = TextView(this)
-                    val textView2 = TextView(this)
-                    sqlResult = cursor.getString(0).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(":  ").plus(", " + cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
+                    val textView1 = TextView(this) // 공백
+                    val textView2 = TextView(this) // 닉네임
+                    val textView3 = TextView(this) // 메뉴
+                    sqlName = " ${cursor.getString(0)}"
+                    sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
-                    textView.background = ContextCompat.getDrawable(this, R.color.purple)
-                    textView.text = sqlResult
-                    scrollLayout.addView(textView, 0)
+                    textView2.text = sqlName
+                    textView3.background = ContextCompat.getDrawable(this, R.color.purple)
+                    textView3.text = sqlResult
+                    scrollLayout.addView(textView3, 0)
                     scrollLayout.addView(textView2, 0)
+                    scrollLayout.addView(textView1, 0)
                 }
                 cursor.close()
                 sqlDB.close()
