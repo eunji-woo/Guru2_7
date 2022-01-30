@@ -35,16 +35,16 @@ class inActivity : AppCompatActivity() {
         dbManager = inDBManager(this)
         sqlDB = dbManager.writableDatabase
 
-        inCheckBox1 = findViewById(R.id.acCheckBox1)
-        inCheckBox2 = findViewById(R.id.acCheckBox2)
-        inCheckBox3 = findViewById(R.id.acCheckBox3)
-        inCheckBox4 = findViewById(R.id.acCheckBox4)
-        inCheckBox5 = findViewById(R.id.acCheckBox5)
-        inCheckBox6 = findViewById(R.id.acCheckBox6)
-        inCheckBox7 = findViewById(R.id.acCheckBox7)
-        inCheckBox8 = findViewById(R.id.acCheckBox8)
-        inCheckBox9 = findViewById(R.id.acCheckBox9)
-        inCheckBox10 = findViewById(R.id.acCheckBox10)
+        inCheckBox1 = findViewById(R.id.inCheckBox1)
+        inCheckBox2 = findViewById(R.id.inCheckBox2)
+        inCheckBox3 = findViewById(R.id.inCheckBox3)
+        inCheckBox4 = findViewById(R.id.inCheckBox4)
+        inCheckBox5 = findViewById(R.id.inCheckBox5)
+        inCheckBox6 = findViewById(R.id.inCheckBox6)
+        inCheckBox7 = findViewById(R.id.inCheckBox7)
+        inCheckBox8 = findViewById(R.id.inCheckBox8)
+        inCheckBox9 = findViewById(R.id.inCheckBox9)
+        inCheckBox10 = findViewById(R.id.inCheckBox10)
 
         okButton = findViewById<Button>(R.id.okButton)
 
@@ -67,25 +67,25 @@ class inActivity : AppCompatActivity() {
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
                 when(buttonView.id){
-                    R.id.acCheckBox1 ->  {menu1 = inCheckBox1.text.toString()
+                    R.id.inCheckBox1 ->  {menu1 = inCheckBox1.text.toString()
                         price += 4500}
-                    R.id.acCheckBox2 ->  {menu2 = inCheckBox2.text.toString()
+                    R.id.inCheckBox2 ->  {menu2 = inCheckBox2.text.toString()
                         price += 9500}
-                    R.id.acCheckBox3 ->  {menu3 = inCheckBox3.text.toString()
+                    R.id.inCheckBox3 ->  {menu3 = inCheckBox3.text.toString()
                         price +=4000}
-                    R.id.acCheckBox4 ->  {menu4 = inCheckBox4.text.toString()
+                    R.id.inCheckBox4 ->  {menu4 = inCheckBox4.text.toString()
                         price += 9000}
-                    R.id.acCheckBox5 ->  {menu5 = inCheckBox5.text.toString()
+                    R.id.inCheckBox5 ->  {menu5 = inCheckBox5.text.toString()
                         price += 500}
-                    R.id.acCheckBox6 ->  {menu6 = inCheckBox6.text.toString()
+                    R.id.inCheckBox6 ->  {menu6 = inCheckBox6.text.toString()
                         price += 4000}
-                    R.id.acCheckBox7 ->  {menu7 = inCheckBox7.text.toString()
+                    R.id.inCheckBox7 ->  {menu7 = inCheckBox7.text.toString()
                         price += 4000}
-                    R.id.acCheckBox8 ->  {menu8 = inCheckBox8.text.toString()
+                    R.id.inCheckBox8 ->  {menu8 = inCheckBox8.text.toString()
                         price += 2500}
-                    R.id.acCheckBox9 ->  {menu9 = inCheckBox9.text.toString()
+                    R.id.inCheckBox9 ->  {menu9 = inCheckBox9.text.toString()
                         price +=2000}
-                    R.id.acCheckBox10 ->  {menu10 = inCheckBox10.text.toString()
+                    R.id.inCheckBox10 ->  {menu10 = inCheckBox10.text.toString()
                         price += 1500}
                 }
             }
