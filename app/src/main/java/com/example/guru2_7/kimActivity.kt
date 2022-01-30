@@ -46,7 +46,7 @@ class kimActivity : AppCompatActivity() {
         kimCheckBox9 = findViewById(R.id.kimCheckBox9)
         kimCheckBox10 = findViewById(R.id.kimCheckBox10)
 
-//        okButton = findViewById<Button>(R.id.okButton)
+        okButton = findViewById<Button>(R.id.okButton)
 
         var menu1:String = ""
         var menu2:String = ""
