@@ -26,7 +26,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/in1" />
                 <CheckBox
-                    android:id="@+id/inCheckBox1"
+                    android:id="@+id/acCheckBox1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 소\n4,500"
@@ -45,7 +45,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/in2" />
                 <CheckBox
-                    android:id="@+id/inCheckBox2"
+                    android:id="@+id/acCheckBox2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 대\n9,500"
@@ -64,7 +64,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/in3" />
                 <CheckBox
-                    android:id="@+id/inCheckBox3"
+                    android:id="@+id/acCheckBox3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 소\n4,000"
@@ -83,7 +83,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/in4" />
                 <CheckBox
-                    android:id="@+id/inCheckBox4"
+                    android:id="@+id/acCheckBox4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 대\n9,000"
@@ -104,7 +104,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/in5" />
                 <CheckBox
-                    android:id="@+id/inCheckBox5"
+                    android:id="@+id/acCheckBox5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="튀긴마늘 슬라이스\n500"
@@ -125,7 +125,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/in6" />
                 <CheckBox
-                    android:id="@+id/inCheckBox6"
+                    android:id="@+id/acCheckBox6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="치즈볼\n4,000"
@@ -146,7 +146,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/restaurant2" />
                 <CheckBox
-                    android:id="@+id/inCheckBox7"
+                    android:id="@+id/acCheckBox7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="모듬감자튀김\n4,000"
@@ -167,7 +167,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/in8" />
                 <CheckBox
-                    android:id="@+id/inCheckBox8"
+                    android:id="@+id/acCheckBox8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="크런치 양파스틱\n2,500"
@@ -189,7 +189,7 @@
                     android:layout_height="100dp"
                     app:srcCompat="@drawable/in9" />
                 <CheckBox
-                    android:id="@+id/inCheckBox9"
+                    android:id="@+id/acCheckBox9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="콘샐러드(새콤달콤)\n2,000"
@@ -211,7 +211,7 @@
                     app:srcCompat="@drawable/in10" />
 
                 <CheckBox
-                    android:id="@+id/inCheckBox10"
+                    android:id="@+id/acCheckBox10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="콜라\n1,500"
