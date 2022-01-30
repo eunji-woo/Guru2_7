@@ -67,25 +67,25 @@ class mongActivity : AppCompatActivity() {
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
                 when(buttonView.id){
-                    R.id.kimCheckBox1 ->  {menu1 = mongCheckBox1.text.toString()
+                    R.id.mongCheckBox1 ->  {menu1 = mongCheckBox1.text.toString()
                         price += 5000}
-                    R.id.kimCheckBox2 ->  {menu2 = mongCheckBox2.text.toString()
+                    R.id.mongCheckBox2 ->  {menu2 = mongCheckBox2.text.toString()
                         price += 5500}
-                    R.id.kimCheckBox3 ->  {menu3 = mongCheckBox3.text.toString()
+                    R.id.mongCheckBox3 ->  {menu3 = mongCheckBox3.text.toString()
                         price += 6000}
-                    R.id.kimCheckBox4 ->  {menu4 = mongCheckBox4.text.toString()
+                    R.id.mongCheckBox4 ->  {menu4 = mongCheckBox4.text.toString()
                         price += 5500}
-                    R.id.kimCheckBox5 ->  {menu5 = mongCheckBox5.text.toString()
+                    R.id.mongCheckBox5 ->  {menu5 = mongCheckBox5.text.toString()
                         price += 5500}
-                    R.id.kimCheckBox6 ->  {menu6 = mongCheckBox6.text.toString()
+                    R.id.mongCheckBox6 ->  {menu6 = mongCheckBox6.text.toString()
                         price += 6000}
-                    R.id.kimCheckBox7 ->  {menu7 = mongCheckBox7.text.toString()
+                    R.id.mongCheckBox7 ->  {menu7 = mongCheckBox7.text.toString()
                         price += 3000}
-                    R.id.kimCheckBox8 ->  {menu8 = mongCheckBox8.text.toString()
+                    R.id.mongCheckBox8 ->  {menu8 = mongCheckBox8.text.toString()
                         price += 1000}
-                    R.id.kimCheckBox9 ->  {menu9 = mongCheckBox9.text.toString()
+                    R.id.mongCheckBox9 ->  {menu9 = mongCheckBox9.text.toString()
                         price += 1000}
-                    R.id.kimCheckBox10 ->  {menu10 = mongCheckBox10.text.toString()
+                    R.id.mongCheckBox10 ->  {menu10 = mongCheckBox10.text.toString()
                         price += 2200}
                 }
             }
