@@ -34,16 +34,16 @@ class mongActivity : AppCompatActivity() {
         dbManager = mongDBManager(this)
         sqlDB = dbManager.writableDatabase
 
-        mongCheckBox1 = findViewById(R.id.mongCheckBox1)
-        mongCheckBox2 = findViewById(R.id.mongCheckBox2)
-        mongCheckBox3 = findViewById(R.id.mongCheckBox3)
-        mongCheckBox4 = findViewById(R.id.mongCheckBox4)
-        mongCheckBox5 = findViewById(R.id.mongCheckBox5)
-        mongCheckBox6 = findViewById(R.id.mongCheckBox6)
-        mongCheckBox7 = findViewById(R.id.mongCheckBox7)
-        mongCheckBox8 = findViewById(R.id.mongCheckBox8)
-        mongCheckBox9 = findViewById(R.id.mongCheckBox9)
-        mongCheckBox10 = findViewById(R.id.mongCheckBox10)
+        mongCheckBox1 = findViewById(R.id.mongCheckBox1) //5000
+        mongCheckBox2 = findViewById(R.id.mongCheckBox2) //5500
+        mongCheckBox3 = findViewById(R.id.mongCheckBox3) //6000
+        mongCheckBox4 = findViewById(R.id.mongCheckBox4) //5500
+        mongCheckBox5 = findViewById(R.id.mongCheckBox5) //5500
+        mongCheckBox6 = findViewById(R.id.mongCheckBox6) //6000
+        mongCheckBox7 = findViewById(R.id.mongCheckBox7) //3000
+        mongCheckBox8 = findViewById(R.id.mongCheckBox8) //1000
+        mongCheckBox9 = findViewById(R.id.mongCheckBox9) //1000
+        mongCheckBox10 = findViewById(R.id.mongCheckBox10) //2000
 
 //        okButton = findViewById<Button>(R.id.okButton)
 
@@ -57,6 +57,7 @@ class mongActivity : AppCompatActivity() {
         var menu8:String = ""
         var menu9:String = ""
         var menu10:String = ""
+        var price:Int = 0
 
 
 //        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
@@ -65,16 +66,26 @@ class mongActivity : AppCompatActivity() {
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
                 when(buttonView.id){
-                    R.id.kimCheckBox1 ->  menu1 = mongCheckBox1.text.toString()
-                    R.id.kimCheckBox2 ->  menu2 = mongCheckBox2.text.toString()
-                    R.id.kimCheckBox3 ->  menu3 = mongCheckBox3.text.toString()
-                    R.id.kimCheckBox4 ->  menu4 = mongCheckBox4.text.toString()
-                    R.id.kimCheckBox5 ->  menu5 = mongCheckBox5.text.toString()
-                    R.id.kimCheckBox6 ->  menu6 = mongCheckBox6.text.toString()
-                    R.id.kimCheckBox7 ->  menu7 = mongCheckBox7.text.toString()
-                    R.id.kimCheckBox8 ->  menu8 = mongCheckBox8.text.toString()
-                    R.id.kimCheckBox9 ->  menu9 = mongCheckBox9.text.toString()
-                    R.id.kimCheckBox10 ->  menu10 = mongCheckBox10.text.toString()
+                    R.id.kimCheckBox1 ->  {menu1 = mongCheckBox1.text.toString()
+                        price += 5000}
+                    R.id.kimCheckBox2 ->  {menu2 = mongCheckBox2.text.toString()
+                        price += 5500}
+                    R.id.kimCheckBox3 ->  {menu3 = mongCheckBox3.text.toString()
+                        price += 6000}
+                    R.id.kimCheckBox4 ->  {menu4 = mongCheckBox4.text.toString()
+                        price += 5500}
+                    R.id.kimCheckBox5 ->  {menu5 = mongCheckBox5.text.toString()
+                        price += 5500}
+                    R.id.kimCheckBox6 ->  {menu6 = mongCheckBox6.text.toString()
+                        price += 6000}
+                    R.id.kimCheckBox7 ->  {menu7 = mongCheckBox7.text.toString()
+                        price += 3000}
+                    R.id.kimCheckBox8 ->  {menu8 = mongCheckBox8.text.toString()
+                        price += 1000}
+                    R.id.kimCheckBox9 ->  {menu9 = mongCheckBox9.text.toString()
+                        price += 1000}
+                    R.id.kimCheckBox10 ->  {menu10 = mongCheckBox10.text.toString()
+                        price += 2200}
                 }
             }
             else { Log.d("test_eunji", "해제")}

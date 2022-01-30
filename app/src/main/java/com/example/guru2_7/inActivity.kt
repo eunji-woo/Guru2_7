@@ -57,6 +57,7 @@ class inActivity : AppCompatActivity() {
         var menu8:String = ""
         var menu9:String = ""
         var menu10:String = ""
+        var price: Int = 0
 
 
 //        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
@@ -65,16 +66,26 @@ class inActivity : AppCompatActivity() {
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
                 when(buttonView.id){
-                    R.id.acCheckBox1 ->  menu1 = inCheckBox1.text.toString()
-                    R.id.acCheckBox2 ->  menu2 = inCheckBox2.text.toString()
-                    R.id.acCheckBox3 ->  menu3 = inCheckBox3.text.toString()
-                    R.id.acCheckBox4 ->  menu4 = inCheckBox4.text.toString()
-                    R.id.acCheckBox5 ->  menu5 = inCheckBox5.text.toString()
-                    R.id.acCheckBox6 ->  menu6 = inCheckBox6.text.toString()
-                    R.id.acCheckBox7 ->  menu7 = inCheckBox7.text.toString()
-                    R.id.acCheckBox8 ->  menu8 = inCheckBox8.text.toString()
-                    R.id.acCheckBox9 ->  menu9 = inCheckBox9.text.toString()
-                    R.id.acCheckBox10 ->  menu10 = inCheckBox10.text.toString()
+                    R.id.acCheckBox1 ->  {menu1 = inCheckBox1.text.toString()
+                        price += 4500}
+                    R.id.acCheckBox2 ->  {menu2 = inCheckBox2.text.toString()
+                        price += 9500}
+                    R.id.acCheckBox3 ->  {menu3 = inCheckBox3.text.toString()
+                        price +=4000}
+                    R.id.acCheckBox4 ->  {menu4 = inCheckBox4.text.toString()
+                        price += 9000}
+                    R.id.acCheckBox5 ->  {menu5 = inCheckBox5.text.toString()
+                        price += 500}
+                    R.id.acCheckBox6 ->  {menu6 = inCheckBox6.text.toString()
+                        price += 4000}
+                    R.id.acCheckBox7 ->  {menu7 = inCheckBox7.text.toString()
+                        price += 4000}
+                    R.id.acCheckBox8 ->  {menu8 = inCheckBox8.text.toString()
+                        price += 2500}
+                    R.id.acCheckBox9 ->  {menu9 = inCheckBox9.text.toString()
+                        price +=2000}
+                    R.id.acCheckBox10 ->  {menu10 = inCheckBox10.text.toString()
+                        price += 1500}
                 }
             }
             else { Log.d("test_eunji", "해제")}
