@@ -36,6 +36,12 @@ class MainActivity : AppCompatActivity() {
             while(cursor.moveToNext()) {
                 if (cursor.getString(1) == idEdittext.text.toString() && cursor.getString(2) == pwEdittext.text.toString()) {
                     Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
+
+                    var pref = this.getSharedPreferences("user",0)
+                    var editor = pref.edit()
+
+                    editor.putString("nickname", cursor.getString(0)).apply()
+
                     val intent = Intent(this, NaviActivity::class.java)
                     startActivity(intent)
                 }
