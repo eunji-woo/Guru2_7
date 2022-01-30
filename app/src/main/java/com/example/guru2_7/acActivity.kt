@@ -87,7 +87,6 @@ class acActivity : AppCompatActivity() {
                         price += 1500}
                     R.id.acCheckBox10 ->  {menu10 = acCheckBox10.text.toString()
                         price += 1500}
-
                 }
             }
             else { Log.d("test_eunji", "해제")}
@@ -107,6 +106,7 @@ class acActivity : AppCompatActivity() {
         okButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
             sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
+            sqlDB.execSQL("INSERT INTO acTBL price ('"+price+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "ac")
             startActivity(intent)
