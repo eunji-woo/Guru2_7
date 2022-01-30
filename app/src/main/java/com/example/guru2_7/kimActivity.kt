@@ -1,5 +1,6 @@
 package com.example.guru2_7
 
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -102,12 +103,13 @@ class kimActivity : AppCompatActivity() {
         kimCheckBox9.setOnCheckedChangeListener(listener)
         kimCheckBox10.setOnCheckedChangeListener(listener)
 
-//        okButton.setOnClickListener {
-//            sqlDB = dbManager.writableDatabase
-//            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
-//            val intent = Intent(this, Order1_Activity::class.java)
-//            startActivity(intent)
-//        }
+        okButton.setOnClickListener {
+            sqlDB = dbManager.writableDatabase
+            sqlDB.execSQL("INSERT INTO kimTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
+            val intent = Intent(this, Order1_Activity::class.java)
+            intent.putExtra("shop_name", "kim")
+            startActivity(intent)
+        }
 
         sqlDB.close()
 

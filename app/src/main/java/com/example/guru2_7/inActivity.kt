@@ -1,5 +1,6 @@
 package com.example.guru2_7
 
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -45,7 +46,7 @@ class inActivity : AppCompatActivity() {
         inCheckBox9 = findViewById(R.id.acCheckBox9)
         inCheckBox10 = findViewById(R.id.acCheckBox10)
 
-//        okButton = findViewById<Button>(R.id.okButton)
+        okButton = findViewById<Button>(R.id.okButton)
 
         var menu1:String = ""
         var menu2:String = ""
@@ -102,12 +103,13 @@ class inActivity : AppCompatActivity() {
         inCheckBox9.setOnCheckedChangeListener(listener)
         inCheckBox10.setOnCheckedChangeListener(listener)
 
-//        okButton.setOnClickListener {
-//            sqlDB = dbManager.writableDatabase
-//            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
-//            val intent = Intent(this, Order1_Activity::class.java)
-//            startActivity(intent)
-//        }
+        okButton.setOnClickListener {
+            sqlDB = dbManager.writableDatabase
+            sqlDB.execSQL("INSERT INTO inTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
+            val intent = Intent(this, Order1_Activity::class.java)
+            intent.putExtra("shop_name", "in")
+            startActivity(intent)
+        }
 
         sqlDB.close()
 

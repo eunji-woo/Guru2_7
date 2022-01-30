@@ -1,5 +1,6 @@
 package com.example.guru2_7
 
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -45,7 +46,7 @@ class wfActivity : AppCompatActivity() {
         wfCheckBox9 = findViewById(R.id.wfCheckBox9)
         wfCheckBox10 = findViewById(R.id.wfCheckBox10)
 
-//        okButton = findViewById<Button>(R.id.okButton)
+        okButton = findViewById<Button>(R.id.okButton)
 
         var menu1:String = ""
         var menu2:String = ""
@@ -102,12 +103,13 @@ class wfActivity : AppCompatActivity() {
         wfCheckBox9.setOnCheckedChangeListener(listener)
         wfCheckBox10.setOnCheckedChangeListener(listener)
 
-//        okButton.setOnClickListener {
-//            sqlDB = dbManager.writableDatabase
-//            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
-//            val intent = Intent(this, Order1_Activity::class.java)
-//            startActivity(intent)
-//        }
+        okButton.setOnClickListener {
+            sqlDB = dbManager.writableDatabase
+            sqlDB.execSQL("INSERT INTO wfTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"','"+menu10 +"');")
+            val intent = Intent(this, Order1_Activity::class.java)
+            intent.putExtra("shop_name", "wf")
+            startActivity(intent)
+        }
 
         sqlDB.close()
 
