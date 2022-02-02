@@ -5,9 +5,8 @@ import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.CompoundButton
+import android.view.View
+import android.widget.*
 
 class wfActivity : AppCompatActivity() {
 
@@ -35,6 +34,8 @@ class wfActivity : AppCompatActivity() {
         dbManager = wfDBManager(this)
         sqlDB = dbManager.writableDatabase
 
+        val spinner_wfp = findViewById<Spinner>(R.id.spinner_wfp)
+        val spinner_wft = findViewById<Spinner>(R.id.spinner_wft)
         var pref = this.getSharedPreferences("user",0)
         var nickname = pref.getString("nickname", "default").toString()
 
@@ -62,6 +63,33 @@ class wfActivity : AppCompatActivity() {
         var menu9:String = ""
         var menu10:String = ""
         var price:Int = 0
+
+        var place_wf:String = ""
+        var time_wf:String = ""
+        val place = resources.getStringArray(R.array.place_array)
+        val time = resources.getStringArray(R.array.time_array)
+        val Adapter_place = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,place)
+        spinner_wfp.adapter = Adapter_place
+        spinner_wfp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                place_wf = place[position]
+
+            }
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
+        val Adapter_time = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,time)
+        spinner_wft.adapter = Adapter_time
+        spinner_wft.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                time_wf = time[position]
+            }
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+
+            }
+        }
+
 
 
 //        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
@@ -108,7 +136,7 @@ class wfActivity : AppCompatActivity() {
 
         okButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO wfTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
+            sqlDB.execSQL("INSERT INTO wfTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_wf+"', '"+time_wf+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "wf")
             startActivity(intent)

@@ -208,6 +208,30 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_kimt"
+                    style="@android:style/Widget.Spinner"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    tools:ignore="MissingConstraints" />
+
+                <Spinner
+                    android:id="@+id/spinner_kimp"
+                    style="@android:style/Widget.Spinner"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
