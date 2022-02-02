@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -39,6 +40,13 @@ class Order2Fragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_order2, null)
 
+        val acImageButton = view.findViewById<ImageButton>(R.id.acImageButton)
+        val inImageButton = view.findViewById<ImageButton>(R.id.inImageButton)
+        val mongImageButton = view.findViewById<ImageButton>(R.id.mongImageButton)
+        val wfImageButton = view.findViewById<ImageButton>(R.id.wfImageButton)
+        val kimImageButton = view.findViewById<ImageButton>(R.id.kimImageButton)
+        val etcImageButton = view.findViewById<ImageButton>(R.id.etcImageButton)
+
         val acText = view.findViewById<TextView>(R.id.acTextView)
         val inText = view.findViewById<TextView>(R.id.inTextView)
         val mongText = view.findViewById<TextView>(R.id.mongTextView)
@@ -52,6 +60,46 @@ class Order2Fragment : Fragment() {
         wfText.text = "주문현황개수 : $wf_count"
         kimText.text = "주문현황개수 : $kim_count"
         etcText.text = "주문현황개수 : 0"
+
+        acImageButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, Order1_Activity::class.java)
+                intent.putExtra("shop_name", "ac")
+                startActivity(intent)
+            }
+        })
+
+        inImageButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, Order1_Activity::class.java)
+                intent.putExtra("shop_name", "in")
+                startActivity(intent)
+            }
+        })
+
+        mongImageButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, Order1_Activity::class.java)
+                intent.putExtra("shop_name", "mong")
+                startActivity(intent)
+            }
+        })
+
+        wfImageButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, Order1_Activity::class.java)
+                intent.putExtra("shop_name", "wf")
+                startActivity(intent)
+            }
+        })
+
+        kimImageButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, Order1_Activity::class.java)
+                intent.putExtra("shop_name", "kim")
+                startActivity(intent)
+            }
+        })
 
         return view
     }

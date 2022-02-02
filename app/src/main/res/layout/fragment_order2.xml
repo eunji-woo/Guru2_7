@@ -20,8 +20,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/map1" />
 
-        <ImageView
-            android:id="@+id/imageView3"
+        <ImageButton
+            android:id="@+id/acImageButton"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="50dp"
@@ -30,8 +30,8 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:srcCompat="@drawable/ac" />
 
-        <ImageView
-            android:id="@+id/imageView4"
+        <ImageButton
+            android:id="@+id/inImageButton"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="50dp"
@@ -40,8 +40,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/in" />
 
-        <ImageView
-            android:id="@+id/imageView5"
+        <ImageButton
+            android:id="@+id/kimImageButton"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="24dp"
@@ -50,8 +50,8 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:srcCompat="@drawable/kim" />
 
-        <ImageView
-            android:id="@+id/imageView6"
+        <ImageButton
+            android:id="@+id/mongImageButton"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginBottom="8dp"
@@ -61,8 +61,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/mong" />
 
-        <ImageView
-            android:id="@+id/imageView7"
+        <ImageButton
+            android:id="@+id/wfImageButton"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="24dp"
@@ -70,6 +70,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:srcCompat="@drawable/wf" />
+
+        <ImageButton
+            android:id="@+id/etcImageButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/restaurant2"
+            app:layout_constraintBottom_toTopOf="@+id/etcTextView"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/acTextView"
@@ -79,7 +89,7 @@
             android:layout_marginEnd="24dp"
             android:text="TextView"
             app:layout_constraintEnd_toStartOf="@+id/kimTextView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintTop_toBottomOf="@+id/kimImageButton" />
 
         <TextView
             android:id="@+id/kimTextView"
@@ -89,7 +99,7 @@
             android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+            app:layout_constraintTop_toBottomOf="@+id/kimImageButton" />
 
         <TextView
             android:id="@+id/inTextView"
@@ -109,7 +119,7 @@
             android:layout_marginTop="8dp"
             android:text="TextView"
             app:layout_constraintStart_toEndOf="@+id/kimTextView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            app:layout_constraintTop_toBottomOf="@+id/wfImageButton" />
 
         <TextView
             android:id="@+id/mongTextView"
@@ -121,16 +131,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/restaurant2"
-            app:layout_constraintBottom_toTopOf="@+id/etcTextView"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <TextView
             android:id="@+id/etcTextView"
             android:layout_width="wrap_content"
@@ -140,6 +140,7 @@
             android:text="TextView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/mongTextView" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
