@@ -2,12 +2,11 @@ package com.example.guru2_7
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.CompoundButton
+import android.view.View
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 
 var ac_count = 0
 
@@ -37,6 +36,9 @@ class acActivity : AppCompatActivity() {
         dbManager = acDBManager(this)
         sqlDB = dbManager.writableDatabase
 
+        val spinner_acp = findViewById<Spinner>(R.id.spinner_acp)
+        val spinner_act = findViewById<Spinner>(R.id.spinner_act)
+
         var pref = this.getSharedPreferences("user",0)
         var nickname = pref.getString("nickname", "default").toString()
 
@@ -64,6 +66,57 @@ class acActivity : AppCompatActivity() {
         var menu9:String = ""
         var menu10:String = ""
         var price: Int = 0
+        var place_ac:String = ""
+        var time_ac:String = ""
+
+        val place = resources.getStringArray(R.array.place_array)
+        val time = resources.getStringArray(R.array.time_array)
+
+        val Adapter_place = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,place)
+        spinner_acp.adapter = Adapter_place
+        spinner_acp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                place_ac = place[position]
+                when (position) {
+                    0 -> {
+                        Log.d("MyTag", "0번 선택") //test 용, 나중에 db 구현하면 item 선택될때 각각 어떻게 될지 구현하면됨
+                    }
+                    1 -> {
+                        Log.d("MyTag", "1번 선택")
+                    }
+                    else -> {
+                        Log.d("MyTag", "0,1말고 다른거 선택")
+                    }
+                }
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                Log.d("MyTag", "아무것도 선택안됨")
+            }
+        }
+
+        val Adapter_time = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,time)
+        spinner_act.adapter = Adapter_time
+        spinner_act.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                time_ac = time[position]
+                when (position) {
+                    0 -> {
+                        Log.d("MyTag", "0번 선택") //test 용, 나중에 db 구현하면 item 선택될때 각각 어떻게 될지 구현하면됨
+                    }
+                    1 -> {
+                        Log.d("MyTag", "1번 선택")
+                    }
+                    else -> {
+                        Log.d("MyTag", "0,1말고 다른거 선택")
+                    }
+                }
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                Log.d("MyTag", "아무것도 선택안됨")
+            }
+        }
 
 
 //        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
@@ -111,14 +164,13 @@ class acActivity : AppCompatActivity() {
         okButton.setOnClickListener {
             ac_count += 1
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
+            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_ac+"', '"+time_ac+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "ac")
             startActivity(intent)
         }
 
         sqlDB.close()
-
 
     }
 }
