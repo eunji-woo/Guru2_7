@@ -40,22 +40,26 @@ class Order1_Activity : AppCompatActivity() {
                 indbManager = inDBManager(this)
                 sqlDB = indbManager.writableDatabase
                 var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
+                var index = 0
 
                 while (cursor.moveToNext()) {
                     val textView1 = TextView(this) // 공백
                     val textView2 = TextView(this) // 닉네임
                     val textView3 = TextView(this) // 메뉴
+
                     sqlName = " ${cursor.getString(0)}"
                     sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                     sqlPlace = " ${cursor.getString(12)}"
                     sqlTime = " ${cursor.getString(13)}"
+
                     textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
                     textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                     textView3.text = sqlResult
-                    scrollLayout.addView(textView3, 0)
-                    scrollLayout.addView(textView2, 0)
-                    scrollLayout.addView(textView1, 0)
+
+                    scrollLayout.addView(textView1, -1)
+                    scrollLayout.addView(textView2, -1)
+                    scrollLayout.addView(textView3, -1)
                 }
                 cursor.close()
                 sqlDB.close()
@@ -70,20 +74,24 @@ class Order1_Activity : AppCompatActivity() {
                     val textView1 = TextView(this) // 공백
                     val textView2 = TextView(this) // 닉네임
                     val textView3 = TextView(this) // 메뉴
+
                     sqlName = " ${cursor.getString(0)}"
                     sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                     sqlPlace = " ${cursor.getString(12)}"
                     sqlTime = " ${cursor.getString(13)}"
+
                     textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
                     textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                     textView3.text = sqlResult
-                    scrollLayout.addView(textView3, 0)
-                    scrollLayout.addView(textView2, 0)
-                    scrollLayout.addView(textView1, 0)
+
+                    scrollLayout.addView(textView1, -1)
+                    scrollLayout.addView(textView2, -1)
+                    scrollLayout.addView(textView3, -1)
                 }
                 cursor.close()
                 sqlDB.close()
+
             } else if (shop_name == "mong") {
                 mongdbManager = mongDBManager(this)
                 sqlDB = mongdbManager.writableDatabase
@@ -94,20 +102,24 @@ class Order1_Activity : AppCompatActivity() {
                     val textView1 = TextView(this) // 공백
                     val textView2 = TextView(this) // 닉네임
                     val textView3 = TextView(this) // 메뉴
+
                     sqlName = " ${cursor.getString(0)}"
                     sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                     sqlPlace = " ${cursor.getString(12)}"
                     sqlTime = " ${cursor.getString(13)}"
+
                     textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
                     textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                     textView3.text = sqlResult
-                    scrollLayout.addView(textView3, 0)
-                    scrollLayout.addView(textView2, 0)
-                    scrollLayout.addView(textView1, 0)
+
+                    scrollLayout.addView(textView1, -1)
+                    scrollLayout.addView(textView2, -1)
+                    scrollLayout.addView(textView3, -1)
                 }
                 cursor.close()
                 sqlDB.close()
+
             } else if (shop_name == "ac") {
                 acdbManager = acDBManager(this)
                 sqlDB = acdbManager.writableDatabase
@@ -130,12 +142,13 @@ class Order1_Activity : AppCompatActivity() {
                     textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                     textView3.text = sqlResult
 
-                    scrollLayout.addView(textView3, 0)
-                    scrollLayout.addView(textView2, 0)
-                    scrollLayout.addView(textView1, 0)
+                    scrollLayout.addView(textView1, -1)
+                    scrollLayout.addView(textView2, -1)
+                    scrollLayout.addView(textView3, -1)
                 }
                 cursor.close()
                 sqlDB.close()
+
             } else if (shop_name == "kim") {
                 kimdbManager = kimDBManager(this)
                 sqlDB = kimdbManager.writableDatabase
@@ -146,17 +159,20 @@ class Order1_Activity : AppCompatActivity() {
                     val textView1 = TextView(this) // 공백
                     val textView2 = TextView(this) // 닉네임
                     val textView3 = TextView(this) // 메뉴
+
                     sqlName = " ${cursor.getString(0)}"
                     sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                     sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                     sqlPlace = " ${cursor.getString(12)}"
                     sqlTime = " ${cursor.getString(13)}"
+
                     textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
                     textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                     textView3.text = sqlResult
-                    scrollLayout.addView(textView3, 0)
-                    scrollLayout.addView(textView2, 0)
-                    scrollLayout.addView(textView1, 0)
+
+                    scrollLayout.addView(textView1, -1)
+                    scrollLayout.addView(textView2, -1)
+                    scrollLayout.addView(textView3, -1)
                 }
                 cursor.close()
                 sqlDB.close()
