@@ -1,10 +1,13 @@
 package com.example.guru2_7
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +37,23 @@ class Order2Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_order2, container, false)
+        val view = inflater.inflate(R.layout.fragment_order2, null)
+
+        val acText = view.findViewById<TextView>(R.id.acTextView)
+        val inText = view.findViewById<TextView>(R.id.inTextView)
+        val mongText = view.findViewById<TextView>(R.id.mongTextView)
+        val wfText = view.findViewById<TextView>(R.id.wfTextView)
+        val kimText = view.findViewById<TextView>(R.id.kimTextView)
+        val etcText = view.findViewById<TextView>(R.id.etcTextView)
+
+        acText.text = "주문현황개수 : $ac_count"
+        inText.text = "주문현황개수 : $in_count"
+        mongText.text = "주문현황개수 : $mong_count"
+        wfText.text = "주문현황개수 : $wf_count"
+        kimText.text = "주문현황개수 : $kim_count"
+        etcText.text = "주문현황개수 : 0"
+
+        return view
     }
 
     companion object {

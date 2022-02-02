@@ -8,6 +8,8 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 
+var wf_count = 0
+
 class wfActivity : AppCompatActivity() {
 
     lateinit var dbManager: wfDBManager
@@ -135,6 +137,7 @@ class wfActivity : AppCompatActivity() {
         wfCheckBox10.setOnCheckedChangeListener(listener)
 
         okButton.setOnClickListener {
+            wf_count += 1
             sqlDB = dbManager.writableDatabase
             sqlDB.execSQL("INSERT INTO wfTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_wf+"', '"+time_wf+"');")
             val intent = Intent(this, Order1_Activity::class.java)

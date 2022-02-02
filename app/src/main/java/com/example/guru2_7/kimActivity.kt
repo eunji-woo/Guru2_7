@@ -8,6 +8,8 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 
+var kim_count = 0
+
 class kimActivity : AppCompatActivity() {
 
     lateinit var dbManager: kimDBManager
@@ -134,6 +136,7 @@ class kimActivity : AppCompatActivity() {
         kimCheckBox10.setOnCheckedChangeListener(listener)
 
         okButton.setOnClickListener {
+            kim_count += 1
             sqlDB = dbManager.writableDatabase
             sqlDB.execSQL("INSERT INTO kimTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_kim+"', '"+time_kim+"');")
             val intent = Intent(this, Order1_Activity::class.java)
