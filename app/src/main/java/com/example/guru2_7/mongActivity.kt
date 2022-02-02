@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.CompoundButton
 
+var mong_count = 0
+
 class mongActivity : AppCompatActivity() {
 
     lateinit var dbManager: mongDBManager
@@ -107,6 +109,7 @@ class mongActivity : AppCompatActivity() {
         mongCheckBox10.setOnCheckedChangeListener(listener)
 
         okButton.setOnClickListener {
+            mong_count += 1
             sqlDB = dbManager.writableDatabase
             sqlDB.execSQL("INSERT INTO mongTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
             val intent = Intent(this, Order1_Activity::class.java)

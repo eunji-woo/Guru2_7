@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.CompoundButton
 
+var in_count = 0
+
 class inActivity : AppCompatActivity() {
 
     lateinit var dbManager: inDBManager
@@ -104,6 +106,7 @@ class inActivity : AppCompatActivity() {
         inCheckBox10.setOnCheckedChangeListener(listener)
 
         okButton.setOnClickListener {
+            in_count += 1
             sqlDB = dbManager.writableDatabase
             sqlDB.execSQL("INSERT INTO inTBL VALUES ('"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"');")
             val intent = Intent(this, Order1_Activity::class.java)
