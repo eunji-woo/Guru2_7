@@ -11,8 +11,8 @@ class Order1_Activity : AppCompatActivity() {
     lateinit var OrderOkButton : Button
     lateinit var scrollLayout: LinearLayout
 
-    lateinit var textView5 : TextView
-    lateinit var textView6 : TextView
+    lateinit var placeTextview : TextView
+    lateinit var timeTextview : TextView
 
     lateinit var acdbManager: acDBManager
     lateinit var kimdbManager: kimDBManager
@@ -27,8 +27,8 @@ class Order1_Activity : AppCompatActivity() {
 
         OrderOkButton = findViewById(R.id.OrderOkButton)
         scrollLayout = findViewById(R.id.scrollLayout)
-        textView5 = findViewById(R.id.textView5)
-        textView6 = findViewById(R.id.textView5)
+        placeTextview = findViewById(R.id.placeTextview)
+        timeTextview = findViewById(R.id.timeTextview)
 
         var shop_name = intent.getStringExtra("shop_name")
         var sqlResult = ""
