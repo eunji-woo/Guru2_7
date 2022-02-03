@@ -11,7 +11,8 @@ class kimDBManager(context: Context) : SQLiteOpenHelper(context, "kimMenuDB", nu
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+        db!!.execSQL("DROP TABLE IF EXISTS kimTBL")
+        onCreate(db)
     }
 
 }

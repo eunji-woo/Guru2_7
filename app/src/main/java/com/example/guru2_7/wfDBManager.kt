@@ -11,7 +11,8 @@ class wfDBManager (context: Context) : SQLiteOpenHelper(context, "wfMenuDB", nul
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+        db!!.execSQL("DROP TABLE IF EXISTS wfTBL")
+        onCreate(db)
     }
 
 }

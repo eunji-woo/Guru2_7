@@ -11,7 +11,8 @@ class mongDBManager (context: Context) : SQLiteOpenHelper(context, "mongMenuDB",
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+        db!!.execSQL("DROP TABLE IF EXISTS mongTBL")
+        onCreate(db)
     }
 
 }
