@@ -47,6 +47,13 @@ class Order2Fragment : Fragment() {
         val kimImageButton = view.findViewById<ImageButton>(R.id.kimImageButton)
         val etcImageButton = view.findViewById<ImageButton>(R.id.etcImageButton)
 
+        val acResultImage = view.findViewById<ImageView>(R.id.acResultImage)
+        val inResultImage = view.findViewById<ImageView>(R.id.inResultImage)
+        val kimResultImage = view.findViewById<ImageView>(R.id.kimResultImage)
+        val mongResultImage = view.findViewById<ImageView>(R.id.mongResultImage)
+        val wfResultImage = view.findViewById<ImageView>(R.id.wfResultImage)
+
+
         val acText = view.findViewById<TextView>(R.id.acTextView)
         val inText = view.findViewById<TextView>(R.id.inTextView)
         val mongText = view.findViewById<TextView>(R.id.mongTextView)
@@ -60,6 +67,43 @@ class Order2Fragment : Fragment() {
         wfText.text = "주문현황개수 : $wf_count"
         kimText.text = "주문현황개수 : $kim_count"
         etcText.text = "주문현황개수 : 0"
+
+        if(acResult==1){
+            acResultImage.visibility=View.VISIBLE
+        }
+        else if(acResult==0){
+            acResultImage.visibility=View.GONE
+        }
+
+        if(inResult==1){
+            inResultImage.visibility=View.VISIBLE
+        }
+        else if(inResult==0){
+            inResultImage.visibility=View.GONE
+        }
+
+        if(kimResult==1){
+            kimResultImage.visibility=View.VISIBLE
+        }
+        else if(kimResult==0){
+            kimResultImage.visibility=View.GONE
+        }
+
+        if(mongResult==1){
+            mongResultImage.visibility=View.VISIBLE
+        }
+        else if(mongResult==0){
+            mongResultImage.visibility=View.GONE
+        }
+
+        if(wfResult==1){
+            wfResultImage.visibility=View.VISIBLE
+        }
+        else if(wfResult==0){
+            wfResultImage.visibility=View.GONE
+        }
+
+
 
         acImageButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {

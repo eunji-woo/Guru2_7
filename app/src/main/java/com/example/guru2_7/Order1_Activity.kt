@@ -8,6 +8,12 @@ import android.widget.*
 import androidx.core.content.ContextCompat
 import android.widget.TextView
 
+var acResult=0
+var inResult=0
+var kimResult=0
+var mongResult=0
+var wfResult=0
+
 class Order1_Activity : AppCompatActivity() {
     lateinit var OrderOkButton : Button
     lateinit var scrollLayout: LinearLayout
@@ -200,6 +206,7 @@ class Order1_Activity : AppCompatActivity() {
 
         OrderOkButton.setOnClickListener {
 
+
             var pref = this.getSharedPreferences("user",0)
             var nickname = pref.getString("nickname", "default").toString()
 
@@ -214,7 +221,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()){
                     indbManager.onUpgrade(sqlDB, 1, 2)
                     in_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    inResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
@@ -235,7 +242,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()){
                     wfdbManager.onUpgrade(sqlDB, 1, 2)
                     wf_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    wfResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
@@ -256,7 +263,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()) {
                     mongdbManager.onUpgrade(sqlDB, 1, 2)
                     mong_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    mongResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
@@ -277,7 +284,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()) {
                     acdbManager.onUpgrade(sqlDB, 1, 2)
                     ac_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    acResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
@@ -298,7 +305,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()) {
                     kimdbManager.onUpgrade(sqlDB, 1, 2)
                     kim_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    kimResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
