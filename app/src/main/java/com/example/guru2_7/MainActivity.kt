@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                     var editor = pref.edit()
 
                     editor.putString("nickname", cursor.getString(0)).apply()
+                    editor.putString("email", cursor.getString(1)).apply()
 
                     val intent = Intent(this, NaviActivity::class.java)
                     startActivity(intent)
