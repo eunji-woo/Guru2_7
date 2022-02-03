@@ -7,6 +7,12 @@ import android.os.Bundle
 import android.widget.*
 import androidx.core.content.ContextCompat
 
+var acResult=0
+var inResult=0
+var kimResult=0
+var mongResult=0
+var wfResult=0
+
 class Order1_Activity : AppCompatActivity() {
     lateinit var OrderOkButton : Button
     lateinit var scrollLayout: LinearLayout
@@ -185,11 +191,13 @@ class Order1_Activity : AppCompatActivity() {
 
         OrderOkButton.setOnClickListener {
 
+
             var pref = this.getSharedPreferences("user",0)
             var nickname = pref.getString("nickname", "default").toString()
 
             //if문으로 주문자랑 참여자 구분해야됨 (아직 그쪽 부분 구현이 안돼서 if문 일단 뺌)
             if (shop_name == "in") {
+                inResult += 1
                 indbManager = inDBManager(this)
                 sqlDB = indbManager.writableDatabase
 
@@ -211,6 +219,7 @@ class Order1_Activity : AppCompatActivity() {
 
                 sqlDB.close()
             } else if (shop_name == "wf") {
+                wfResult += 1
                 wfdbManager = wfDBManager(this)
                 sqlDB = wfdbManager.writableDatabase
 
@@ -232,6 +241,7 @@ class Order1_Activity : AppCompatActivity() {
 
                 sqlDB.close()
             } else if (shop_name == "mong") {
+                mongResult += 1
                 mongdbManager = mongDBManager(this)
                 sqlDB = mongdbManager.writableDatabase
 
@@ -253,6 +263,7 @@ class Order1_Activity : AppCompatActivity() {
 
                 sqlDB.close()
             } else if (shop_name == "ac") {
+                acResult += 1
                 acdbManager = acDBManager(this)
                 sqlDB = acdbManager.writableDatabase
 
@@ -274,6 +285,7 @@ class Order1_Activity : AppCompatActivity() {
 
                 sqlDB.close()
             } else if (shop_name == "kim") {
+                kimResult += 1
                 kimdbManager = kimDBManager(this)
                 sqlDB = kimdbManager.writableDatabase
 
