@@ -68,42 +68,20 @@ class Order2Fragment : Fragment() {
         kimText.text = "주문현황개수 : $kim_count"
         etcText.text = "주문현황개수 : 0"
 
-        if(acResult==1){
-            acResultImage.visibility=View.VISIBLE
-        }
-        else if(acResult==0){
-            acResultImage.visibility=View.GONE
-        }
+        if(acResult == 0){ acResultImage.visibility = View.GONE }
+        else{ acResultImage.visibility = View.VISIBLE }
 
-        if(inResult==1){
-            inResultImage.visibility=View.VISIBLE
-        }
-        else if(inResult==0){
-            inResultImage.visibility=View.GONE
-        }
+        if(inResult == 0){ inResultImage.visibility = View.GONE }
+        else{ inResultImage.visibility = View.VISIBLE }
 
-        if(kimResult==1){
-            kimResultImage.visibility=View.VISIBLE
-        }
-        else if(kimResult==0){
-            kimResultImage.visibility=View.GONE
-        }
+        if(mongResult == 0){ mongResultImage.visibility = View.GONE }
+        else{ mongResultImage.visibility = View.VISIBLE }
 
-        if(mongResult==1){
-            mongResultImage.visibility=View.VISIBLE
-        }
-        else if(mongResult==0){
-            mongResultImage.visibility=View.GONE
-        }
+        if(wfResult == 0){ wfResultImage.visibility = View.GONE }
+        else{ wfResultImage.visibility = View.VISIBLE }
 
-        if(wfResult==1){
-            wfResultImage.visibility=View.VISIBLE
-        }
-        else if(wfResult==0){
-            wfResultImage.visibility=View.GONE
-        }
-
-
+        if(kimResult == 0){ kimResultImage.visibility = View.GONE }
+        else{ kimResultImage.visibility = View.VISIBLE }
 
         acImageButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {

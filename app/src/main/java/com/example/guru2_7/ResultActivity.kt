@@ -12,15 +12,21 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
+        var shop_name = intent.getStringExtra("shop_name")
+
         Homebutton=findViewById(R.id.Homebutton)
 
-
         Homebutton.setOnClickListener{
+
+            if(shop_name == "ac") { acResult = 0 }
+            else if(shop_name == "in") { inResult = 0 }
+            else if(shop_name == "kim") { kimResult = 0 }
+            else if(shop_name == "mong") { mongResult = 0 }
+            else { wfResult = 0 }
+
             // Home 으로 이동
             val intent = Intent(this, NaviActivity::class.java)
             startActivity(intent)
         }
     }
-
-
 }

@@ -210,6 +210,7 @@ class Order1_Activity : AppCompatActivity() {
                     in_count = 0
                     inResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
+                    intent.putExtra("shop_name", "in")
                     startActivity(intent)
                 }
 
@@ -231,6 +232,7 @@ class Order1_Activity : AppCompatActivity() {
                     wf_count = 0
                     wfResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
+                    intent.putExtra("shop_name", "wf")
                     startActivity(intent)
                 }
 
@@ -252,6 +254,7 @@ class Order1_Activity : AppCompatActivity() {
                     mong_count = 0
                     mongResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
+                    intent.putExtra("shop_name", "mong")
                     startActivity(intent)
                 }
 
@@ -273,6 +276,7 @@ class Order1_Activity : AppCompatActivity() {
                     ac_count = 0
                     acResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
+                    intent.putExtra("shop_name", "ac")
                     startActivity(intent)
                 }
 
@@ -294,6 +298,7 @@ class Order1_Activity : AppCompatActivity() {
                     kim_count = 0
                     kimResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
+                    intent.putExtra("shop_name", "kim")
                     startActivity(intent)
                 }
 
