@@ -66,6 +66,19 @@ class acActivity : AppCompatActivity() {
         var menu9:String = ""
         var menu10:String = ""
         var price: Int = 0
+
+
+
+        var cursor = sqlDB.rawQuery("SELECT * FROM acTBL", null)
+        if(cursor.moveToNext()==false){
+            spinner_act.visibility = View.VISIBLE
+            spinner_acp.visibility = View.VISIBLE
+        }
+        else{
+            spinner_act.visibility = View.GONE
+            spinner_acp.visibility = View.GONE
+        }
+
         var place_ac:String = ""
         var time_ac:String = ""
 

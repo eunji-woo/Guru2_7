@@ -66,6 +66,17 @@ class kimActivity : AppCompatActivity() {
         var menu10:String = ""
         var price: Int = 0
 
+        var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
+        if(cursor.moveToNext()==false){
+            spinner_kimt.visibility = View.VISIBLE
+            spinner_kimp.visibility = View.VISIBLE
+        }
+        else{
+            spinner_kimt.visibility = View.GONE
+            spinner_kimp.visibility = View.GONE
+        }
+
+
         var place_kim:String = ""
         var time_kim:String = ""
         val place = resources.getStringArray(R.array.place_array)

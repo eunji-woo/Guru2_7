@@ -66,6 +66,17 @@ class wfActivity : AppCompatActivity() {
         var menu10:String = ""
         var price:Int = 0
 
+
+        var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
+        if(cursor.moveToNext()==false){
+            spinner_wft.visibility = View.VISIBLE
+            spinner_wfp.visibility = View.VISIBLE
+        }
+        else{
+            spinner_wft.visibility = View.GONE
+            spinner_wfp.visibility = View.GONE
+        }
+
         var place_wf:String = ""
         var time_wf:String = ""
         val place = resources.getStringArray(R.array.place_array)
