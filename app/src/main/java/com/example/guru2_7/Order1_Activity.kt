@@ -182,51 +182,114 @@ class Order1_Activity : AppCompatActivity() {
 
         OrderOkButton.setOnClickListener {
 
+            var pref = this.getSharedPreferences("user",0)
+            var nickname = pref.getString("nickname", "default").toString()
+
             //if문으로 주문자랑 참여자 구분해야됨 (아직 그쪽 부분 구현이 안돼서 if문 일단 뺌)
             if (shop_name == "in") {
                 indbManager = inDBManager(this)
                 sqlDB = indbManager.writableDatabase
-                indbManager.onUpgrade(sqlDB, 1, 2)
-                in_count = 0
-                Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, NaviActivity::class.java)
-                startActivity(intent)
+
+                var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
+                cursor.moveToNext()
+
+                if(cursor.getString(0).toString() == nickname.toString()){
+                    indbManager.onUpgrade(sqlDB, 1, 2)
+                    in_count = 0
+                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, ResultActivity::class.java)
+                    startActivity(intent)
+                }
+
+                else{
+                    val intent = Intent(this, NaviActivity::class.java)
+                    startActivity(intent)
+                }
+
                 sqlDB.close()
             } else if (shop_name == "wf") {
                 wfdbManager = wfDBManager(this)
                 sqlDB = wfdbManager.writableDatabase
-                wfdbManager.onUpgrade(sqlDB, 1, 2)
-                wf_count = 0
-                Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, NaviActivity::class.java)
-                startActivity(intent)
+
+                var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
+                cursor.moveToNext()
+
+                if(cursor.getString(0).toString() == nickname.toString()){
+                    wfdbManager.onUpgrade(sqlDB, 1, 2)
+                    wf_count = 0
+                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, ResultActivity::class.java)
+                    startActivity(intent)
+                }
+
+                else{
+                    val intent = Intent(this, NaviActivity::class.java)
+                    startActivity(intent)
+                }
+
                 sqlDB.close()
             } else if (shop_name == "mong") {
                 mongdbManager = mongDBManager(this)
                 sqlDB = mongdbManager.writableDatabase
-                mongdbManager.onUpgrade(sqlDB, 1, 2)
-                mong_count = 0
-                Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, NaviActivity::class.java)
-                startActivity(intent)
+
+                var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
+                cursor.moveToNext()
+
+                if(cursor.getString(0).toString() == nickname.toString()) {
+                    mongdbManager.onUpgrade(sqlDB, 1, 2)
+                    mong_count = 0
+                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, ResultActivity::class.java)
+                    startActivity(intent)
+                }
+
+                else{
+                    val intent = Intent(this, NaviActivity::class.java)
+                    startActivity(intent)
+                }
+
                 sqlDB.close()
             } else if (shop_name == "ac") {
                 acdbManager = acDBManager(this)
                 sqlDB = acdbManager.writableDatabase
-                acdbManager.onUpgrade(sqlDB, 1, 2)
-                ac_count = 0
-                Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, NaviActivity::class.java)
-                startActivity(intent)
+
+                var cursor = sqlDB.rawQuery("SELECT * FROM acTBL", null)
+                cursor.moveToNext()
+
+                if(cursor.getString(0).toString() == nickname.toString()) {
+                    acdbManager.onUpgrade(sqlDB, 1, 2)
+                    ac_count = 0
+                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, ResultActivity::class.java)
+                    startActivity(intent)
+                }
+
+                else{
+                    val intent = Intent(this, NaviActivity::class.java)
+                    startActivity(intent)
+                }
+
                 sqlDB.close()
             } else if (shop_name == "kim") {
                 kimdbManager = kimDBManager(this)
                 sqlDB = kimdbManager.writableDatabase
-                kimdbManager.onUpgrade(sqlDB, 1, 2)
-                kim_count = 0
-                Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, NaviActivity::class.java)
-                startActivity(intent)
+
+                var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
+                cursor.moveToNext()
+
+                if(cursor.getString(0).toString() == nickname.toString()) {
+                    kimdbManager.onUpgrade(sqlDB, 1, 2)
+                    kim_count = 0
+                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, ResultActivity::class.java)
+                    startActivity(intent)
+                }
+
+                else{
+                    val intent = Intent(this, NaviActivity::class.java)
+                    startActivity(intent)
+                }
+
                 sqlDB.close()
             }
         }
