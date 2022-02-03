@@ -1,262 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".inActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="300dp"
-        tools:layout_editor_absoluteY="180dp" >
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        >
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="180dp" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin = "30px" >
+                    <ImageView
+                        android:id="@+id/inImage1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in1" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 소\n4,500"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in2" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 대\n9,500"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in3" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 소\n4,000"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in4" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 대\n9,000"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:layout_editor_absoluteX="92dp"
+                        tools:layout_editor_absoluteY="446dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in5" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="튀긴마늘 슬라이스\n500"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:layout_editor_absoluteX="81dp"
+                        tools:layout_editor_absoluteY="178dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in6" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="치즈볼\n4,000"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:layout_editor_absoluteX="83dp"
+                        tools:layout_editor_absoluteY="113dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/restaurant2" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="모듬감자튀김\n4,000"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:layout_editor_absoluteX="92dp"
+                        tools:layout_editor_absoluteY="522dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in8" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="크런치 양파스틱\n2,500"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:layout_editor_absoluteX="85dp"
+                        tools:layout_editor_absoluteY="238dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in9" />
+                    <CheckBox
+                        android:id="@+id/inCheckBox9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="콘샐러드(새콤달콤)\n2,000"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:layout_editor_absoluteX="83dp"
+                        tools:layout_editor_absoluteY="306dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30px">
+                    <ImageView
+                        android:id="@+id/inImage10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/in10" />
+
+                    <CheckBox
+                        android:id="@+id/inCheckBox10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="콜라\n1,500"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin = "30px" >
-                <ImageView
-                    android:id="@+id/inImage1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in1" />
-                <CheckBox
-                    android:id="@+id/inCheckBox1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 소\n4,500"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in2" />
-                <CheckBox
-                    android:id="@+id/inCheckBox2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 대\n9,500"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage3"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in3" />
-                <CheckBox
-                    android:id="@+id/inCheckBox3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 소\n4,000"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage4"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in4" />
-                <CheckBox
-                    android:id="@+id/inCheckBox4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 대\n9,000"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    tools:layout_editor_absoluteX="92dp"
-                    tools:layout_editor_absoluteY="446dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage5"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in5" />
-                <CheckBox
-                    android:id="@+id/inCheckBox5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="튀긴마늘 슬라이스\n500"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    tools:layout_editor_absoluteX="81dp"
-                    tools:layout_editor_absoluteY="178dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage6"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in6" />
-                <CheckBox
-                    android:id="@+id/inCheckBox6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="치즈볼\n4,000"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    tools:layout_editor_absoluteX="83dp"
-                    tools:layout_editor_absoluteY="113dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage7"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/restaurant2" />
-                <CheckBox
-                    android:id="@+id/inCheckBox7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="모듬감자튀김\n4,000"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    tools:layout_editor_absoluteX="92dp"
-                    tools:layout_editor_absoluteY="522dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage8"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in8" />
-                <CheckBox
-                    android:id="@+id/inCheckBox8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="크런치 양파스틱\n2,500"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    tools:layout_editor_absoluteX="85dp"
-                    tools:layout_editor_absoluteY="238dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage9"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in9" />
-                <CheckBox
-                    android:id="@+id/inCheckBox9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="콘샐러드(새콤달콤)\n2,000"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    tools:layout_editor_absoluteX="83dp"
-                    tools:layout_editor_absoluteY="306dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30px">
-                <ImageView
-                    android:id="@+id/inImage10"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/in10" />
-
-                <CheckBox
-                    android:id="@+id/inCheckBox10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="콜라\n1,500"
-                    android:layout_gravity="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="30px"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/spinner_int"
-                    style="@android:style/Widget.Spinner"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:visibility="visible"
-                    tools:ignore="MissingConstraints" />
-
-                <Spinner
-                    android:id="@+id/spinner_inp"
-                    style="@android:style/Widget.Spinner"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:visibility="visible"
-                    tools:ignore="MissingConstraints" />
-
-            </LinearLayout>
-
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/spinner_inp"
+                style="@android:style/Widget.Spinner"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:textSize="10sp"
+                android:layout_marginTop="15px"
+                android:layout_marginLeft="15px"
+                android:padding="0px"
+                tools:ignore="MissingConstraints" />
+            <Spinner
+                android:id="@+id/spinner_int"
+                style="@android:style/Widget.Spinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:textSize="10sp"
+                android:layout_marginTop="15px"
+                android:layout_marginLeft="10px"
+                android:padding="0px"
+                tools:ignore="MissingConstraints" />
         </LinearLayout>
-    </ScrollView>
 
-    <Button
-        android:id="@+id/okButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="690dp"
-        android:layout_marginTop="1100dp"
-        android:text="주문완료"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/okButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:text="주문완료"
+                android:textSize="24sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
