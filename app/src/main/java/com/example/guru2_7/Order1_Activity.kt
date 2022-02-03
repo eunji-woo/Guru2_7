@@ -53,7 +53,10 @@ class Order1_Activity : AppCompatActivity() {
                 sqlPlace = " ${cursor.getString(12)}"
                 sqlTime = " ${cursor.getString(13)}"
 
-                textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
+                placeTextview.append(sqlPlace)
+                timeTextview.append(sqlTime)
+
+                textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
