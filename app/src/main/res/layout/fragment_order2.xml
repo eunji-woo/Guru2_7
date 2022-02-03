@@ -150,6 +150,56 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/mongTextView" />
 
+        <ImageView
+            android:id="@+id/acResultImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/delivery_man"
+            app:layout_constraintBottom_toTopOf="@+id/acTextView"
+            app:layout_constraintEnd_toStartOf="@+id/kimImageButton" />
+
+        <ImageView
+            android:id="@+id/kimResultImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/delivery_man"
+            app:layout_constraintBottom_toTopOf="@+id/kimTextView"
+            app:layout_constraintEnd_toStartOf="@+id/wfImageButton" />
+
+        <ImageView
+            android:id="@+id/wfResultImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="83dp"
+            android:src="@drawable/delivery_man"
+            app:layout_constraintBottom_toTopOf="@+id/etcImageButton"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/inResultImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/delivery_man"
+            app:layout_constraintBottom_toTopOf="@+id/inTextView"
+            app:layout_constraintEnd_toStartOf="@+id/mongImageButton" />
+
+        <ImageView
+            android:id="@+id/mongResultImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/delivery_man"
+            app:layout_constraintBottom_toTopOf="@+id/mongTextView"
+            app:layout_constraintEnd_toStartOf="@+id/etcImageButton" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
