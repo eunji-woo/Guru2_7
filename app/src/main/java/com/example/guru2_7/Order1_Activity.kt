@@ -187,6 +187,7 @@ class Order1_Activity : AppCompatActivity() {
                 indbManager = inDBManager(this)
                 sqlDB = indbManager.writableDatabase
                 indbManager.onUpgrade(sqlDB, 1, 2)
+                in_count = 0
                 Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, NaviActivity::class.java)
                 startActivity(intent)
@@ -195,6 +196,7 @@ class Order1_Activity : AppCompatActivity() {
                 wfdbManager = wfDBManager(this)
                 sqlDB = wfdbManager.writableDatabase
                 wfdbManager.onUpgrade(sqlDB, 1, 2)
+                wf_count = 0
                 Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, NaviActivity::class.java)
                 startActivity(intent)
@@ -203,6 +205,7 @@ class Order1_Activity : AppCompatActivity() {
                 mongdbManager = mongDBManager(this)
                 sqlDB = mongdbManager.writableDatabase
                 mongdbManager.onUpgrade(sqlDB, 1, 2)
+                mong_count = 0
                 Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, NaviActivity::class.java)
                 startActivity(intent)
@@ -211,6 +214,7 @@ class Order1_Activity : AppCompatActivity() {
                 acdbManager = acDBManager(this)
                 sqlDB = acdbManager.writableDatabase
                 acdbManager.onUpgrade(sqlDB, 1, 2)
+                ac_count = 0
                 Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, NaviActivity::class.java)
                 startActivity(intent)
@@ -219,6 +223,7 @@ class Order1_Activity : AppCompatActivity() {
                 kimdbManager = kimDBManager(this)
                 sqlDB = kimdbManager.writableDatabase
                 kimdbManager.onUpgrade(sqlDB, 1, 2)
+                kim_count = 0
                 Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, NaviActivity::class.java)
                 startActivity(intent)
