@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.core.content.ContextCompat
+import android.widget.TextView
 
 class Order1_Activity : AppCompatActivity() {
     lateinit var OrderOkButton : Button
@@ -55,8 +56,8 @@ class Order1_Activity : AppCompatActivity() {
                 sqlPlace = " ${cursor.getString(12)}"
                 sqlTime = " ${cursor.getString(13)}"
 
-                placeTextview.append(sqlPlace)
-                timeTextview.append(sqlTime)
+                placeTextview.text = "$place_in"
+                timeTextview.text = "$time_in"
 
                 textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
@@ -86,7 +87,10 @@ class Order1_Activity : AppCompatActivity() {
                 sqlPlace = " ${cursor.getString(12)}"
                 sqlTime = " ${cursor.getString(13)}"
 
-                textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
+                placeTextview.text = "$place_wf"
+                timeTextview.text = "$time_wf"
+
+                textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
@@ -114,7 +118,10 @@ class Order1_Activity : AppCompatActivity() {
                 sqlPlace = " ${cursor.getString(12)}"
                 sqlTime = " ${cursor.getString(13)}"
 
-                textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
+                placeTextview.text = "$place_mong"
+                timeTextview.text = "$time_mong"
+
+                textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
@@ -143,7 +150,10 @@ class Order1_Activity : AppCompatActivity() {
                 sqlPlace = " ${cursor.getString(12)}"
                 sqlTime = " ${cursor.getString(13)}"
 
-                textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
+                placeTextview.text = "$place_ac"
+                timeTextview.text = "$time_ac"
+
+                textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
@@ -171,7 +181,10 @@ class Order1_Activity : AppCompatActivity() {
                 sqlPlace = " ${cursor.getString(12)}"
                 sqlTime = " ${cursor.getString(13)}"
 
-                textView2.text = sqlName.plus(sqlPlace).plus(sqlTime)
+                placeTextview.text = "$place_kim"
+                timeTextview.text = "$time_kim"
+
+                textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 

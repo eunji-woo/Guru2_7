@@ -9,6 +9,8 @@ import android.view.View
 import android.widget.*
 
 var kim_count = 0
+var place_kim = ""
+var time_kim = ""
 
 class kimActivity : AppCompatActivity() {
 
@@ -77,8 +79,6 @@ class kimActivity : AppCompatActivity() {
         }
 
 
-        var place_kim:String = ""
-        var time_kim:String = ""
         val place = resources.getStringArray(R.array.place_array)
         val time = resources.getStringArray(R.array.time_array)
         val Adapter_place = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,place)
