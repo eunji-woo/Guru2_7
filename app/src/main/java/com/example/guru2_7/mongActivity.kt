@@ -66,6 +66,17 @@ class mongActivity : AppCompatActivity() {
         var menu10:String = ""
         var price:Int = 0
 
+        var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
+        if(cursor.moveToNext()==false){
+            spinner_mongt.visibility = View.VISIBLE
+            spinner_mongp.visibility = View.VISIBLE
+        }
+        else{
+            spinner_mongt.visibility = View.GONE
+            spinner_mongp.visibility = View.GONE
+        }
+
+
         var place_mong:String = ""
         var time_mong:String = ""
         val place = resources.getStringArray(R.array.place_array)

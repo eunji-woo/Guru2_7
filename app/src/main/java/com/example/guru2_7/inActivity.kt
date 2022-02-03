@@ -66,6 +66,18 @@ class inActivity : AppCompatActivity() {
         var menu10:String = ""
         var price: Int = 0
 
+
+        var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
+        if(cursor.moveToNext()==false){
+            spinner_int.visibility = View.VISIBLE
+            spinner_inp.visibility = View.VISIBLE
+        }
+        else{
+            spinner_int.visibility = View.GONE
+            spinner_inp.visibility = View.GONE
+        }
+
+
         var place_in:String = ""
         var time_in:String = ""
         val place = resources.getStringArray(R.array.place_array)
