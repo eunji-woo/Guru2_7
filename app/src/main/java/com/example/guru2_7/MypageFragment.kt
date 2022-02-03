@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -41,8 +42,13 @@ class MypageFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_mypage, null)
         val changeButton = view.findViewById<Button>(R.id.ChangePWbutton)
         val OutButton = view.findViewById<Button>(R.id.Outbutton)
+        val textView2 = view.findViewById<TextView>(R.id.textView2)
         lateinit var dbManager: DBManager
         lateinit var sqlDB: SQLiteDatabase
+        var pref = requireActivity().getSharedPreferences("user",0)
+        var nickname = pref.getString("nickname", "default").toString()
+
+        textView2.text = nickname
 
         changeButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
