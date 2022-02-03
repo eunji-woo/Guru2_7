@@ -47,7 +47,7 @@ class Order1_Activity : AppCompatActivity() {
             indbManager = inDBManager(this)
             sqlDB = indbManager.writableDatabase
             var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
-            var index = 0
+            var priceAll = 0
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
@@ -57,9 +57,11 @@ class Order1_Activity : AppCompatActivity() {
                 sqlName = " ${cursor.getString(0)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+                priceAll = priceAll + cursor.getString(11).toInt()
 
                 placeTextview.text = "$place_in"
                 timeTextview.text = "$time_in"
+                priceTextview.text = priceAll.toString()
 
                 textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
@@ -75,8 +77,8 @@ class Order1_Activity : AppCompatActivity() {
         } else if (shop_name == "wf") {
             wfdbManager = wfDBManager(this)
             sqlDB = wfdbManager.writableDatabase
-
             var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
+            var priceAll = 0
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
@@ -86,9 +88,11 @@ class Order1_Activity : AppCompatActivity() {
                 sqlName = " ${cursor.getString(0)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+                priceAll = priceAll + cursor.getString(11).toInt()
 
                 placeTextview.text = "$place_wf"
                 timeTextview.text = "$time_wf"
+                priceTextview.text = priceAll.toString()
 
                 textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
@@ -104,8 +108,8 @@ class Order1_Activity : AppCompatActivity() {
         } else if (shop_name == "mong") {
             mongdbManager = mongDBManager(this)
             sqlDB = mongdbManager.writableDatabase
-
             var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
+            var priceAll = 0
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
@@ -115,9 +119,11 @@ class Order1_Activity : AppCompatActivity() {
                 sqlName = " ${cursor.getString(0)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+                priceAll = priceAll + cursor.getString(11).toInt()
 
                 placeTextview.text = "$place_mong"
                 timeTextview.text = "$time_mong"
+                priceTextview.text = priceAll.toString()
 
                 textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
@@ -133,9 +139,8 @@ class Order1_Activity : AppCompatActivity() {
         } else if (shop_name == "ac") {
             acdbManager = acDBManager(this)
             sqlDB = acdbManager.writableDatabase
-            //shop_name="in"
-
             var cursor = sqlDB.rawQuery("SELECT * FROM acTBL", null)
+            var priceAll = 0
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
@@ -145,9 +150,11 @@ class Order1_Activity : AppCompatActivity() {
                 sqlName = " ${cursor.getString(0)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+                priceAll = priceAll + cursor.getString(11).toInt()
 
                 placeTextview.text = "$place_ac"
                 timeTextview.text = "$time_ac"
+                priceTextview.text = priceAll.toString()
 
                 textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
@@ -163,8 +170,8 @@ class Order1_Activity : AppCompatActivity() {
         } else if (shop_name == "kim") {
             kimdbManager = kimDBManager(this)
             sqlDB = kimdbManager.writableDatabase
-
             var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
+            var priceAll = 0
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
@@ -174,9 +181,11 @@ class Order1_Activity : AppCompatActivity() {
                 sqlName = " ${cursor.getString(0)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+                priceAll = priceAll + cursor.getString(11).toInt()
 
                 placeTextview.text = "$place_kim"
                 timeTextview.text = "$time_kim"
+                priceTextview.text = priceAll.toString()
 
                 textView2.text = sqlName
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
