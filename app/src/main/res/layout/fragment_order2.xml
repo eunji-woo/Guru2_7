@@ -175,9 +175,9 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="83dp"
+            android:layout_marginBottom="8dp"
             android:src="@drawable/delivery_man"
-            app:layout_constraintBottom_toTopOf="@+id/etcImageButton"
+            app:layout_constraintBottom_toBottomOf="@+id/wfImageButton"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
