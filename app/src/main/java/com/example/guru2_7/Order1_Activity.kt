@@ -199,7 +199,6 @@ class Order1_Activity : AppCompatActivity() {
 
             //if문으로 주문자랑 참여자 구분해야됨 (아직 그쪽 부분 구현이 안돼서 if문 일단 뺌)
             if (shop_name == "in") {
-                inResult = 1
                 indbManager = inDBManager(this)
                 sqlDB = indbManager.writableDatabase
 
@@ -209,7 +208,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()){
                     indbManager.onUpgrade(sqlDB, 1, 2)
                     in_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    inResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
@@ -221,7 +220,6 @@ class Order1_Activity : AppCompatActivity() {
 
                 sqlDB.close()
             } else if (shop_name == "wf") {
-                wfResult = 1
                 wfdbManager = wfDBManager(this)
                 sqlDB = wfdbManager.writableDatabase
 
@@ -231,7 +229,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()){
                     wfdbManager.onUpgrade(sqlDB, 1, 2)
                     wf_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    wfResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
@@ -243,7 +241,6 @@ class Order1_Activity : AppCompatActivity() {
 
                 sqlDB.close()
             } else if (shop_name == "mong") {
-                mongResult = 1
                 mongdbManager = mongDBManager(this)
                 sqlDB = mongdbManager.writableDatabase
 
@@ -253,7 +250,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()) {
                     mongdbManager.onUpgrade(sqlDB, 1, 2)
                     mong_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    mongResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
@@ -265,7 +262,6 @@ class Order1_Activity : AppCompatActivity() {
 
                 sqlDB.close()
             } else if (shop_name == "ac") {
-                acResult = 1
                 acdbManager = acDBManager(this)
                 sqlDB = acdbManager.writableDatabase
 
@@ -275,7 +271,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()) {
                     acdbManager.onUpgrade(sqlDB, 1, 2)
                     ac_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    acResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
@@ -287,7 +283,6 @@ class Order1_Activity : AppCompatActivity() {
 
                 sqlDB.close()
             } else if (shop_name == "kim") {
-                kimResult = 1
                 kimdbManager = kimDBManager(this)
                 sqlDB = kimdbManager.writableDatabase
 
@@ -297,7 +292,7 @@ class Order1_Activity : AppCompatActivity() {
                 if(cursor.getString(0).toString() == nickname.toString()) {
                     kimdbManager.onUpgrade(sqlDB, 1, 2)
                     kim_count = 0
-                    Toast.makeText(this, "주문이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+                    kimResult = 1
                     val intent = Intent(this, ResultActivity::class.java)
                     startActivity(intent)
                 }
