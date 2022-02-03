@@ -13,6 +13,7 @@ class Order1_Activity : AppCompatActivity() {
 
     lateinit var placeTextview : TextView
     lateinit var timeTextview : TextView
+    lateinit var priceTextview : TextView
 
     lateinit var acdbManager: acDBManager
     lateinit var kimdbManager: kimDBManager
@@ -29,6 +30,7 @@ class Order1_Activity : AppCompatActivity() {
         scrollLayout = findViewById(R.id.scrollLayout)
         placeTextview = findViewById(R.id.placeTextview)
         timeTextview = findViewById(R.id.timeTextview)
+        priceTextview = findViewById(R.id.priceTextview)
 
         var shop_name = intent.getStringExtra("shop_name")
         var sqlResult = ""
