@@ -2,11 +2,15 @@ package com.example.guru2_7
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.annotation.RequiresApi
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 var kim_count = 0
 var place_kim = ""
@@ -31,6 +35,7 @@ class kimActivity : AppCompatActivity() {
     lateinit var okButton: Button
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kim)
@@ -67,6 +72,10 @@ class kimActivity : AppCompatActivity() {
         var menu9:String = ""
         var menu10:String = ""
         var price: Int = 0
+
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("h:mm a")
+        val start = current.format(formatter)
 
         var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
         if(cursor.moveToNext()==false){
@@ -149,7 +158,7 @@ class kimActivity : AppCompatActivity() {
         okButton.setOnClickListener {
             kim_count += 1
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO kimTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_kim+"', '"+time_kim+"');")
+            sqlDB.execSQL("INSERT INTO kimTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_kim+"', '"+time_kim+"', '"+start+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "kim")
             startActivity(intent)

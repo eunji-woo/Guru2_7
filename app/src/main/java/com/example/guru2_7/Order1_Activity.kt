@@ -2,11 +2,15 @@ package com.example.guru2_7
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.core.content.ContextCompat
 import android.widget.TextView
+import androidx.annotation.RequiresApi
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 var acResult=0
 var inResult=0
@@ -29,6 +33,7 @@ class Order1_Activity : AppCompatActivity() {
     lateinit var wfdbManager: wfDBManager
     lateinit var sqlDB: SQLiteDatabase
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order1_)
@@ -42,6 +47,7 @@ class Order1_Activity : AppCompatActivity() {
         var shop_name = intent.getStringExtra("shop_name")
         var sqlResult = ""
         var sqlName = ""
+        var sqlTime = ""
 
         if (shop_name == "in") {
             indbManager = inDBManager(this)
@@ -55,6 +61,7 @@ class Order1_Activity : AppCompatActivity() {
                 val textView3 = TextView(this) // 메뉴
 
                 sqlName = " ${cursor.getString(0)}"
+                sqlTime = " ${cursor.getString(14)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                 priceAll = priceAll + cursor.getString(11).toInt()
@@ -63,7 +70,7 @@ class Order1_Activity : AppCompatActivity() {
                 timeTextview.text = "$time_in"
                 priceTextview.text = priceAll.toString()
 
-                textView2.text = sqlName
+                textView2.text = sqlName.plus(sqlTime)
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
@@ -86,6 +93,7 @@ class Order1_Activity : AppCompatActivity() {
                 val textView3 = TextView(this) // 메뉴
 
                 sqlName = " ${cursor.getString(0)}"
+                sqlTime = " ${cursor.getString(14)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                 priceAll = priceAll + cursor.getString(11).toInt()
@@ -94,7 +102,7 @@ class Order1_Activity : AppCompatActivity() {
                 timeTextview.text = "$time_wf"
                 priceTextview.text = priceAll.toString()
 
-                textView2.text = sqlName
+                textView2.text = sqlName.plus(sqlTime)
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
@@ -117,6 +125,7 @@ class Order1_Activity : AppCompatActivity() {
                 val textView3 = TextView(this) // 메뉴
 
                 sqlName = " ${cursor.getString(0)}"
+                sqlTime = " ${cursor.getString(14)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                 priceAll = priceAll + cursor.getString(11).toInt()
@@ -125,7 +134,7 @@ class Order1_Activity : AppCompatActivity() {
                 timeTextview.text = "$time_mong"
                 priceTextview.text = priceAll.toString()
 
-                textView2.text = sqlName
+                textView2.text = sqlName.plus(sqlTime)
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
@@ -148,6 +157,7 @@ class Order1_Activity : AppCompatActivity() {
                 val textView3 = TextView(this) // 메뉴
 
                 sqlName = " ${cursor.getString(0)}"
+                sqlTime = " ${cursor.getString(14)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                 priceAll = priceAll + cursor.getString(11).toInt()
@@ -156,7 +166,7 @@ class Order1_Activity : AppCompatActivity() {
                 timeTextview.text = "$time_ac"
                 priceTextview.text = priceAll.toString()
 
-                textView2.text = sqlName
+                textView2.text = sqlName.plus(sqlTime)
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
@@ -179,6 +189,7 @@ class Order1_Activity : AppCompatActivity() {
                 val textView3 = TextView(this) // 메뉴
 
                 sqlName = " ${cursor.getString(0)}"
+                sqlTime = " ${cursor.getString(14)}"
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
                 priceAll = priceAll + cursor.getString(11).toInt()
@@ -187,7 +198,7 @@ class Order1_Activity : AppCompatActivity() {
                 timeTextview.text = "$time_kim"
                 priceTextview.text = priceAll.toString()
 
-                textView2.text = sqlName
+                textView2.text = sqlName.plus(sqlTime)
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 

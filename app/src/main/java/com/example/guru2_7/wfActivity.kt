@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 var wf_count = 0
 var place_wf = ""
@@ -67,6 +69,10 @@ class wfActivity : AppCompatActivity() {
         var menu9:String = ""
         var menu10:String = ""
         var price:Int = 0
+
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("h:mm a")
+        val start = current.format(formatter)
 
 
         var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
@@ -150,7 +156,7 @@ class wfActivity : AppCompatActivity() {
         okButton.setOnClickListener {
             wf_count += 1
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO wfTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_wf+"', '"+time_wf+"');")
+            sqlDB.execSQL("INSERT INTO wfTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_wf+"', '"+time_wf+"', '"+start+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "wf")
             startActivity(intent)

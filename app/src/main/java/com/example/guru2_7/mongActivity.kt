@@ -2,11 +2,15 @@ package com.example.guru2_7
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.annotation.RequiresApi
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 var mong_count = 0
 var place_mong = ""
@@ -31,6 +35,7 @@ class mongActivity : AppCompatActivity() {
     lateinit var okButton: Button
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mong)
@@ -67,6 +72,10 @@ class mongActivity : AppCompatActivity() {
         var menu9:String = ""
         var menu10:String = ""
         var price:Int = 0
+
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("h:mm a")
+        val start = current.format(formatter)
 
         var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
         if(cursor.moveToNext()==false){
@@ -150,7 +159,7 @@ class mongActivity : AppCompatActivity() {
         okButton.setOnClickListener {
             mong_count += 1
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO mongTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_mong+"', '"+time_mong+"');")
+            sqlDB.execSQL("INSERT INTO mongTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_mong+"', '"+time_mong+"', '"+start+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "mong")
             startActivity(intent)

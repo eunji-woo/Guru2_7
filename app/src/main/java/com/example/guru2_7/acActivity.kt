@@ -2,11 +2,17 @@ package com.example.guru2_7
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
+import android.os.Build
+import android.os.Build.VERSION_CODES
+import android.os.Build.VERSION_CODES.*
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 var ac_count = 0
 var place_ac = ""
@@ -31,6 +37,7 @@ class acActivity : AppCompatActivity() {
     lateinit var okButton: Button
 
 
+    @RequiresApi(O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ac)
@@ -68,6 +75,10 @@ class acActivity : AppCompatActivity() {
         var menu9:String = ""
         var menu10:String = ""
         var price: Int = 0
+
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("h:mm a")
+        val start = current.format(formatter)
 
 
 
@@ -177,7 +188,7 @@ class acActivity : AppCompatActivity() {
         okButton.setOnClickListener {
             ac_count += 1
             sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_ac+"', '"+time_ac+"');")
+            sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_ac+"', '"+time_ac+"', '"+start+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "ac")
             startActivity(intent)
