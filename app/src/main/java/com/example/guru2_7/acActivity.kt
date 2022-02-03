@@ -9,6 +9,8 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 var ac_count = 0
+var place_ac = ""
+var time_ac = ""
 
 class acActivity : AppCompatActivity() {
 
@@ -79,8 +81,6 @@ class acActivity : AppCompatActivity() {
             spinner_acp.visibility = View.GONE
         }
 
-        var place_ac:String = ""
-        var time_ac:String = ""
 
         val place = resources.getStringArray(R.array.place_array)
         val time = resources.getStringArray(R.array.time_array)

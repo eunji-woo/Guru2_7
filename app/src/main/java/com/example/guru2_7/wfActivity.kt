@@ -9,6 +9,8 @@ import android.view.View
 import android.widget.*
 
 var wf_count = 0
+var place_wf = ""
+var time_wf = ""
 
 class wfActivity : AppCompatActivity() {
 
@@ -77,8 +79,6 @@ class wfActivity : AppCompatActivity() {
             spinner_wfp.visibility = View.GONE
         }
 
-        var place_wf:String = ""
-        var time_wf:String = ""
         val place = resources.getStringArray(R.array.place_array)
         val time = resources.getStringArray(R.array.time_array)
         val Adapter_place = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,place)

@@ -9,6 +9,8 @@ import android.view.View
 import android.widget.*
 
 var in_count = 0
+var place_in = ""
+var time_in = ""
 
 class inActivity : AppCompatActivity() {
 
@@ -78,8 +80,6 @@ class inActivity : AppCompatActivity() {
         }
 
 
-        var place_in:String = ""
-        var time_in:String = ""
         val place = resources.getStringArray(R.array.place_array)
         val time = resources.getStringArray(R.array.time_array)
         val Adapter_place = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,place)

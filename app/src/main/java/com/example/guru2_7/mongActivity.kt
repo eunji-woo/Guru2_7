@@ -9,6 +9,8 @@ import android.view.View
 import android.widget.*
 
 var mong_count = 0
+var place_mong = ""
+var time_mong = ""
 
 class mongActivity : AppCompatActivity() {
 
@@ -77,8 +79,6 @@ class mongActivity : AppCompatActivity() {
         }
 
 
-        var place_mong:String = ""
-        var time_mong:String = ""
         val place = resources.getStringArray(R.array.place_array)
         val time = resources.getStringArray(R.array.time_array)
         val Adapter_place = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,place)

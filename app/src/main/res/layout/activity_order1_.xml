@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="30px"
-            android:text="장소"
+            android:text=""
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="24sp" />
         <TextView
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="30px"
-            android:text="시간"
+            android:text=""
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="24sp" />
         <TextView
