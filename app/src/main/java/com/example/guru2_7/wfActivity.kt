@@ -111,8 +111,6 @@ class wfActivity : AppCompatActivity() {
 
 
 
-//        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
-
 
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){

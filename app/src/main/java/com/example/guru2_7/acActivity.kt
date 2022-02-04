@@ -101,17 +101,6 @@ class acActivity : AppCompatActivity() {
         spinner_acp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 place_ac = place[position]
-                when (position) {
-                    0 -> {
-                        Log.d("MyTag", "0번 선택") //test 용, 나중에 db 구현하면 item 선택될때 각각 어떻게 될지 구현하면됨
-                    }
-                    1 -> {
-                        Log.d("MyTag", "1번 선택")
-                    }
-                    else -> {
-                        Log.d("MyTag", "0,1말고 다른거 선택")
-                    }
-                }
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -124,17 +113,6 @@ class acActivity : AppCompatActivity() {
         spinner_act.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 time_ac = time[position]
-                when (position) {
-                    0 -> {
-                        Log.d("MyTag", "0번 선택") //test 용, 나중에 db 구현하면 item 선택될때 각각 어떻게 될지 구현하면됨
-                    }
-                    1 -> {
-                        Log.d("MyTag", "1번 선택")
-                    }
-                    else -> {
-                        Log.d("MyTag", "0,1말고 다른거 선택")
-                    }
-                }
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
