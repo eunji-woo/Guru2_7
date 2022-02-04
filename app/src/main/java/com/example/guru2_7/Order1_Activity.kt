@@ -220,14 +220,12 @@ class Order1_Activity : AppCompatActivity() {
         }
 
 
-
         OrderOkButton.setOnClickListener {
 
 
             var pref = this.getSharedPreferences("user",0)
             var nickname = pref.getString("nickname", "default").toString()
 
-            //if문으로 주문자랑 참여자 구분해야됨 (아직 그쪽 부분 구현이 안돼서 if문 일단 뺌)
             if (shop_name == "in") {
                 indbManager = inDBManager(this)
                 sqlDB = indbManager.writableDatabase
@@ -243,10 +241,8 @@ class Order1_Activity : AppCompatActivity() {
                     intent.putExtra("shop_name", "in")
                     startActivity(intent)
                 }
-
                 else{
-                    val intent = Intent(this, NaviActivity::class.java)
-                    startActivity(intent)
+                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
 
                 sqlDB.close()
@@ -265,10 +261,8 @@ class Order1_Activity : AppCompatActivity() {
                     intent.putExtra("shop_name", "wf")
                     startActivity(intent)
                 }
-
                 else{
-                    val intent = Intent(this, NaviActivity::class.java)
-                    startActivity(intent)
+                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
 
                 sqlDB.close()
@@ -287,10 +281,8 @@ class Order1_Activity : AppCompatActivity() {
                     intent.putExtra("shop_name", "mong")
                     startActivity(intent)
                 }
-
                 else{
-                    val intent = Intent(this, NaviActivity::class.java)
-                    startActivity(intent)
+                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
 
                 sqlDB.close()
@@ -309,10 +301,8 @@ class Order1_Activity : AppCompatActivity() {
                     intent.putExtra("shop_name", "ac")
                     startActivity(intent)
                 }
-
                 else{
-                    val intent = Intent(this, NaviActivity::class.java)
-                    startActivity(intent)
+                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
 
                 sqlDB.close()
@@ -331,10 +321,8 @@ class Order1_Activity : AppCompatActivity() {
                     intent.putExtra("shop_name", "kim")
                     startActivity(intent)
                 }
-
                 else{
-                    val intent = Intent(this, NaviActivity::class.java)
-                    startActivity(intent)
+                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
 
                 sqlDB.close()
