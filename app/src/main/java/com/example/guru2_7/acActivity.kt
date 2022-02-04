@@ -2,8 +2,6 @@ package com.example.guru2_7
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
-import android.os.Build
-import android.os.Build.VERSION_CODES
 import android.os.Build.VERSION_CODES.*
 import android.os.Bundle
 import android.util.Log
@@ -104,7 +102,6 @@ class acActivity : AppCompatActivity() {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                Log.d("MyTag", "아무것도 선택안됨")
             }
         }
 
@@ -116,12 +113,8 @@ class acActivity : AppCompatActivity() {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                Log.d("MyTag", "아무것도 선택안됨")
             }
         }
-
-
-//        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
 
 
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->

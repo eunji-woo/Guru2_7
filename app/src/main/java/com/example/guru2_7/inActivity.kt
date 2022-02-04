@@ -5,7 +5,6 @@ import android.database.sqlite.SQLiteDatabase
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
@@ -112,9 +111,6 @@ class inActivity : AppCompatActivity() {
 
             }
         }
-
-
-//        sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+menu2+"','"+menu1+"','"+menu3 +"');")
 
 
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->

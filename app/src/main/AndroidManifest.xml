@@ -19,28 +19,9 @@
         <activity android:name=".wfActivity" />
         <activity android:name=".acActivity" />
         <activity android:name=".OutActivity" />
-        <activity android:name=".shopActivity" />
         <activity android:name=".NaviActivity" />
-        <activity
-            android:name=".Navigation"
-            android:label="@string/title_activity_navigation" />
         <activity android:name=".joinActivity" />
-        <activity android:name=".JoinActivity" />
-        <activity
-            android:name=".NavigationActivity"
-            android:label="@string/title_activity_navigation" />
-        <activity
-            android:name=".MypageActivity"
-            android:label="@string/title_activity_mypage" />
-        <activity
-            android:name=".Order2_Activity"
-            android:label="@string/title_activity_order2_" />
-        <activity
-            android:name=".ShopActivity"
-            android:label="@string/title_activity_shop" />
         <activity android:name=".ChangeActivity" />
-        <activity android:name=".BillActivity" />
-        <activity android:name=".MenuActivity" />
         <activity
             android:name=".Order1_Activity"
             android:parentActivityName=".NaviActivity" />

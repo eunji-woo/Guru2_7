@@ -10,7 +10,6 @@ import android.widget.Toast
 
 class ChangeActivity : AppCompatActivity() {
     lateinit var ChangeOkButton: Button
-    //lateinit var name_Edittext: EditText
     lateinit var before_pwEdittext: EditText
     lateinit var after_pwEdittext: EditText
     lateinit var after_pwEdittext2: EditText
@@ -22,7 +21,6 @@ class ChangeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_change)
 
-        //name_Edittext = findViewById(R.id.name_Edittext)
         ChangeOkButton = findViewById(R.id.ChangeOkButton)
         before_pwEdittext = findViewById(R.id.before_pwEdittext)
         after_pwEdittext = findViewById(R.id.after_pwEdittext)

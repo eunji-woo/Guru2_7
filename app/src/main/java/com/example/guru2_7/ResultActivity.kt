@@ -24,7 +24,6 @@ class ResultActivity : AppCompatActivity() {
             else if(shop_name == "mong") { mongResult = 0 }
             else { wfResult = 0 }
 
-            // Home 으로 이동
             val intent = Intent(this, NaviActivity::class.java)
             startActivity(intent)
         }

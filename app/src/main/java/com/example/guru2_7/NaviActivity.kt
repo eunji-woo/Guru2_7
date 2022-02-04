@@ -2,7 +2,6 @@ package com.example.guru2_7
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class NaviActivity : AppCompatActivity() {

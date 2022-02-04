@@ -1,9 +1,7 @@
 package com.example.guru2_7
 
-import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
-import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -67,15 +65,4 @@ class joinActivity : AppCompatActivity() {
             }
         }
     }
-
-    /*class myDBHelper(context: Context) : SQLiteOpenHelper(context, "groupDB", null, 1){
-        override fun onCreate(db: SQLiteDatabase?) {
-            db!!.execSQL("CREATE TABLE groupTBL (nickname CHAR(20), email CHAR(30) PRIMARY KEY, passwd CHAR(30));")
-        }
-        override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
-            db!!.execSQL("DROP TABLE IF EXISTS groupTBL")
-            onCreate(db)
-        }
-    }*/
-
 }
