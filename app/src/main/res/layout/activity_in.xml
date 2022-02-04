@@ -286,9 +286,10 @@
                 android:id="@+id/okButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5px"
-                android:text="주문완료"
+                android:layout_marginTop="15px"
+                android:layout_marginLeft="20px"
                 android:fontFamily="@font/gangwongyoyugmodubold"
+                android:text="주문하기"
                 android:textSize="24sp"/>
         </LinearLayout>
 
