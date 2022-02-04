@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import java.lang.Exception
+import java.util.regex.Pattern
 
 class joinActivity : AppCompatActivity() {
 
@@ -44,6 +45,9 @@ class joinActivity : AppCompatActivity() {
             }
             else if(join_emailEdittext.text.contains(swumail)==false){
                 Toast.makeText(applicationContext, "서울여대 이메일만 사용할 수 있습니다.", Toast.LENGTH_SHORT).show()
+            }
+            else if (!Pattern.matches("^(?=.*\\d)(?=.*[~`!@#$%\\^&*()-])(?=.*[a-zA-Z]).{8,20}$", join_pwEdittext.text)) {
+                Toast.makeText(this, "비밀번호 형식을 지켜주세요.", Toast.LENGTH_SHORT).show()
             }
             else{ // 정보 다 제대로 입력해서 로그인 창으로 intent
                 if(join_pwEdittext.text.toString() == join_pwEdittext2.text.toString()){
