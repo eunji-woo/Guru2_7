@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import android.widget.TextView
@@ -45,9 +46,17 @@ class Order1_Activity : AppCompatActivity() {
         priceTextview = findViewById(R.id.priceTextview)
 
         var shop_name = intent.getStringExtra("shop_name")
+        var navi = intent.getStringExtra("navi")
         var sqlResult = ""
         var sqlName = ""
         var sqlTime = ""
+
+        if (navi == "0"){
+            OrderOkButton.visibility = View.GONE
+        } else{
+            OrderOkButton.visibility = View.VISIBLE
+        }
+
 
         if (shop_name == "in") {
             indbManager = inDBManager(this)

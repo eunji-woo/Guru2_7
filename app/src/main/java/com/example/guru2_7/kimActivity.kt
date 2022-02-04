@@ -161,6 +161,7 @@ class kimActivity : AppCompatActivity() {
             sqlDB.execSQL("INSERT INTO kimTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_kim+"', '"+time_kim+"', '"+start+"');")
             val intent = Intent(this, Order1_Activity::class.java)
             intent.putExtra("shop_name", "kim")
+            intent.putExtra("navi", "1")
             startActivity(intent)
         }
 

@@ -87,6 +87,7 @@ class Order2Fragment : Fragment() {
             override fun onClick(v: View?) {
                 val intent = Intent(context, Order1_Activity::class.java)
                 intent.putExtra("shop_name", "ac")
+                intent.putExtra("navi", "0")
                 startActivity(intent)
             }
         })
@@ -95,6 +96,7 @@ class Order2Fragment : Fragment() {
             override fun onClick(v: View?) {
                 val intent = Intent(context, Order1_Activity::class.java)
                 intent.putExtra("shop_name", "in")
+                intent.putExtra("navi", "0")
                 startActivity(intent)
             }
         })
@@ -103,6 +105,7 @@ class Order2Fragment : Fragment() {
             override fun onClick(v: View?) {
                 val intent = Intent(context, Order1_Activity::class.java)
                 intent.putExtra("shop_name", "mong")
+                intent.putExtra("navi", "0")
                 startActivity(intent)
             }
         })
@@ -111,6 +114,7 @@ class Order2Fragment : Fragment() {
             override fun onClick(v: View?) {
                 val intent = Intent(context, Order1_Activity::class.java)
                 intent.putExtra("shop_name", "wf")
+                intent.putExtra("navi", "0")
                 startActivity(intent)
             }
         })
@@ -119,6 +123,7 @@ class Order2Fragment : Fragment() {
             override fun onClick(v: View?) {
                 val intent = Intent(context, Order1_Activity::class.java)
                 intent.putExtra("shop_name", "kim")
+                intent.putExtra("navi", "0")
                 startActivity(intent)
             }
         })
