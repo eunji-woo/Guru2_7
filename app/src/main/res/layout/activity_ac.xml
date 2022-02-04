@@ -222,7 +222,7 @@
                         android:id="@+id/acImage9"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        app:srcCompat="@drawable/ac8" />
+                        app:srcCompat="@drawable/readyimage" />
 
                     <CheckBox
                         android:id="@+id/inCheckBox9"
@@ -245,7 +245,7 @@
                         android:id="@+id/acImage10"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        app:srcCompat="@drawable/ac2" />
+                        app:srcCompat="@drawable/readyimage" />
 
                     <CheckBox
                         android:id="@+id/inCheckBox10"

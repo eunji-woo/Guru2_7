@@ -159,7 +159,7 @@
                         android:id="@+id/mongImage7"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        app:srcCompat="@drawable/mong6" />
+                        app:srcCompat="@drawable/readyimage" />
                     <CheckBox
                         android:id="@+id/mongCheckBox7"
                         android:layout_width="match_parent"
@@ -180,7 +180,7 @@
                         android:id="@+id/mongImage8"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        app:srcCompat="@drawable/mong1" />
+                        app:srcCompat="@drawable/readyimage" />
                     <CheckBox
                         android:id="@+id/mongCheckBox8"
                         android:layout_width="match_parent"
@@ -201,7 +201,7 @@
                         android:id="@+id/mongImage9"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        app:srcCompat="@drawable/mong1" />
+                        app:srcCompat="@drawable/readyimage" />
                     <CheckBox
                         android:id="@+id/mongCheckBox9"
                         android:layout_width="match_parent"
@@ -222,7 +222,7 @@
                         android:id="@+id/mongImage10"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        app:srcCompat="@drawable/mong1" />
+                        app:srcCompat="@drawable/readyimage" />
                     <CheckBox
                         android:id="@+id/mongCheckBox10"
                         android:layout_width="match_parent"
