@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/first" app:showAsAction="ifRoom" android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground" android:title="Shop" />
+        android:icon="@drawable/ic_baseline_food_bank_24" android:title="Shop" />
     <item android:id="@+id/second" app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_launcher_foreground" android:title="Order" />
+        android:icon="@drawable/ic_round_restaurant_24" android:title="Order" />
     <item android:id="@+id/third" app:showAsAction="ifRoom"
-        android:enabled="true" android:icon="@drawable/ic_launcher_foreground" android:title="Mypage" />
+        android:enabled="true" android:icon="@drawable/ic_baseline_account_circle_24" android:title="Mypage" />
 </menu>
