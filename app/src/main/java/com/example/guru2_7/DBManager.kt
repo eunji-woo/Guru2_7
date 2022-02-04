@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class DBManager(context: Context) : SQLiteOpenHelper(context, "groupDB", null, 1) {
     override fun onCreate(db: SQLiteDatabase?) {
+        //유저 정보 저장 테이블 생성
         db!!.execSQL("CREATE TABLE groupTBL (nickname CHAR(20) PRIMARY KEY, email CHAR(30), passwd CHAR(30));")
     }
 

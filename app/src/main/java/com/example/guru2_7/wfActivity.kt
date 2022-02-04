@@ -17,10 +17,10 @@ var time_wf = ""
 
 class wfActivity : AppCompatActivity() {
 
-    lateinit var dbManager: wfDBManager
+    lateinit var dbManager: wfDBManager // db 사용을 위한 db 매니저 미리 선언
     lateinit var sqlDB: SQLiteDatabase
 
-    lateinit var wfCheckBox1: CheckBox
+    lateinit var wfCheckBox1: CheckBox // xml에 있는 체크박스 연결을 위해 선언
     lateinit var wfCheckBox2: CheckBox
     lateinit var wfCheckBox3: CheckBox
     lateinit var wfCheckBox4: CheckBox
@@ -40,14 +40,14 @@ class wfActivity : AppCompatActivity() {
         setContentView(R.layout.activity_wf)
 
         dbManager = wfDBManager(this)
-        sqlDB = dbManager.writableDatabase
+        sqlDB = dbManager.writableDatabase //db메니저를 통해 db 열기
 
         val spinner_wfp = findViewById<Spinner>(R.id.spinner_wfp)
         val spinner_wft = findViewById<Spinner>(R.id.spinner_wft)
-        var pref = this.getSharedPreferences("user",0)
+        var pref = this.getSharedPreferences("user",0) // 로그인할때 입력된 닉네임 공유자원 통해서 받아오기
         var nickname = pref.getString("nickname", "default").toString()
 
-        wfCheckBox1 = findViewById(R.id.wfCheckBox1)
+        wfCheckBox1 = findViewById(R.id.wfCheckBox1) // 각 가게별 xml에 있는 체크박스 연결
         wfCheckBox2 = findViewById(R.id.wfCheckBox2)
         wfCheckBox3 = findViewById(R.id.wfCheckBox3)
         wfCheckBox4 = findViewById(R.id.wfCheckBox4)
@@ -60,7 +60,7 @@ class wfActivity : AppCompatActivity() {
 
         okButton = findViewById<Button>(R.id.okButton)
 
-        var menu1:String = ""
+        var menu1:String = "" // 각 메뉴 선택되었을 시 메뉴 이름 저장하기 위한 변수
         var menu2:String = ""
         var menu3:String = ""
         var menu4:String = ""
@@ -74,11 +74,11 @@ class wfActivity : AppCompatActivity() {
 
         val current = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofPattern("h:mm a")
-        val start = current.format(formatter)
+        val start = current.format(formatter) // 메뉴 주문할때의 시간 저장
 
 
         var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
-        if(cursor.moveToNext()==false){
+        if(cursor.moveToNext()==false){ // 처음 주문자에게만 시간, 장소 선택할 수 있는 스피너 보이도록 설정
             spinner_wft.visibility = View.VISIBLE
             spinner_wfp.visibility = View.VISIBLE
         }
@@ -87,13 +87,14 @@ class wfActivity : AppCompatActivity() {
             spinner_wfp.visibility = View.GONE
         }
 
-        val place = resources.getStringArray(R.array.place_array)
+        val place = resources.getStringArray(R.array.place_array) // 스피너를 통해 입력받은 정보 저장
         val time = resources.getStringArray(R.array.time_array)
+
         val Adapter_place = ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,place)
         spinner_wfp.adapter = Adapter_place
         spinner_wfp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                place_wf = place[position]
+                place_wf = place[position] // 스피너를 통해 입력받은 정보 전역변수에 저장
 
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -104,7 +105,7 @@ class wfActivity : AppCompatActivity() {
         spinner_wft.adapter = Adapter_time
         spinner_wft.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                time_wf = time[position]
+                time_wf = time[position] // 스피너를 통해 입력받은 정보 전역변수에 저장
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
 
@@ -116,7 +117,7 @@ class wfActivity : AppCompatActivity() {
 
         var listener = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
             if(isChecked){
-                when(buttonView.id){
+                when(buttonView.id){ // 메뉴선택 페이지에서 메뉴 선택되었을때 menu 변수에 메뉴 이름 저장
                     R.id.wfCheckBox1 ->  {menu1 = wfCheckBox1.text.toString() //3200
                         price += 3200}
                     R.id.wfCheckBox2 ->  {menu2 = wfCheckBox2.text.toString() //4200
@@ -142,7 +143,7 @@ class wfActivity : AppCompatActivity() {
             else {Toast.makeText(this, "선택 취소.", Toast.LENGTH_SHORT).show()}
         }
 
-        wfCheckBox1.setOnCheckedChangeListener(listener)
+        wfCheckBox1.setOnCheckedChangeListener(listener) // 리스너와 체크박스 연결
         wfCheckBox2.setOnCheckedChangeListener(listener)
         wfCheckBox3.setOnCheckedChangeListener(listener)
         wfCheckBox4.setOnCheckedChangeListener(listener)
@@ -156,8 +157,9 @@ class wfActivity : AppCompatActivity() {
         okButton.setOnClickListener {
             if (menu1 == "" && menu2 == "" && menu3 == "" && menu4 == "" && menu5 == "" && menu6 == "" && menu7 == "" && menu8 == "" && menu9 == "" && menu10 == ""){
                 Toast.makeText(this, "메뉴를 선택해주세요.", Toast.LENGTH_SHORT).show()
+                // 메뉴 한개라도 선택되지 않으면 okbutton 누를 수 없도록 처리
             }
-            else {
+            else { // 메뉴가 한개라도 선택될 경우 db에 선택된 메뉴와 닉네임, 가격, 시간, 장소 저장 후 intent
                 wf_count += 1
                 sqlDB = dbManager.writableDatabase
                 sqlDB.execSQL("INSERT INTO wfTBL VALUES ('" + nickname + "', '" + menu1 + "', '" + menu2 + "', '" + menu3 + "', '" + menu4 + "', '" + menu5 + "', '" + menu6 + "', '" + menu7 + "', '" + menu8 + "', '" + menu9 + "', '" + menu10 + "', '" + price + "', '" + place_wf + "', '" + time_wf + "', '" + start + "');")
