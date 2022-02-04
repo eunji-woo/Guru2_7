@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MypageFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -19,6 +18,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="60dp"
             android:text="닉네임"
+            android:fontFamily="@font/gangwongyoyugmodubold"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +30,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="이메일"
+            android:fontFamily="@font/gangwongyoyugmodubold"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/nicknameTextView" />
 
@@ -44,37 +45,34 @@
             app:srcCompat="@drawable/ic_baseline_person_24" />
 
         <Button
-            android:id="@+id/Billbutton"
-            android:layout_width="400dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="24dp"
-            android:text="영수증"
-            android:fontFamily="@font/gangwongyoyugmodubold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-        <Button
             android:id="@+id/ChangePWbutton"
             android:layout_width="400dp"
             android:layout_height="70dp"
-            android:layout_marginTop="8dp"
-            android:text="비밀번호 변경"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/gangwongyoyugmodubold"
+            android:text="비밀번호 변경"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@+id/Outbutton"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Billbutton" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <Button
             android:id="@+id/Outbutton"
             android:layout_width="400dp"
             android:layout_height="70dp"
+            android:layout_marginStart="2dp"
             android:layout_marginTop="8dp"
-            android:text="회원 탈퇴"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="190dp"
             android:fontFamily="@font/gangwongyoyugmodubold"
+            android:text="회원 탈퇴"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ChangePWbutton" />
@@ -85,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:text="개발자"
+            android:fontFamily="@font/gangwongyoyugmodubold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

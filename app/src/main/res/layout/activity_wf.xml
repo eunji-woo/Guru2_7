@@ -42,6 +42,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="애플시나몬와플\n3,200"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -61,6 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="민트초코와플\n4,200"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -80,6 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="크런치딸기잼와플\n4,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -99,6 +102,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="생딸기범벅젤라또와플\n5,700"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="92dp"
                         tools:layout_editor_absoluteY="446dp" />
@@ -120,6 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="블루베리범벅젤라또와플\n5,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="81dp"
                         tools:layout_editor_absoluteY="178dp" />
@@ -141,6 +146,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="오레오젤라또컵\n4,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="83dp"
                         tools:layout_editor_absoluteY="113dp" />
@@ -162,6 +168,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="팥젤라또컵\n4,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="92dp"
                         tools:layout_editor_absoluteY="522dp" />
@@ -183,6 +190,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="아메리카노\n3,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="85dp"
                         tools:layout_editor_absoluteY="238dp" />
@@ -204,6 +212,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="카페라떼\n3,800"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="83dp"
                         tools:layout_editor_absoluteY="306dp" />
@@ -225,6 +234,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="카라멜라떼\n4,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -247,6 +257,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="355ml 스파클링청포도\n1,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </LinearLayout>
@@ -301,6 +312,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5px"
                 android:text="주문완료"
+                android:fontFamily="@font/gangwongyoyugmodubold"
                 android:textSize="24sp"/>
         </LinearLayout>
 
