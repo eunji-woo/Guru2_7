@@ -9,6 +9,8 @@ import android.widget.EditText
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+
+
     lateinit var LoginButton: Button
     lateinit var joinButton: Button
     lateinit var idEdittext: EditText
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var dbManager: DBManager
     lateinit var sqlDB: SQLiteDatabase
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
