@@ -157,12 +157,19 @@ class inActivity : AppCompatActivity() {
         inCheckBox10.setOnCheckedChangeListener(listener)
 
         okButton.setOnClickListener {
-            in_count += 1
-            sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO inTBL VALUES ('"+nickname+"','"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_in+"', '"+time_in+"', '"+start+"');")
-            val intent = Intent(this, Order1_Activity::class.java)
-            intent.putExtra("shop_name", "in")
-            startActivity(intent)
+
+            if (menu1 == "" && menu2 == "" && menu3 == "" && menu4 == "" && menu5 == "" && menu6 == "" && menu7 == "" && menu8 == "" && menu9 == "" && menu10 == ""){
+                Toast.makeText(this, "메뉴를 선택해주세요.", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                in_count += 1
+                sqlDB = dbManager.writableDatabase
+                sqlDB.execSQL("INSERT INTO inTBL VALUES ('"+nickname+"','"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_in+"', '"+time_in+"', '"+start+"');")
+                val intent = Intent(this, Order1_Activity::class.java)
+                intent.putExtra("shop_name", "in")
+                intent.putExtra("navi", "1")
+                startActivity(intent)
+            }
         }
 
         sqlDB.close()
