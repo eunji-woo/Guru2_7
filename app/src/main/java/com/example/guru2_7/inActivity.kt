@@ -142,7 +142,7 @@ class inActivity : AppCompatActivity() {
                         price += 1500}
                 }
             }
-            else { Log.d("test_eunji", "해제")}
+            else {Toast.makeText(this, "선택 취소.", Toast.LENGTH_SHORT).show()}
         }
 
         inCheckBox1.setOnCheckedChangeListener(listener)

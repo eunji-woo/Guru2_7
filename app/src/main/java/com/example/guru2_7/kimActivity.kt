@@ -141,7 +141,7 @@ class kimActivity : AppCompatActivity() {
                         price += 8500}
                 }
             }
-            else { Log.d("test_eunji", "해제")}
+            else {Toast.makeText(this, "선택 취소.", Toast.LENGTH_SHORT).show()}
         }
 
         kimCheckBox1.setOnCheckedChangeListener(listener)

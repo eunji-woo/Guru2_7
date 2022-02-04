@@ -139,7 +139,7 @@ class wfActivity : AppCompatActivity() {
                         price += 4000}
                 }
             }
-            else { Log.d("test_eunji", "해제")}
+            else {Toast.makeText(this, "선택 취소.", Toast.LENGTH_SHORT).show()}
         }
 
         wfCheckBox1.setOnCheckedChangeListener(listener)
