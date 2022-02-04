@@ -1,7 +1,6 @@
 package com.example.guru2_7
 
 import android.content.Intent
-import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,11 +14,6 @@ import android.widget.TextView
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MypageFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MypageFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -37,14 +31,16 @@ class MypageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val view = inflater.inflate(R.layout.fragment_mypage, null)
+
+        // 버튼과 텍스트뷰 선언
         val changeButton = view.findViewById<Button>(R.id.ChangePWbutton)
         val OutButton = view.findViewById<Button>(R.id.Outbutton)
         val nicknameTextView = view.findViewById<TextView>(R.id.nicknameTextView)
         val emailTextView = view.findViewById<TextView>(R.id.emailTextView)
-        lateinit var dbManager: DBManager
-        lateinit var sqlDB: SQLiteDatabase
+
+
+        // 공유자원을 통해 닉네임과 이메일 관리
         var pref = requireActivity().getSharedPreferences("user",0)
         var nickname = pref.getString("nickname", "default").toString()
         var email = pref.getString("email", "default").toString()
@@ -52,36 +48,26 @@ class MypageFragment : Fragment() {
         nicknameTextView.text = nickname
         emailTextView.text = email
 
+        // changeButton을 통해 비밀번호 변경창으로 이동
         changeButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
-                //비밀번호 변경창으로 이동
                 val intent = Intent(context, ChangeActivity::class.java)
                 startActivity(intent)
             }
         })
 
+        // OutButton을 통해 탈퇴창으로 이동
         OutButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
-                //탈퇴창으로 이동
                 val intent = Intent(context, OutActivity::class.java)
                 startActivity(intent)
             }
         })
 
-
-
         return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MypageFragment.
-         */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =

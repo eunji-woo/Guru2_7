@@ -13,11 +13,7 @@ import android.widget.ImageButton
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ShopFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class ShopFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -36,6 +32,8 @@ class ShopFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_shop, null)
+
+        // 버튼 선언
         val acButton = view.findViewById<ImageButton>(R.id.acButton)
         val inButton = view.findViewById<ImageButton>(R.id.inButton)
         val kimButton = view.findViewById<ImageButton>(R.id.kimButton)
@@ -43,6 +41,9 @@ class ShopFragment : Fragment() {
         val wfButton = view.findViewById<ImageButton>(R.id.wfButton)
         val etcButton = view.findViewById<ImageButton>(R.id.etcButton)
 
+
+        // 식당버튼을 클릭하면 각각 식당의 주문페이지로 intent된다
+        // intent하면서 shop_name(식당이름)값을 같이 보낸다
         acButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(context, acActivity::class.java)
@@ -83,6 +84,7 @@ class ShopFragment : Fragment() {
             }
         })
 
+        // 기타 식당은 입점준비중으로 안내창으로 intent된다
         etcButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(context, etcActivity::class.java)
@@ -94,14 +96,6 @@ class ShopFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ShopFragment.
-         */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =

@@ -15,11 +15,7 @@ import android.widget.TextView
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Order2Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class Order2Fragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -40,6 +36,7 @@ class Order2Fragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_order2, null)
 
+        // 이미지버튼 선언
         val acImageButton = view.findViewById<ImageButton>(R.id.acImageButton)
         val inImageButton = view.findViewById<ImageButton>(R.id.inImageButton)
         val mongImageButton = view.findViewById<ImageButton>(R.id.mongImageButton)
@@ -47,13 +44,14 @@ class Order2Fragment : Fragment() {
         val kimImageButton = view.findViewById<ImageButton>(R.id.kimImageButton)
         val etcImageButton = view.findViewById<ImageButton>(R.id.etcImageButton)
 
+        // 이미지 선언
         val acResultImage = view.findViewById<ImageView>(R.id.acResultImage)
         val inResultImage = view.findViewById<ImageView>(R.id.inResultImage)
         val kimResultImage = view.findViewById<ImageView>(R.id.kimResultImage)
         val mongResultImage = view.findViewById<ImageView>(R.id.mongResultImage)
         val wfResultImage = view.findViewById<ImageView>(R.id.wfResultImage)
 
-
+        // 텍스트뷰 선언
         val acText = view.findViewById<TextView>(R.id.acTextView)
         val inText = view.findViewById<TextView>(R.id.inTextView)
         val mongText = view.findViewById<TextView>(R.id.mongTextView)
@@ -61,6 +59,7 @@ class Order2Fragment : Fragment() {
         val kimText = view.findViewById<TextView>(R.id.kimTextView)
         val etcText = view.findViewById<TextView>(R.id.etcTextView)
 
+        // 주문현황개수 변수를 활용하여 텍스트뷰에 출력
         acText.text = "주문현황개수 : $ac_count"
         inText.text = "주문현황개수 : $in_count"
         mongText.text = "주문현황개수 : $mong_count"
@@ -68,6 +67,7 @@ class Order2Fragment : Fragment() {
         kimText.text = "주문현황개수 : $kim_count"
         etcText.text = "주문현황개수 : 0"
 
+        // 배달중 아이콘 표시여부를 visibility처리로 조절
         if(acResult == 0){ acResultImage.visibility = View.GONE }
         else{ acResultImage.visibility = View.VISIBLE }
 
@@ -83,6 +83,10 @@ class Order2Fragment : Fragment() {
         if(kimResult == 0){ kimResultImage.visibility = View.GONE }
         else{ kimResultImage.visibility = View.VISIBLE }
 
+
+
+        // 식당버튼을 클릭하면 각각의 식당 주문현황페이지로 intent된다
+        // intent하면서 shop_name, navi 값을 같이 보낸다
         acImageButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(context, Order1_Activity::class.java)
@@ -128,18 +132,18 @@ class Order2Fragment : Fragment() {
             }
         })
 
+        // 기타 식당은 입점준비중으로 안내창으로 intent된다
+        etcImageButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, etcActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
         return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Order2Fragment.
-         */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
