@@ -15,7 +15,7 @@
         <ImageButton
             android:id="@+id/acButton"
             android:layout_width="207dp"
-            android:layout_height="205dp"
+            android:layout_height="170dp"
             android:backgroundTint="#FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/ac" />
@@ -23,7 +23,7 @@
         <ImageButton
             android:id="@+id/wfButton"
             android:layout_width="207dp"
-            android:layout_height="205dp"
+            android:layout_height="170dp"
             android:background="#FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/wf" />
@@ -38,7 +38,7 @@
         <ImageButton
             android:id="@+id/inButton"
             android:layout_width="207dp"
-            android:layout_height="205dp"
+            android:layout_height="170dp"
             android:background="#FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/in" />
@@ -46,7 +46,7 @@
         <ImageButton
             android:id="@+id/kimButton"
             android:layout_width="207dp"
-            android:layout_height="205dp"
+            android:layout_height="170dp"
             android:background="#FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/kim" />
@@ -61,7 +61,7 @@
         <ImageButton
             android:id="@+id/mongButton"
             android:layout_width="207dp"
-            android:layout_height="205dp"
+            android:layout_height="170dp"
             android:background="#FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/mong" />
@@ -69,7 +69,7 @@
         <ImageButton
             android:id="@+id/etcButton"
             android:layout_width="207dp"
-            android:layout_height="190dp"
+            android:layout_height="170dp"
             android:background="#FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/restaurant2" />
