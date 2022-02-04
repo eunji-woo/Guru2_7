@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="슈니야~ 밥 먹자~"
+        android:fontFamily="@font/gangwongyoyugmodubold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/LoginImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/pwEdittext"
         android:layout_width="wrap_content"
@@ -63,8 +74,8 @@
 
     <ImageView
         android:id="@+id/LoginImage"
-        android:layout_width="225dp"
-        android:layout_height="241dp"
+        android:layout_width="198dp"
+        android:layout_height="201dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="36dp"
