@@ -21,6 +21,8 @@ class joinActivity : AppCompatActivity() {
     lateinit var dbManager: DBManager
     lateinit var sqlDB: SQLiteDatabase
 
+    var swumail = "@swu.ac.kr"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
@@ -36,8 +38,12 @@ class joinActivity : AppCompatActivity() {
         join_joinButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
 
+
             if(join_nameEdittext.text.isEmpty() || join_emailEdittext.text.isEmpty() || join_pwEdittext.text.isEmpty() || join_pwEdittext2.text.isEmpty()){ // 정보 입력 제대로 안한 경우 제대로 입력하라는 toast 메시지
                 Toast.makeText(applicationContext, "정보를 모두 입력해주세요.", Toast.LENGTH_SHORT).show()
+            }
+            else if(join_emailEdittext.text.contains(swumail)==false){
+                Toast.makeText(applicationContext, "서울여대 이메일만 사용할 수 있습니다.", Toast.LENGTH_SHORT).show()
             }
             else{ // 정보 다 제대로 입력해서 로그인 창으로 intent
                 if(join_pwEdittext.text.toString() == join_pwEdittext2.text.toString()){
