@@ -41,6 +41,7 @@ class ShopFragment : Fragment() {
         val kimButton = view.findViewById<ImageButton>(R.id.kimButton)
         val mongButton = view.findViewById<ImageButton>(R.id.mongButton)
         val wfButton = view.findViewById<ImageButton>(R.id.wfButton)
+        val etcButton = view.findViewById<ImageButton>(R.id.etcButton)
 
         acButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
@@ -78,6 +79,13 @@ class ShopFragment : Fragment() {
             override fun onClick(v: View?) {
                 val intent = Intent(context, wfActivity::class.java)
 //                intent.putExtra("shop_name", "wf")
+                startActivity(intent)
+            }
+        })
+
+        etcButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, etcActivity::class.java)
                 startActivity(intent)
             }
         })
