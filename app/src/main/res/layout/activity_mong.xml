@@ -40,6 +40,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="치킨라이스\n5,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -59,6 +60,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="스킨칩스라이스\n5,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -80,6 +82,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="소고기감자\n6,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -99,6 +102,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="소고기라이스\n5,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -119,6 +123,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="치킨감자\n5,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -139,6 +144,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="스킨칩스감자\n6,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -159,6 +165,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="치킨윙\n3,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -179,6 +186,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="콜라\n1,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -199,6 +207,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="델몬트 에이드\n1,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -219,6 +228,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="콘트라베이스커피\n2,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>

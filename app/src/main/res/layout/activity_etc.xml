@@ -15,7 +15,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/restaurant1"/>
+        app:srcCompat="@drawable/restaurant2"/>
 
     <TextView
         android:id="@+id/etcTextview"
@@ -23,9 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="206dp"
         android:text="추가 입점 준비중"
+        android:fontFamily="@font/gangwongyoyugmodubold"
         android:textColor="#FF9800"
         android:textSize="30sp"
-        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"

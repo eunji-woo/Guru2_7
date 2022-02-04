@@ -38,6 +38,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 소\n4,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -57,6 +58,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="바삭 닭껍질튀김(쉑쉑시즈닝) - 대\n9,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -76,6 +78,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 소\n4,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -95,6 +98,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="바삭 닭껍질튀김(스위트칠리소스포함) - 대\n9,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="92dp"
@@ -116,6 +120,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="튀긴마늘 슬라이스\n500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="81dp"
@@ -137,6 +142,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="치즈볼\n4,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="83dp"
@@ -158,6 +164,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="모듬감자튀김\n4,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="92dp"
@@ -179,6 +186,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="크런치 양파스틱\n2,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="85dp"
@@ -201,6 +209,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="콘샐러드(새콤달콤)\n2,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         tools:layout_editor_absoluteX="83dp"
@@ -223,6 +232,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="콜라\n1,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -278,6 +288,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5px"
                 android:text="주문완료"
+                android:fontFamily="@font/gangwongyoyugmodubold"
                 android:textSize="24sp"/>
         </LinearLayout>
 

@@ -13,37 +13,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:text="현재 비밀번호" />
+        android:text="현재 비밀번호"
+        android:fontFamily="@font/gangwongyoyugmodubold" />
 
     <EditText
         android:id="@+id/before_pwEdittext"
         android:inputType="textPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gangwongyoyugmodubold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:text="변경할 비밀번호" />
+        android:text="변경할 비밀번호"
+        android:fontFamily="@font/gangwongyoyugmodubold" />
 
     <EditText
         android:id="@+id/after_pwEdittext"
         android:layout_width="match_parent"
         android:inputType="textPassword"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gangwongyoyugmodubold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:text="비밀번호 확인" />
+        android:text="비밀번호 확인"
+        android:fontFamily="@font/gangwongyoyugmodubold"/>
 
     <EditText
         android:id="@+id/after_pwEdittext2"
         android:layout_width="match_parent"
         android:inputType="textPassword"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gangwongyoyugmodubold"/>
 
     <Button
         android:id="@+id/ChangeOkButton"
@@ -52,6 +58,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
         android:text="완료"
+        android:fontFamily="@font/gangwongyoyugmodubold"
         android:textSize="20sp" />
 
 </LinearLayout>

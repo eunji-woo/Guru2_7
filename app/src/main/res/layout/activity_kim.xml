@@ -41,6 +41,7 @@
                         android:layout_height="wrap_content"
                         android:text="김가네 김밥\n3800"
                         android:layout_gravity="center"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -60,6 +61,7 @@
                         android:layout_height="wrap_content"
                         android:text="참치마요김밥\n4800"
                         android:layout_gravity="center"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -78,6 +80,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="소고기김밥\n4800"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -97,6 +100,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="유부우동\n6000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -116,6 +120,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="왕새우튀김우동\n7500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -135,6 +140,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="물냉면\n7000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -154,6 +160,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="비빔냉면\n7000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -173,6 +180,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="치즈떡볶이\n6000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -192,6 +200,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="치킨마요덮밥\n6000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -211,6 +220,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="치즈돈까스\n8500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:layout_gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -266,6 +276,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5px"
                 android:text="주문완료"
+                android:fontFamily="@font/gangwongyoyugmodubold"
                 android:textSize="24sp"/>
         </LinearLayout>
 

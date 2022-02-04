@@ -45,6 +45,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="순한알밥\n4,600"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -66,6 +67,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="카레알밥\n5,200"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -87,6 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="진매알밥\n5,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -109,6 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="마늘듬뿍매콤제육알밥\n6,300"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </LinearLayout>
@@ -131,6 +135,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="불고기알밥\n6,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </LinearLayout>
@@ -154,6 +159,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="그릴드치킨알밥\n6,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </LinearLayout>
@@ -177,6 +183,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="짜장알밥\n5,800"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </LinearLayout>
@@ -200,6 +207,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="갈릭오밥\n6,000"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -222,6 +230,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="355ml 스프라이트\n1,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -244,6 +253,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="355ml 스파클링청포도\n1,500"
+                        android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 </LinearLayout>
@@ -298,6 +308,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5px"
                 android:text="주문완료"
+                android:fontFamily="@font/gangwongyoyugmodubold"
                 android:textSize="24sp"/>
         </LinearLayout>
 
