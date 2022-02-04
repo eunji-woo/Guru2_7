@@ -7,29 +7,12 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/idEdittext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:fontFamily="@font/gangwongyoyugmodubold"
-        android:hint="ID:                  @swu.ac.kr"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/pwEdittext"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/pwEdittext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="140dp"
         android:ems="10"
         android:fontFamily="@font/gangwongyoyugmodubold"
         android:hint="PW:"
@@ -41,6 +24,24 @@
         app:layout_constraintStart_toStartOf="@+id/idEdittext"
         app:layout_constraintTop_toBottomOf="@+id/idEdittext" />
 
+    <EditText
+        android:id="@+id/idEdittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:fontFamily="@font/gangwongyoyugmodubold"
+        android:hint="ID:                  @swu.ac.kr"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pwEdittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
@@ -48,10 +49,10 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/purple_500"
         android:fontFamily="@font/gangwongyoyugmodubold"
         android:text="로그인"
         android:textColor="@color/white"
-        android:backgroundTint="@color/purple_500"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,19 +63,19 @@
 
     <ImageView
         android:id="@+id/LoginImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="241dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="147dp"
+        android:layout_marginEnd="36dp"
         android:layout_marginBottom="46dp"
         app:layout_constraintBottom_toTopOf="@+id/idEdittext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/idEdittext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.54"
+        app:srcCompat="@drawable/main_image" />
 
     <Button
         android:id="@+id/joinButton"
@@ -83,10 +84,10 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="60dp"
         android:layout_marginBottom="100dp"
-        android:textColor="@color/white"
         android:backgroundTint="@color/purple_500"
         android:fontFamily="@font/gangwongyoyugmodubold"
         android:text="회원가입"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/LoginButton"
