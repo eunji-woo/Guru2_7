@@ -214,7 +214,7 @@
                         android:id="@+id/kimImage10"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        app:srcCompat="@drawable/kim10" />
+                        app:srcCompat="@drawable/readyimage" />
                     <CheckBox
                         android:id="@+id/kimCheckBox10"
                         android:layout_width="match_parent"
