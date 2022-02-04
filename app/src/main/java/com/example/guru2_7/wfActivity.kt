@@ -154,13 +154,18 @@ class wfActivity : AppCompatActivity() {
         wfCheckBox10.setOnCheckedChangeListener(listener)
 
         okButton.setOnClickListener {
-            wf_count += 1
-            sqlDB = dbManager.writableDatabase
-            sqlDB.execSQL("INSERT INTO wfTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_wf+"', '"+time_wf+"', '"+start+"');")
-            val intent = Intent(this, Order1_Activity::class.java)
-            intent.putExtra("shop_name", "wf")
-            intent.putExtra("navi", "1")
-            startActivity(intent)
+            if (menu1 == "" && menu2 == "" && menu3 == "" && menu4 == "" && menu5 == "" && menu6 == "" && menu7 == "" && menu8 == "" && menu9 == "" && menu10 == ""){
+                Toast.makeText(this, "메뉴를 선택해주세요.", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                wf_count += 1
+                sqlDB = dbManager.writableDatabase
+                sqlDB.execSQL("INSERT INTO wfTBL VALUES ('" + nickname + "', '" + menu1 + "', '" + menu2 + "', '" + menu3 + "', '" + menu4 + "', '" + menu5 + "', '" + menu6 + "', '" + menu7 + "', '" + menu8 + "', '" + menu9 + "', '" + menu10 + "', '" + price + "', '" + place_wf + "', '" + time_wf + "', '" + start + "');")
+                val intent = Intent(this, Order1_Activity::class.java)
+                intent.putExtra("shop_name", "wf")
+                intent.putExtra("navi", "1")
+                startActivity(intent)
+            }
         }
 
         sqlDB.close()
