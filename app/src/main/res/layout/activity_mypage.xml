@@ -37,27 +37,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_person_24" />
 
-    <Button
-        android:id="@+id/Billbutton"
-        android:layout_width="400dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="24dp"
-        android:text="영수증"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/ChangePWbutton"
         android:layout_width="400dp"
         android:layout_height="70dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="52dp"
         android:text="비밀번호 변경"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Billbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/Outbutton"
