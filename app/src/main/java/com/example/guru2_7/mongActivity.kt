@@ -163,7 +163,6 @@ class mongActivity : AppCompatActivity() {
                 sqlDB.execSQL("INSERT INTO mongTBL VALUES ('" + nickname + "', '" + menu1 + "', '" + menu2 + "', '" + menu3 + "', '" + menu4 + "', '" + menu5 + "', '" + menu6 + "', '" + menu7 + "', '" + menu8 + "', '" + menu9 + "', '" + menu10 + "', '" + price + "', '" + place_mong + "', '" + time_mong + "', '" + start + "');")
                 val intent = Intent(this, Order1_Activity::class.java)
                 intent.putExtra("shop_name", "mong")
-                intent.putExtra("navi", "1")
                 startActivity(intent)
             }
         }
