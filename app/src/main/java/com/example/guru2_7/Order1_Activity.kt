@@ -2,16 +2,12 @@ package com.example.guru2_7
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import android.widget.TextView
-import androidx.annotation.RequiresApi
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
+
 
 // 배달중 아이콘 관련 변수 ( 0일 때: GONE, 1일 때: VISIBLE )
 var acResult = 0
@@ -250,17 +246,24 @@ class Order1_Activity : AppCompatActivity() {
         }
 
 
+        // 주문완료버튼
         OrderOkButton.setOnClickListener {
+
+            // 공유자원을 통해 닉네임값 가져오기
             var pref = this.getSharedPreferences("user",0)
             var nickname = pref.getString("nickname", "default").toString()
+
 
             if (shop_name == "in") {
                 indbManager = inDBManager(this)
                 sqlDB = indbManager.writableDatabase
 
+                //주문완료버튼 예외처리(현재 진행중인 주문이 없을때 완료버튼을 누를경우 발생되는 오류 예외처리)
                 try {
+
                     var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
                     cursor.moveToNext()
+
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         indbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
@@ -285,9 +288,11 @@ class Order1_Activity : AppCompatActivity() {
                 wfdbManager = wfDBManager(this)
                 sqlDB = wfdbManager.writableDatabase
 
+                //주문완료버튼 예외처리(현재 진행중인 주문이 없을때 완료버튼을 누를경우 발생되는 오류 예외처리)
                 try {
                     var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
                     cursor.moveToNext()
+
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         wfdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
@@ -313,9 +318,11 @@ class Order1_Activity : AppCompatActivity() {
                 mongdbManager = mongDBManager(this)
                 sqlDB = mongdbManager.writableDatabase
 
+                //주문완료버튼 예외처리(현재 진행중인 주문이 없을때 완료버튼을 누를경우 발생되는 오류 예외처리)
                 try {
                     var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
                     cursor.moveToNext()
+
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         mongdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
@@ -340,9 +347,11 @@ class Order1_Activity : AppCompatActivity() {
                 acdbManager = acDBManager(this)
                 sqlDB = acdbManager.writableDatabase
 
+                //주문완료버튼 예외처리(현재 진행중인 주문이 없을때 완료버튼을 누를경우 발생되는 오류 예외처리)
                 try {
                     var cursor = sqlDB.rawQuery("SELECT * FROM acTBL", null)
                     cursor.moveToNext()
+
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         acdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
@@ -368,9 +377,11 @@ class Order1_Activity : AppCompatActivity() {
                 kimdbManager = kimDBManager(this)
                 sqlDB = kimdbManager.writableDatabase
 
+                //주문완료버튼 예외처리(현재 진행중인 주문이 없을때 완료버튼을 누를경우 발생되는 오류 예외처리)
                 try {
                     var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
                     cursor.moveToNext()
+
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         kimdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
