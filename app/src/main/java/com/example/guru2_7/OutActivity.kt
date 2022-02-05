@@ -7,9 +7,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-
+//회원탈퇴 Activity
 class OutActivity : AppCompatActivity() {
 
+    //button 과 edittext, DB 사용을 위한 선언
     lateinit var dbManager: DBManager
     lateinit var sqlDB: SQLiteDatabase
     lateinit var Outpw: TextView
@@ -26,10 +27,12 @@ class OutActivity : AppCompatActivity() {
 
         dbManager = DBManager(this)
 
+        //회원탈퇴 검증
         OutButton2.setOnClickListener {
 
             sqlDB = dbManager.writableDatabase
 
+            //DB에서 계정정보 가져와서 비교
             var cursor = sqlDB.rawQuery("SELECT * FROM groupTBL", null)
 
             while(cursor.moveToNext()) {
