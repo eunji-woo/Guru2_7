@@ -47,17 +47,10 @@ class Order1_Activity : AppCompatActivity() {
         priceTextview = findViewById(R.id.priceTextview)
 
         var shop_name = intent.getStringExtra("shop_name")
-        var navi = intent.getStringExtra("navi")
         var sqlResult = ""
         var sqlName = ""
         var sqlTime = ""
 
-        // Order2에서 주문현황을 확인할 때는 주문완료 버튼이 안 보이게 처리
-        if (navi == "0"){
-            OrderOkButton.visibility = View.GONE
-        } else{
-            OrderOkButton.visibility = View.VISIBLE
-        }
 
 
         if (shop_name == "in") {
@@ -265,106 +258,139 @@ class Order1_Activity : AppCompatActivity() {
                 indbManager = inDBManager(this)
                 sqlDB = indbManager.writableDatabase
 
-                var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
-                cursor.moveToNext()
+                try {
+                    var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
+                    cursor.moveToNext()
+                    // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
+                    if(cursor.getString(0).toString() == nickname.toString()){
+                        indbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                        in_count = 0 // 주문현황 개수 초기화
+                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        val intent = Intent(this, ResultActivity::class.java)
+                        intent.putExtra("shop_name", "in")
+                        startActivity(intent)
+                    }
+                    else{
+                        Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
+                    }
+                    sqlDB.close()
 
-                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
-                if(cursor.getString(0).toString() == nickname.toString()){
-                    indbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                    in_count = 0 // 주문현황 개수 초기화
-                    inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
-                    val intent = Intent(this, ResultActivity::class.java)
-                    intent.putExtra("shop_name", "in")
-                    startActivity(intent)
+
+                } catch (e:Exception){
+                    Toast.makeText(applicationContext, "현재 진행중인 주문이 없습니다.", Toast.LENGTH_SHORT).show()
+
                 }
-                else{
-                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
-                }
-                sqlDB.close()
 
             } else if (shop_name == "wf") {
                 wfdbManager = wfDBManager(this)
                 sqlDB = wfdbManager.writableDatabase
 
-                var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
-                cursor.moveToNext()
+                try {
+                    var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
+                    cursor.moveToNext()
+                    // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
+                    if(cursor.getString(0).toString() == nickname.toString()){
+                        wfdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                        in_count = 0 // 주문현황 개수 초기화
+                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        val intent = Intent(this, ResultActivity::class.java)
+                        intent.putExtra("shop_name", "wf")
+                        startActivity(intent)
+                    }
+                    else{
+                        Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
+                    }
+                    sqlDB.close()
 
-                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
-                if(cursor.getString(0).toString() == nickname.toString()){
-                    wfdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                    wf_count = 0 // 주문현황 개수 초기화
-                    wfResult = 1 // 배달중 아이콘 표시 (VISIBLE)
-                    val intent = Intent(this, ResultActivity::class.java)
-                    intent.putExtra("shop_name", "wf")
-                    startActivity(intent)
+
+                } catch (e:Exception){
+                    Toast.makeText(applicationContext, "현재 진행중인 주문이 없습니다.", Toast.LENGTH_SHORT).show()
+
                 }
-                else{
-                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
-                }
-                sqlDB.close()
+
 
             } else if (shop_name == "mong") {
                 mongdbManager = mongDBManager(this)
                 sqlDB = mongdbManager.writableDatabase
 
-                var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
-                cursor.moveToNext()
+                try {
+                    var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
+                    cursor.moveToNext()
+                    // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
+                    if(cursor.getString(0).toString() == nickname.toString()){
+                        mongdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                        in_count = 0 // 주문현황 개수 초기화
+                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        val intent = Intent(this, ResultActivity::class.java)
+                        intent.putExtra("shop_name", "mong")
+                        startActivity(intent)
+                    }
+                    else{
+                        Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
+                    }
+                    sqlDB.close()
 
-                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
-                if(cursor.getString(0).toString() == nickname.toString()) {
-                    mongdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                    mong_count = 0 // 주문현황 개수 초기화
-                    mongResult = 1 // 배달중 아이콘 표시 (VISIBLE)
-                    val intent = Intent(this, ResultActivity::class.java)
-                    intent.putExtra("shop_name", "mong")
-                    startActivity(intent)
+
+                } catch (e:Exception){
+                    Toast.makeText(applicationContext, "현재 진행중인 주문이 없습니다.", Toast.LENGTH_SHORT).show()
+
                 }
-                else{
-                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
-                }
-                sqlDB.close()
 
             } else if (shop_name == "ac") {
                 acdbManager = acDBManager(this)
                 sqlDB = acdbManager.writableDatabase
 
-                var cursor = sqlDB.rawQuery("SELECT * FROM acTBL", null)
-                cursor.moveToNext()
+                try {
+                    var cursor = sqlDB.rawQuery("SELECT * FROM acTBL", null)
+                    cursor.moveToNext()
+                    // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
+                    if(cursor.getString(0).toString() == nickname.toString()){
+                        acdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                        in_count = 0 // 주문현황 개수 초기화
+                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        val intent = Intent(this, ResultActivity::class.java)
+                        intent.putExtra("shop_name", "ac")
+                        startActivity(intent)
+                    }
+                    else{
+                        Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
+                    }
+                    sqlDB.close()
 
-                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
-                if(cursor.getString(0).toString() == nickname.toString()) {
-                    acdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                    ac_count = 0 // 주문현황 개수 초기화
-                    acResult = 1 // 배달중 아이콘 표시 (VISIBLE)
-                    val intent = Intent(this, ResultActivity::class.java)
-                    intent.putExtra("shop_name", "ac")
-                    startActivity(intent)
+
+                } catch (e:Exception){
+                    Toast.makeText(applicationContext, "현재 진행중인 주문이 없습니다.", Toast.LENGTH_SHORT).show()
+
                 }
-                else{
-                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
-                }
-                sqlDB.close()
+
 
             } else if (shop_name == "kim") {
                 kimdbManager = kimDBManager(this)
                 sqlDB = kimdbManager.writableDatabase
 
-                var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
-                cursor.moveToNext()
+                try {
+                    var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
+                    cursor.moveToNext()
+                    // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
+                    if(cursor.getString(0).toString() == nickname.toString()){
+                        kimdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                        in_count = 0 // 주문현황 개수 초기화
+                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        val intent = Intent(this, ResultActivity::class.java)
+                        intent.putExtra("shop_name", "kim")
+                        startActivity(intent)
+                    }
+                    else{
+                        Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
+                    }
+                    sqlDB.close()
 
-                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
-                if(cursor.getString(0).toString() == nickname.toString()) {
-                    kimdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                    kim_count = 0 // 주문현황 개수 초기화
-                    kimResult = 1 // 배달중 아이콘 표시 (VISIBLE)
-                    val intent = Intent(this, ResultActivity::class.java)
-                    intent.putExtra("shop_name", "kim")
-                    startActivity(intent)
+
+                } catch (e:Exception){
+                    Toast.makeText(applicationContext, "현재 진행중인 주문이 없습니다.", Toast.LENGTH_SHORT).show()
+
                 }
-                else{
-                    Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
-                }
-                sqlDB.close()
+
             }
         }
     }
