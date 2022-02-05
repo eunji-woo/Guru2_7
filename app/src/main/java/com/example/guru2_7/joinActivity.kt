@@ -9,15 +9,17 @@ import android.widget.EditText
 import android.widget.Toast
 import java.lang.Exception
 import java.util.regex.Pattern
-
+//회원가입 Activity
 class joinActivity : AppCompatActivity() {
 
+    //button 과 edittext 선언
     lateinit var join_nameEdittext: EditText
     lateinit var join_emailEdittext: EditText
     lateinit var join_pwEdittext: EditText
     lateinit var join_pwEdittext2: EditText
     lateinit var join_joinButton: Button
 
+    //DB 사용을 위한 선언
     lateinit var dbManager: DBManager
     lateinit var sqlDB: SQLiteDatabase
 
@@ -35,9 +37,11 @@ class joinActivity : AppCompatActivity() {
 
         dbManager = DBManager(this)
 
+        //회원가입 검증
         join_joinButton.setOnClickListener {
             sqlDB = dbManager.writableDatabase
 
+            //정보를 모두 입력하지 않았을 때, 서울여대 이메일이 아닐 때, 비밀번호 형식이 지켜지지 않았을 때를 차례로 if문으로 검증
             if(join_nameEdittext.text.isEmpty() || join_emailEdittext.text.isEmpty() || join_pwEdittext.text.isEmpty() || join_pwEdittext2.text.isEmpty()){ // 정보 입력 제대로 안한 경우 제대로 입력하라는 toast 메시지
                 Toast.makeText(applicationContext, "정보를 모두 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
@@ -57,7 +61,7 @@ class joinActivity : AppCompatActivity() {
                     }
                     catch(e:Exception){
                         Toast.makeText(applicationContext, "이미 있는 닉네임입니다.", Toast.LENGTH_SHORT).show()
-                    }
+                    } //닉네임이 중복인 경우 예외 처리
                 }
                 else{
                     Toast.makeText(applicationContext, "비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()

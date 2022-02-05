@@ -7,18 +7,18 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-
+//첫 화면 Activity
 class MainActivity : AppCompatActivity() {
 
-
+    //button 과 edittext 선언
     lateinit var LoginButton: Button
     lateinit var joinButton: Button
     lateinit var idEdittext: EditText
     lateinit var pwEdittext: EditText
 
+    //DB 사용을 위한 선언
     lateinit var dbManager: DBManager
     lateinit var sqlDB: SQLiteDatabase
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,15 +31,18 @@ class MainActivity : AppCompatActivity() {
 
         dbManager = DBManager(this)
 
+        //로그인 검증
         LoginButton.setOnClickListener {
             sqlDB = dbManager.readableDatabase
 
+            //DB에서 계정 정보 확인하는 코드
             var cursor = sqlDB.rawQuery("SELECT * FROM groupTBL", null)
 
             while(cursor.moveToNext()) {
                 if (cursor.getString(1) == idEdittext.text.toString() && cursor.getString(2) == pwEdittext.text.toString()) {
                     Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
 
+                    //닉네임과 이메일 공유자원으로 처리
                     var pref = this.getSharedPreferences("user",0)
                     var editor = pref.edit()
 
