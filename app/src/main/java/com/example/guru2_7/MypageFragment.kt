@@ -36,6 +36,7 @@ class MypageFragment : Fragment() {
         // 버튼과 텍스트뷰 선언
         val changeButton = view.findViewById<Button>(R.id.ChangePWbutton)
         val OutButton = view.findViewById<Button>(R.id.Outbutton)
+        val LogOutButton = view.findViewById<Button>(R.id.LogOutbutton)
         val nicknameTextView = view.findViewById<TextView>(R.id.nicknameTextView)
         val emailTextView = view.findViewById<TextView>(R.id.emailTextView)
 
@@ -60,6 +61,14 @@ class MypageFragment : Fragment() {
         OutButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(context, OutActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+        // LogOutButton을 통해 로그아웃
+        LogOutButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, MainActivity::class.java)
                 startActivity(intent)
             }
         })

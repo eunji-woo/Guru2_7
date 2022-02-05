@@ -49,31 +49,45 @@
             android:layout_width="400dp"
             android:layout_height="70dp"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="62dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="2dp"
-            android:layout_marginBottom="8dp"
             android:fontFamily="@font/gangwongyoyugmodubold"
             android:text="비밀번호 변경"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintBottom_toTopOf="@+id/Outbutton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/LogOutbutton" />
 
         <Button
             android:id="@+id/Outbutton"
             android:layout_width="400dp"
             android:layout_height="70dp"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="2dp"
             android:fontFamily="@font/gangwongyoyugmodubold"
             android:text="회원 탈퇴"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ChangePWbutton" />
+
+        <Button
+            android:id="@+id/LogOutbutton"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="71dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/gangwongyoyugmodubold"
+            android:text="로그아웃"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
