@@ -13,11 +13,12 @@ import androidx.annotation.RequiresApi
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-var acResult=0
-var inResult=0
-var kimResult=0
-var mongResult=0
-var wfResult=0
+// 배달중 아이콘 관련 변수 ( 0일 때: GONE, 1일 때: VISIBLE )
+var acResult = 0
+var inResult = 0
+var kimResult = 0
+var mongResult = 0
+var wfResult = 0
 
 class Order1_Activity : AppCompatActivity() {
     lateinit var OrderOkButton : Button
@@ -51,6 +52,7 @@ class Order1_Activity : AppCompatActivity() {
         var sqlName = ""
         var sqlTime = ""
 
+        // Order2에서 주문현황을 확인할 때는 주문완료 버튼이 안 보이게 처리
         if (navi == "0"){
             OrderOkButton.visibility = View.GONE
         } else{
@@ -66,15 +68,21 @@ class Order1_Activity : AppCompatActivity() {
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
-                val textView2 = TextView(this) // 닉네임
+                val textView2 = TextView(this) // 닉네임, 시간
                 val textView3 = TextView(this) // 메뉴
 
+                // 주문자의 닉네임과 주문한 시간
                 sqlName = " ${cursor.getString(0)}"
                 sqlTime = " ${cursor.getString(14)}"
+
+                // 선택한 메뉴 + 메뉴 개수에 따른 쉼표 처리
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+
+                // 가격 합산 (주문들의 총 금액)
                 priceAll = priceAll + cursor.getString(11).toInt()
 
+                // 최초 주문자가 선택한 장소 및 시간, 총 금액 표시
                 placeTextview.text = "$place_in"
                 timeTextview.text = "$time_in"
                 priceTextview.text = priceAll.toString()
@@ -83,9 +91,10 @@ class Order1_Activity : AppCompatActivity() {
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
-                scrollLayout.addView(textView1, -1)
-                scrollLayout.addView(textView2, -1)
-                scrollLayout.addView(textView3, -1)
+                // textView 추가 (밑으로 추가됨)
+                scrollLayout.addView(textView1, -1) // 공백
+                scrollLayout.addView(textView2, -1) // 닉네임, 시간
+                scrollLayout.addView(textView3, -1) // 메뉴
             }
             cursor.close()
             sqlDB.close()
@@ -98,15 +107,21 @@ class Order1_Activity : AppCompatActivity() {
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
-                val textView2 = TextView(this) // 닉네임
+                val textView2 = TextView(this) // 닉네임, 시간
                 val textView3 = TextView(this) // 메뉴
 
+                // 주문자의 닉네임과 주문한 시간
                 sqlName = " ${cursor.getString(0)}"
                 sqlTime = " ${cursor.getString(14)}"
+
+                // 선택한 메뉴 + 메뉴 개수에 따른 쉼표 처리
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+
+                // 가격 합산 (주문들의 총 금액)
                 priceAll = priceAll + cursor.getString(11).toInt()
 
+                // 최초 주문자가 선택한 장소 및 시간, 총 금액 표시
                 placeTextview.text = "$place_wf"
                 timeTextview.text = "$time_wf"
                 priceTextview.text = priceAll.toString()
@@ -115,9 +130,10 @@ class Order1_Activity : AppCompatActivity() {
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
-                scrollLayout.addView(textView1, -1)
-                scrollLayout.addView(textView2, -1)
-                scrollLayout.addView(textView3, -1)
+                // textView 추가 (밑으로 추가됨)
+                scrollLayout.addView(textView1, -1) // 공백
+                scrollLayout.addView(textView2, -1) // 닉네임, 시간
+                scrollLayout.addView(textView3, -1) // 메뉴
             }
             cursor.close()
             sqlDB.close()
@@ -130,15 +146,21 @@ class Order1_Activity : AppCompatActivity() {
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
-                val textView2 = TextView(this) // 닉네임
+                val textView2 = TextView(this) // 닉네임, 시간
                 val textView3 = TextView(this) // 메뉴
 
+                // 주문자의 닉네임과 주문한 시간
                 sqlName = " ${cursor.getString(0)}"
                 sqlTime = " ${cursor.getString(14)}"
+
+                // 선택한 메뉴 + 메뉴 개수에 따른 쉼표 처리
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+
+                // 가격 합산 (주문들의 총 금액)
                 priceAll = priceAll + cursor.getString(11).toInt()
 
+                // 최초 주문자가 선택한 장소 및 시간, 총 금액 표시
                 placeTextview.text = "$place_mong"
                 timeTextview.text = "$time_mong"
                 priceTextview.text = priceAll.toString()
@@ -147,9 +169,10 @@ class Order1_Activity : AppCompatActivity() {
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
-                scrollLayout.addView(textView1, -1)
-                scrollLayout.addView(textView2, -1)
-                scrollLayout.addView(textView3, -1)
+                // textView 추가 (밑으로 추가됨)
+                scrollLayout.addView(textView1, -1) // 공백
+                scrollLayout.addView(textView2, -1) // 닉네임, 시간
+                scrollLayout.addView(textView3, -1) // 메뉴
             }
             cursor.close()
             sqlDB.close()
@@ -162,15 +185,21 @@ class Order1_Activity : AppCompatActivity() {
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
-                val textView2 = TextView(this) // 닉네임
+                val textView2 = TextView(this) // 닉네임, 시간
                 val textView3 = TextView(this) // 메뉴
 
+                // 주문자의 닉네임과 주문한 시간
                 sqlName = " ${cursor.getString(0)}"
                 sqlTime = " ${cursor.getString(14)}"
+
+                // 선택한 메뉴 + 메뉴 개수에 따른 쉼표 처리
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+
+                // 가격 합산 (주문들의 총 금액)
                 priceAll = priceAll + cursor.getString(11).toInt()
 
+                // 최초 주문자가 선택한 장소 및 시간, 총 금액 표시
                 placeTextview.text = "$place_ac"
                 timeTextview.text = "$time_ac"
                 priceTextview.text = priceAll.toString()
@@ -179,9 +208,10 @@ class Order1_Activity : AppCompatActivity() {
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
-                scrollLayout.addView(textView1, -1)
-                scrollLayout.addView(textView2, -1)
-                scrollLayout.addView(textView3, -1)
+                // textView 추가 (밑으로 추가됨)
+                scrollLayout.addView(textView1, -1) // 공백
+                scrollLayout.addView(textView2, -1) // 닉네임, 시간
+                scrollLayout.addView(textView3, -1) // 메뉴
             }
             cursor.close()
             sqlDB.close()
@@ -194,15 +224,21 @@ class Order1_Activity : AppCompatActivity() {
 
             while (cursor.moveToNext()) {
                 val textView1 = TextView(this) // 공백
-                val textView2 = TextView(this) // 닉네임
+                val textView2 = TextView(this) // 닉네임, 시간
                 val textView3 = TextView(this) // 메뉴
 
+                // 주문자의 닉네임과 주문한 시간
                 sqlName = " ${cursor.getString(0)}"
                 sqlTime = " ${cursor.getString(14)}"
+
+                // 선택한 메뉴 + 메뉴 개수에 따른 쉼표 처리
                 sqlResult = cursor.getString(1).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ").plus(", " + cursor.getString(2).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(3).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(4).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(5).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(6).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(7).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(8).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(9).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " ")).plus(", " + cursor.getString(10).replace("\\r\\n|\\r|\\n|\\n\\r".toRegex(), " "))
                 sqlResult = sqlResult.replace(", , , , , , , , , ", "").replace(", , , , , , , , ", "").replace(", , , , , , , ", "").replace(", , , , , , ", "").replace(", , , , , ", "").replace(", , , , ", "").replace(", , , ", "").replace(", , ", " ").replace(",  ", " ")
+
+                // 가격 합산 (주문들의 총 금액)
                 priceAll = priceAll + cursor.getString(11).toInt()
 
+                // 최초 주문자가 선택한 장소 및 시간, 총 금액 표시
                 placeTextview.text = "$place_kim"
                 timeTextview.text = "$time_kim"
                 priceTextview.text = priceAll.toString()
@@ -211,9 +247,10 @@ class Order1_Activity : AppCompatActivity() {
                 textView3.background = ContextCompat.getDrawable(this, R.color.purple)
                 textView3.text = sqlResult
 
-                scrollLayout.addView(textView1, -1)
-                scrollLayout.addView(textView2, -1)
-                scrollLayout.addView(textView3, -1)
+                // textView 추가 (밑으로 추가됨)
+                scrollLayout.addView(textView1, -1) // 공백
+                scrollLayout.addView(textView2, -1) // 닉네임, 시간
+                scrollLayout.addView(textView3, -1) // 메뉴
             }
             cursor.close()
             sqlDB.close()
@@ -221,8 +258,6 @@ class Order1_Activity : AppCompatActivity() {
 
 
         OrderOkButton.setOnClickListener {
-
-
             var pref = this.getSharedPreferences("user",0)
             var nickname = pref.getString("nickname", "default").toString()
 
@@ -233,10 +268,11 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM inTBL", null)
                 cursor.moveToNext()
 
+                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                 if(cursor.getString(0).toString() == nickname.toString()){
-                    indbManager.onUpgrade(sqlDB, 1, 2)
-                    in_count = 0
-                    inResult = 1
+                    indbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                    in_count = 0 // 주문현황 개수 초기화
+                    inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                     val intent = Intent(this, ResultActivity::class.java)
                     intent.putExtra("shop_name", "in")
                     startActivity(intent)
@@ -244,8 +280,8 @@ class Order1_Activity : AppCompatActivity() {
                 else{
                     Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
-
                 sqlDB.close()
+
             } else if (shop_name == "wf") {
                 wfdbManager = wfDBManager(this)
                 sqlDB = wfdbManager.writableDatabase
@@ -253,10 +289,11 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM wfTBL", null)
                 cursor.moveToNext()
 
+                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                 if(cursor.getString(0).toString() == nickname.toString()){
-                    wfdbManager.onUpgrade(sqlDB, 1, 2)
-                    wf_count = 0
-                    wfResult = 1
+                    wfdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                    wf_count = 0 // 주문현황 개수 초기화
+                    wfResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                     val intent = Intent(this, ResultActivity::class.java)
                     intent.putExtra("shop_name", "wf")
                     startActivity(intent)
@@ -264,8 +301,8 @@ class Order1_Activity : AppCompatActivity() {
                 else{
                     Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
-
                 sqlDB.close()
+
             } else if (shop_name == "mong") {
                 mongdbManager = mongDBManager(this)
                 sqlDB = mongdbManager.writableDatabase
@@ -273,10 +310,11 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM mongTBL", null)
                 cursor.moveToNext()
 
+                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                 if(cursor.getString(0).toString() == nickname.toString()) {
-                    mongdbManager.onUpgrade(sqlDB, 1, 2)
-                    mong_count = 0
-                    mongResult = 1
+                    mongdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                    mong_count = 0 // 주문현황 개수 초기화
+                    mongResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                     val intent = Intent(this, ResultActivity::class.java)
                     intent.putExtra("shop_name", "mong")
                     startActivity(intent)
@@ -284,8 +322,8 @@ class Order1_Activity : AppCompatActivity() {
                 else{
                     Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
-
                 sqlDB.close()
+
             } else if (shop_name == "ac") {
                 acdbManager = acDBManager(this)
                 sqlDB = acdbManager.writableDatabase
@@ -293,10 +331,11 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM acTBL", null)
                 cursor.moveToNext()
 
+                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                 if(cursor.getString(0).toString() == nickname.toString()) {
-                    acdbManager.onUpgrade(sqlDB, 1, 2)
-                    ac_count = 0
-                    acResult = 1
+                    acdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                    ac_count = 0 // 주문현황 개수 초기화
+                    acResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                     val intent = Intent(this, ResultActivity::class.java)
                     intent.putExtra("shop_name", "ac")
                     startActivity(intent)
@@ -304,8 +343,8 @@ class Order1_Activity : AppCompatActivity() {
                 else{
                     Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
-
                 sqlDB.close()
+
             } else if (shop_name == "kim") {
                 kimdbManager = kimDBManager(this)
                 sqlDB = kimdbManager.writableDatabase
@@ -313,10 +352,11 @@ class Order1_Activity : AppCompatActivity() {
                 var cursor = sqlDB.rawQuery("SELECT * FROM kimTBL", null)
                 cursor.moveToNext()
 
+                // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                 if(cursor.getString(0).toString() == nickname.toString()) {
-                    kimdbManager.onUpgrade(sqlDB, 1, 2)
-                    kim_count = 0
-                    kimResult = 1
+                    kimdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
+                    kim_count = 0 // 주문현황 개수 초기화
+                    kimResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                     val intent = Intent(this, ResultActivity::class.java)
                     intent.putExtra("shop_name", "kim")
                     startActivity(intent)
@@ -324,10 +364,8 @@ class Order1_Activity : AppCompatActivity() {
                 else{
                     Toast.makeText(applicationContext, "주문자만 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
                 }
-
                 sqlDB.close()
             }
         }
     }
-
 }
