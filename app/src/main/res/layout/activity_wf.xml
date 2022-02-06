@@ -237,31 +237,6 @@
                         android:fontFamily="@font/gangwongyoyugmodubold"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30px"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/acImage10"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:srcCompat="@drawable/wf10" />
-
-                    <CheckBox
-                        android:id="@+id/inCheckBox10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="355ml 스파클링청포도\n1,500"
-                        android:fontFamily="@font/gangwongyoyugmodubold"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                </LinearLayout>
-
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
