@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         //로그인 검증
         LoginButton.setOnClickListener {
             sqlDB = dbManager.readableDatabase
+            var login = "0"
 
             //DB에서 계정 정보 확인하는 코드
             var cursor = sqlDB.rawQuery("SELECT * FROM groupTBL", null)
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             while(cursor.moveToNext()) {
                 if (cursor.getString(1) == idEdittext.text.toString() && cursor.getString(2) == pwEdittext.text.toString()) {
                     Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
+                    login = "1"
 
                     //닉네임과 이메일 공유자원으로 처리
                     var pref = this.getSharedPreferences("user",0)
@@ -52,10 +54,10 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, NaviActivity::class.java)
                     startActivity(intent)
                 }
-                else {
-                    Toast.makeText(this, "다시 입력해주세요.", Toast.LENGTH_SHORT).show()
-                }
             }
+
+            if (login == "0")
+                Toast.makeText(this, "다시 입력해주세요.", Toast.LENGTH_SHORT).show()
 
         }
 
