@@ -86,7 +86,7 @@ class Order2Fragment : Fragment() {
 
 
         // 식당버튼을 클릭하면 각각의 식당 주문현황페이지로 intent된다
-        // intent하면서 shop_name, navi 값을 같이 보낸다
+        // intent하면서 shop_name 값을 같이 보낸다
         acImageButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(context, Order1_Activity::class.java)

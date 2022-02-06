@@ -163,7 +163,7 @@ class acActivity : AppCompatActivity() {
                 // 메뉴 한개라도 선택되지 않으면 okbutton 누를 수 없도록 처리
 
             }
-            else { // 메뉴가 한개라도 선택될 경우 db에 선택된 메뉴와 닉네임, 가격, 시간, 장소 저장 후 intent
+            else { // 메뉴가 한개라도 선택될 경우 db에 선택된 메뉴와 닉네임, 가격, 시간, 장소 저장 후 intent + 주문현황 개수 증가
                 ac_count += 1
                 sqlDB = dbManager.writableDatabase
                 sqlDB.execSQL("INSERT INTO acTBL VALUES ('"+nickname+"', '"+menu1+"', '"+menu2+"', '"+menu3+"', '"+menu4+"', '"+menu5+"', '"+menu6+"', '"+menu7+"', '"+menu8+"', '"+menu9+"', '"+menu10 +"', '"+price+"', '"+place_ac+"', '"+time_ac+"', '"+start+"');")
