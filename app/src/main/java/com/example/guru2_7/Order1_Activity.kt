@@ -296,8 +296,8 @@ class Order1_Activity : AppCompatActivity() {
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         wfdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                        in_count = 0 // 주문현황 개수 초기화
-                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        wf_count = 0 // 주문현황 개수 초기화
+                        wfResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                         val intent = Intent(this, ResultActivity::class.java)
                         intent.putExtra("shop_name", "wf")
                         startActivity(intent)
@@ -326,8 +326,8 @@ class Order1_Activity : AppCompatActivity() {
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         mongdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                        in_count = 0 // 주문현황 개수 초기화
-                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        mong_count = 0 // 주문현황 개수 초기화
+                        mongResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                         val intent = Intent(this, ResultActivity::class.java)
                         intent.putExtra("shop_name", "mong")
                         startActivity(intent)
@@ -355,8 +355,8 @@ class Order1_Activity : AppCompatActivity() {
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         acdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                        in_count = 0 // 주문현황 개수 초기화
-                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        ac_count = 0 // 주문현황 개수 초기화
+                        acResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                         val intent = Intent(this, ResultActivity::class.java)
                         intent.putExtra("shop_name", "ac")
                         startActivity(intent)
@@ -385,8 +385,8 @@ class Order1_Activity : AppCompatActivity() {
                     // 최초 주문자가 주문완료 버튼을 눌렀을 때만 동작
                     if(cursor.getString(0).toString() == nickname.toString()){
                         kimdbManager.onUpgrade(sqlDB, 1, 2) // 테이블 초기화
-                        in_count = 0 // 주문현황 개수 초기화
-                        inResult = 1 // 배달중 아이콘 표시 (VISIBLE)
+                        kim_count = 0 // 주문현황 개수 초기화
+                        kimResult = 1 // 배달중 아이콘 표시 (VISIBLE)
                         val intent = Intent(this, ResultActivity::class.java)
                         intent.putExtra("shop_name", "kim")
                         startActivity(intent)
