@@ -48,6 +48,7 @@ class joinActivity : AppCompatActivity() {
             else if(join_emailEdittext.text.contains(swumail)==false){
                 Toast.makeText(applicationContext, "서울여대 이메일만 사용할 수 있습니다.", Toast.LENGTH_SHORT).show()
             }
+
             else if (!Pattern.matches("^(?=.*\\d)(?=.*[~`!@#$%\\^&*()-])(?=.*[a-zA-Z]).{8,20}$", join_pwEdittext.text)) {
                 Toast.makeText(this, "비밀번호 형식을 지켜주세요.", Toast.LENGTH_SHORT).show()
             }
